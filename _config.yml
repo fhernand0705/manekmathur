@@ -30,7 +30,6 @@ theme: minima
 plugins:
   - jekyll-feed
 
-permalink: none
 
 
 # Exclude from processing.
