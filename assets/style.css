@@ -26,8 +26,19 @@ ul, ol {
 .center-logo {
   position: relative;
   float: left;
-  left: 6em;
-  margin-top: 10px;
+  left: 7.5em;
+  margin-top: 0;
+}
+
+.img-logo {
+  position: relative;
+  top: -2em;
+}
+
+.header-tagline {
+  position: relative;
+  top: -5em;
+  right: 2em;
 }
 
 .nav-left, .nav-right {
