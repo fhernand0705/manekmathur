@@ -1,0 +1,107 @@
+---
+---
+
+body {
+  font: 400 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #111;
+   }
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+.highlight {
+  margin-bottom: 15px; }
+
+// navbar
+ul, ol {
+  margin-left: 25px; }
+
+.navbar-container {
+  display: initial;
+}
+
+.navbar-left {float:left;}
+.navbar-right {float:right;}
+
+.center-logo {
+  position: relative;
+  float: left;
+  left: 7.5em;
+  margin-top: 0;
+}
+
+.img-logo {
+  position: relative;
+  top: -4em;
+}
+
+.header-tagline {
+  position: relative;
+  top: -6em;
+  right: 3em;
+  text-transform: uppercase;
+}
+
+.nav-left, .nav-right {
+  display: inline-flex;
+  position: relative;
+  margin: 20px;
+  list-style: none;
+}
+
+.nav-left a, .nav-right a {
+  text-decoration: none;
+  padding: 10px;
+}
+
+.navbar-right {
+  position: relative;
+  right: 3em;
+}
+
+.mobile-logo {
+  display: none;
+}
+
+// responsive navbar
+@media all and (max-width: 378px) {
+  .navbar-container {
+    display: none;
+  }
+
+  .mobile-logo, img {
+    display: inline;
+    position: relative;
+    top: -3em;
+    max-width: 225px;
+    width: 200px;
+    float: left;
+  }
+
+  .mobile-navbar-container {
+    display: inline;
+  }
+
+  .menu-icon {
+    float: right;
+  }
+
+  .bar-1, .bar-3 {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    border-radius: 5px;
+ }
+
+  .bar-2 {
+    width: 25px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    border-radius: 5px;
+  }
+}
