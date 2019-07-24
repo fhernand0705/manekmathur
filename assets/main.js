@@ -1,6 +1,6 @@
 ---
 ---
 
-function close(x) {
+function myFunction(x) {
   x.classList.toggle("change");
 }
