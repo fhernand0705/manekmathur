@@ -166,6 +166,7 @@ ul, ol {margin-left: 25px; }
     height: 100%;
     max-height: none;
   }
+
 }
 
 @media all and (min-width: 1101px) and (max-width: 1440px) {
@@ -193,4 +194,31 @@ ul, ol {margin-left: 25px; }
     position: $rel;
     right: 1.5em;
   }
+}
+
+// global footer
+.footer-container {
+  display: block;
+  position: absolute;
+  background-color: gray;
+  //width: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+
+// responsive footer
+@media all and (max-width: 458px) {
+  .social-icons {
+    display: inline-flex;
+    position: $rel;
+    list-style: none;
+    right: 1em;
+    margin-right: 0;
+  }
+
+  .social-icons li {
+    padding: 5px 10px;
+  }
+
 }
