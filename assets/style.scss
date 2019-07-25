@@ -1,8 +1,10 @@
 ---
 ---
+
+// global variables
 $rel: relative;
 
-
+// global rules
 body {
   font: 400 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: #111;
@@ -18,8 +20,7 @@ ul, ol, dl, figure,
   margin-bottom: 15px; }
 
 // navbar
-ul, ol {
-  margin-left: 25px; }
+ul, ol {margin-left: 25px; }
 
 .navbar-container {display: initial;}
 
