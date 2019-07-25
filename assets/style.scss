@@ -63,7 +63,9 @@ ul, ol {
   right: 3em;
 }
 
-.mobile-logo {
+.mobile-logo {display: none;}
+
+.overlay-content a {
   display: none;
 }
 
@@ -72,6 +74,50 @@ ul, ol {
   .navbar-container {
     display: none;
   }
+
+  .overlay.active {
+    opacity: .7;
+    height: 100%;
+    max-height: none;
+  }
+
+   .overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    display: block;
+    opacity: 0;
+    left: 0;
+    top: 0;
+    background-color: gray;
+    overflow: hidden;
+    max-height: 0;
+    transition: all 0.7s;
+  }
+
+
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .overlay-content {
+    position: relative;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .overlay-content a {
+    display: block;
+  }
+
 
   .mobile-logo, img {
     display: inline;
@@ -90,11 +136,10 @@ ul, ol {
     margin-top: 121%;
   }
 
-  .mobile-navbar-container {
-    display: inline;
-  }
+  .mobile-navbar-container {display: inline;}
 
-  .menu-icon {
+  #menu-icon {
+    position: relative;
     cursor: pointer;
     float: right;
   }
