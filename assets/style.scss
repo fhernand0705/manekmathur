@@ -214,27 +214,9 @@ ul, ol {margin-left: 25px; }
     position: $rel;
     right: 1.5em;
   }
-  .social-icons {
-    display: grid;
-    justify-content: center;
-    position: relative;
-    top: 2.5em;
-    right: 2em;
-    grid-template-columns: 60px 12px 60px 12px
-                           60px 12px 60px 12px
-                           60px 12px;
-    list-style: none;
-  }
-
-  .social-icons li {
-    padding: 5px 0;
-    text-align: center;
-  }
-
-  .social-icons hr {background-color: whitesmoke;}
 }
 
-// footer container
+// footer
 .footer-container {
   position: absolute;
   background-color: gray;
@@ -242,4 +224,35 @@ ul, ol {margin-left: 25px; }
   left: 0;
   top: 0;
   right: 0;
+}
+
+.social-icons {
+  display: grid;
+  justify-content: center;
+  position: relative;
+  top: 2.5em;
+  right: 2em;
+  grid-template-columns: 60px 12px 60px 12px
+                         60px 12px 60px 12px
+                         60px;
+  list-style: none;
+}
+
+.social-icons li {
+  padding: 5px 0;
+  text-align: center;
+}
+
+.social-icons hr {background-color: whitesmoke;}
+
+// responsive footer
+@media all and (max-width: 330px) {
+  .social-icons {
+    grid-template-columns: 35px 12px 35px 12px
+                           35px 12px 35px 12px
+                           35px;
+  }
+  .social-icons i {
+    font-size: 1.5em;
+  }
 }
