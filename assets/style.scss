@@ -10,6 +10,11 @@ body {
   color: #111;
    }
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
@@ -18,6 +23,11 @@ p, blockquote, pre,
 ul, ol, dl, figure,
 .highlight {
   margin-bottom: 15px; }
+
+//main wrapper
+.main-wrapper {
+  height: 95vh;
+}
 
 // navbar
 ul, ol {margin-left: 25px; }
@@ -118,6 +128,13 @@ ul, ol {margin-left: 25px; }
     max-width: 200px;
     width: 175px;
     float: left;
+    left: .8em;
+  }
+
+  .mobile-logo span {
+    position: absolute;
+    top: 82px;
+    right: 28px;
   }
 
   .mobile-tagline {
@@ -126,6 +143,7 @@ ul, ol {margin-left: 25px; }
     text-transform: uppercase;
     font-size: 9.4px;
     margin-top: 121%;
+    left: .8em;
   }
 
   .mobile-navbar-container {display: inline;}
@@ -134,6 +152,8 @@ ul, ol {margin-left: 25px; }
     position: $rel;
     cursor: pointer;
     float: right;
+    right: 1.5em;
+    top: 1em;
   }
 
   .bar-1, .bar-3 {
@@ -167,6 +187,7 @@ ul, ol {margin-left: 25px; }
     max-height: none;
   }
 
+//footer icons
   .social-icons {
     display: grid;
     justify-content: center;
@@ -182,11 +203,11 @@ ul, ol {margin-left: 25px; }
   .social-icons li {
     padding: 5px 0;
     text-align: center;
- }
+  }
 
- .social-icons hr {
-   background-color: whitesmoke;
- }
+  .social-icons hr {
+    background-color: whitesmoke;
+  }
 }
 
 // full screen navbar responsiveness
@@ -194,8 +215,14 @@ ul, ol {margin-left: 25px; }
   .center-logo {
     position: $rel;
     float: left;
-    left: 7.5em;
+    left: 8em;
     margin-top: -9px;
+  }
+
+  .center-logo span {
+    position: absolute;
+    top: 57px;
+    right: 49px;
   }
 
   .img-logo {
@@ -219,8 +246,8 @@ ul, ol {margin-left: 25px; }
 
 // footer
 .footer-container {
-  position: absolute;
-  background-color: gray;
+  position: sticky;
+  //background-color: gray;
   height: 25%;
   left: 0;
   top: 0;
@@ -231,10 +258,10 @@ ul, ol {margin-left: 25px; }
   display: grid;
   justify-content: center;
   position: relative;
-  top: 2.5em;
+  top: 3em;
   right: 2em;
-  grid-template-columns: 60px 12px 60px 12px
-                         60px 12px 60px 12px
+  grid-template-columns: 60px 2px 60px 2px
+                         60px 2px 60px 2px
                          60px;
   list-style: none;
 }
@@ -244,7 +271,12 @@ ul, ol {margin-left: 25px; }
   text-align: center;
 }
 
-.social-icons hr {background-color: whitesmoke;}
+.social-icons hr {
+  background-color: black;
+  position: $rel;
+  top: .5em;
+  height: 20px;
+}
 
 // responsive footer
 @media all and (max-width: 330px) {
