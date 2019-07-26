@@ -189,6 +189,7 @@ ul, ol {margin-left: 25px; }
  }
 }
 
+// full screen navbar responsiveness
 @media all and (min-width: 1101px) and (max-width: 1440px) {
   .center-logo {
     position: $rel;
