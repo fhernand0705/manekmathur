@@ -29,6 +29,13 @@ ul, ol, dl, figure,
   height: 95vh;
 }
 
+//background images per page
+.home-image {
+  background-image: url("/assets/images/manek-home.jpg");
+  background-size: cover;
+
+}
+
 // navbar
 ul, ol {margin-left: 25px; }
 
@@ -40,7 +47,7 @@ ul, ol {margin-left: 25px; }
 .center-logo {
   position: $rel;
   float: left;
-  left: 7.5em;
+  left: 4.5em;
   margin-top: -13px;
 }
 
@@ -66,6 +73,9 @@ ul, ol {margin-left: 25px; }
 
 .nav-left a, .nav-right a {
   text-decoration: none;
+  color: whitesmoke;
+  text-shadow: 2px 2px black;
+  text-transform: uppercase;
   padding: 10px;
 }
 
@@ -203,6 +213,11 @@ ul, ol {margin-left: 25px; }
   .social-icons li {
     padding: 5px 0;
     text-align: center;
+
+  }
+
+  .fab {
+    color: whitesmoke;
   }
 
   .social-icons hr {
@@ -215,14 +230,15 @@ ul, ol {margin-left: 25px; }
   .center-logo {
     position: $rel;
     float: left;
-    left: 8em;
+    left: 5.5em;
     margin-top: -9px;
   }
 
   .center-logo span {
     position: absolute;
     top: 57px;
-    right: 49px;
+    right: 75px;
+    color: black;
   }
 
   .img-logo {
@@ -232,10 +248,12 @@ ul, ol {margin-left: 25px; }
 
   .header-tagline {
     position: $rel;
-    top: -13em;
+    top: -11em;
     right: 2em;
+    color: whitesmoke;
+    text-shadow: 2px 2px black;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 15px;
   }
 
   .navbar-right {
@@ -247,7 +265,6 @@ ul, ol {margin-left: 25px; }
 // footer
 .footer-container {
   position: sticky;
-  //background-color: gray;
   height: 25%;
   left: 0;
   top: 0;
@@ -270,6 +287,8 @@ ul, ol {margin-left: 25px; }
   padding: 5px 0;
   text-align: center;
 }
+
+.fab {color: whitesmoke;}
 
 .social-icons hr {
   background-color: black;
