@@ -64,6 +64,7 @@ ul, ol {margin-left: 25px; }
   top: -14em;
   right: 2em;
   text-transform: uppercase;
+  font-weight: 500;
   font-size: 13px;
 }
 
@@ -79,6 +80,7 @@ ul, ol {margin-left: 25px; }
   color: whitesmoke;
   //text-shadow: 2px 2px black;
   text-transform: uppercase;
+  font-weight: 500;
   padding: 10px;
 }
 
@@ -98,6 +100,8 @@ ul, ol {margin-left: 25px; }
   .navbar-container {
     display: none;
   }
+
+  .home-image {background-position: 50%;}
 
   .overlay {
     height: 100%;
@@ -146,6 +150,7 @@ ul, ol {margin-left: 25px; }
 
   .mobile-logo span {
     position: absolute;
+    color: black;
     top: 82px;
     right: 28px;
   }
@@ -154,7 +159,9 @@ ul, ol {margin-left: 25px; }
     position: $rel;
     top: -10.5em;
     text-transform: uppercase;
+    font-weight: 400;
     font-size: 9.4px;
+    color: #e5e3e3;
     margin-top: 121%;
     left: .8em;
   }
@@ -172,7 +179,7 @@ ul, ol {margin-left: 25px; }
   .bar-1, .bar-3 {
     width: 30px;
     height: 4px;
-    background-color: black;
+    background-color: #e5e3e3;
     margin: 5px 0;
     border-radius: 5px;
     transition: 0.4s;
@@ -181,7 +188,7 @@ ul, ol {margin-left: 25px; }
   .bar-2 {
     width: 20px;
     height: 4px;
-    background-color: black;
+    background-color: #e5e3e3;
     margin: 5px 0;
     border-radius: 5px;
     transition: 0.4s;
@@ -219,12 +226,10 @@ ul, ol {margin-left: 25px; }
 
   }
 
-  .fab {
-    color: whitesmoke;
-  }
+  .fab {color: #e5e3e3;}
 
   .social-icons hr {
-    background-color: whitesmoke;
+    background-color: black;
   }
 }
 
@@ -253,7 +258,7 @@ ul, ol {margin-left: 25px; }
     position: $rel;
     top: -11em;
     right: 2em;
-    color: whitesmoke;
+    color: #e5e3e3;
     //text-shadow: 2px 2px black;
     text-transform: uppercase;
     font-size: 15px;
@@ -291,7 +296,7 @@ ul, ol {margin-left: 25px; }
   text-align: center;
 }
 
-.fab {color: whitesmoke;}
+.fab {color: #e5e3e3;}
 
 .social-icons hr {
   background-color: black;
