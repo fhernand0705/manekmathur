@@ -48,9 +48,10 @@ ul, ol {margin-left: 25px; }
 .navbar-right {float:right;}
 
 .center-logo {
+  display: inline-grid;
   position: $rel;
-  float: left;
-  left: 4.5em;
+  //float: left;
+  left: 7em;
   margin-top: -13px;
 }
 
@@ -62,31 +63,28 @@ ul, ol {margin-left: 25px; }
 .header-tagline {
   position: $rel;
   top: -14em;
-  right: 2em;
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .nav-left, .nav-right {
-  display: inline-flex;
+  display: inline-grid;
   position: $rel;
   margin: 20px;
   list-style: none;
 }
 
+.nav-left {grid-template-columns: 73px 186px 201px;}
+
+.nav-right {grid-template-columns: 63px 175px 123px;}
+
 .nav-left a, .nav-right a {
   text-decoration: none;
   color: whitesmoke;
-  //text-shadow: 2px 2px black;
   text-transform: uppercase;
   font-weight: 500;
   padding: 10px;
-}
-
-.navbar-right {
-  position: $rel;
-  right: 3em;
 }
 
 .mobile-logo {display: none;}
@@ -97,9 +95,7 @@ ul, ol {margin-left: 25px; }
 
 // responsive navbar
 @media all and (max-width: 1100px) {
-  .navbar-container {
-    display: none;
-  }
+  .navbar-container {display: none;}
 
   .home-image {background-position: 50%;}
 
@@ -234,7 +230,7 @@ ul, ol {margin-left: 25px; }
 }
 
 // full screen navbar responsiveness
-@media all and (min-width: 1101px) and (max-width: 1440px) {
+@media all and (min-width: 1100px) and (max-width: 1440px) {
   .center-logo {
     position: $rel;
     float: left;
@@ -259,14 +255,13 @@ ul, ol {margin-left: 25px; }
     top: -11em;
     right: 2em;
     color: #e5e3e3;
-    //text-shadow: 2px 2px black;
     text-transform: uppercase;
     font-size: 15px;
   }
 
   .navbar-right {
     position: $rel;
-    right: 1.5em;
+    right: .5em;
   }
 }
 
