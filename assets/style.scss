@@ -26,7 +26,8 @@ ul, ol, dl, figure,
 
 //main wrapper
 .main-wrapper {
-  height: 95vh;
+  height: 105vh;
+  margin-bottom: 125px;
 }
 
 //background images per page
@@ -301,32 +302,32 @@ ul, ol {margin-left: 25px; }
   color: white;
 }
 
-//brand partnerships section
-.normatec-container, .normatec-text {display: inline-grid;}
-
-.normatec-container {
-
-  grid-template-columns: 35% 50%;
-}
-
-.normatec-text {
-
-  grid-template-rows: 50px 50px;
-}
-
-.normatec-logo {
-  position: $rel;
-  width: 75%;
-  left: 4.5em;
-}
-
 // responsive brand partnerships section
 @media all and (max-width: 640px) {
   .brands-header {
     display: grid;
+    position: $rel;
+    top: -2.5em;
     width: 100%;
     text-align: center;
   }
+
+  .main-breakpoint {
+    top: -4.5em;
+    box-shadow: 0 0 9px 0 rgba(43, 43, 43, 0.1),
+    0 5px 8px 1.5px rgba(43, 43, 43, 0.1);
+  }
+
+  .main-breakpoint,
+  .breakpoint-1,
+  .breakpoint-2 {
+    position: $rel;
+    margin: 0 auto;
+    width: 65%;
+  }
+
+  .breakpoint-1 {top: 4.5em;}
+  .breakpoint-2 {top: 8.5em;}
 
   .normatec-container {
     display: inline-grid;
@@ -336,55 +337,181 @@ ul, ol {margin-left: 25px; }
     text-align: center;
   }
 
-  .normatec-logo {
+  .normatec-logo,
+  .whoop-logo,
+  .nucalm-logo {
     left: 0;
     width: 100%;
+  }
+
+  .whoop-container {
+    display: inline-grid;
+    position: $rel;
+    grid-template-rows: 45% 55%;
+    grid-template-columns: auto;
+    margin: 23px;
+    top: 5.5em;
+    text-align: center;
+  }
+
+  .nucalm-container {
+    display: inline-grid;
+    position: $rel;
+    grid-template-rows: 45% 55%;
+    grid-template-columns: auto;
+    margin: 23px;
+    top: 8.5em;
+    text-align: center;
   }
 }
 
 @media all and (min-width: 641px) and (max-width: 1100px) {
+  .brands-header {
+    display: grid;
+    position: $rel;
+    width: 100%;
+    text-align: center;
+    top: -3.5em;
+  }
+
+  .main-breakpoint {
+    position: $rel;
+    margin: 0 auto;
+    width: 45%;
+    top: -6em;
+    box-shadow: 0 0 9px 0 rgba(43, 43, 43, 0.1),
+    0 5px 8px 1.5px rgba(43, 43, 43, 0.1);
+  }
+
+  .breakpoint-1,
+  .breakpoint-2 {
+    position: $rel;
+    margin: 0 auto;
+    width: 65%;
+  }
+
+  .breakpoint-1 {top: 4.5em;}
+  .breakpoint-2 {top: 6.5em;}
+
   .normatec-container {
     display: inline-grid;
     grid-template-columns: 46% 48%;
     margin: 15px;
   }
 
-  .normatec-logo {
+  .normatec-logo,
+  .whoop-logo,
+  .nucalm-logo {
     position: $rel;
     width: 75%;
     left: 4em;
   }
 
+  .whoop-container {
+    display: inline-grid;
+    position: $rel;
+    grid-template-columns: 46% 48%;
+    margin: 15px;
+    top: 5.5em;
+  }
+
+  .whoop-logo {top: 4em;}
+
+  .nucalm-logo {
+    width: 100%;
+    left: 1em;
+    top: 2em;
+  }
+
+  .nucalm-container {
+    display: inline-grid;
+    position: $rel;
+    grid-template-columns: 46% 48%;
+    margin: 15px;
+    top: 8.5em;
+  }
+}
+
+@media all and (min-width: 1100px) and (max-width: 1500px) {
   .brands-header {
     display: grid;
     position: $rel;
     width: 100%;
     text-align: center;
-    top: -2.5em;
+    top: -3.5em;
   }
 
-  .brands-wrapper hr {
+  .main-breakpoint {
     position: $rel;
     margin: 0 auto;
-    width: 45%;
-    top: -4em;
+    width: 30%;
+    top: -6.5em;
     box-shadow: 0 0 9px 0 rgba(43, 43, 43, 0.1),
-                0 5px 8px 1.5px rgba(43, 43, 43, 0.1);
+    0 5px 8px 1.5px rgba(43, 43, 43, 0.1);
+  }
+
+  .breakpoint-1,
+  .breakpoint-2 {
+    position: $rel;
+    margin: 0 auto;
+    width: 65%;
+  }
+
+  .breakpoint-1 {top: 4.5em;}
+  .breakpoint-2 {top: 6.5em;}
+
+  .normatec-container {
+    display: inline-grid;
+    grid-template-columns: 37% 63%;
+    margin: 15px;
+  }
+
+  .whoop-container {
+    display: inline-grid;
+    position: $rel;
+    grid-template-columns: 36% 61%;
+    margin: 15px;
+    top: 5.5em;
+  }
+
+  .normatec-logo {
+    position: $rel;
+    width: 75%;
+    left: 4.5em;
+  }
+
+  .whoop-logo {
+    position: $rel;
+    width: 80%;
+    left: 3.5em;
+    top: 1em;
+  }
+
+  .nucalm-logo {
+    width: 100%;
+    left: 1em;
+    top: 2em;
+  }
+
+  .nucalm-container {
+    display: inline-grid;
+    position: $rel;
+    grid-template-columns: 36% 64%;
+    margin: 15px;
+    top: 8.5em;
   }
 }
 
-@media all and (min-width: 1100px) and (max-width: 1440px)
-
-// footer
+// footer section
 .footer-container {
   position: sticky;
-  height: 25%;
+  left: 0 ; right: 0; bottom: 0;
 }
 
 .social-icons {
   display: grid;
   justify-content: center;
-  position: relative;
+  position: $rel;
   top: 3em;
   right: 2em;
   grid-template-columns: 60px 2px 60px 2px
