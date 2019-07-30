@@ -321,7 +321,7 @@ ul, ol {margin-left: 25px; }
 }
 
 // responsive brand partnerships section
-@media all and (max-width: 415px) {
+@media all and (max-width: 640px) {
   .brands-header {
     display: grid;
     width: 100%;
@@ -330,7 +330,7 @@ ul, ol {margin-left: 25px; }
 
   .normatec-container {
     display: inline-grid;
-    grid-template-rows: 60% 55%;
+    grid-template-rows: 75% 55%;
     grid-template-columns: auto;
     margin: 23px;
     text-align: center;
@@ -341,6 +341,39 @@ ul, ol {margin-left: 25px; }
     width: 100%;
   }
 }
+
+@media all and (min-width: 641px) and (max-width: 1100px) {
+  .normatec-container {
+    display: inline-grid;
+    grid-template-columns: 46% 48%;
+    margin: 15px;
+  }
+
+  .normatec-logo {
+    position: $rel;
+    width: 75%;
+    left: 4em;
+  }
+
+  .brands-header {
+    display: grid;
+    position: $rel;
+    width: 100%;
+    text-align: center;
+    top: -2.5em;
+  }
+
+  .brands-wrapper hr {
+    position: $rel;
+    margin: 0 auto;
+    width: 45%;
+    top: -4em;
+    box-shadow: 0 0 9px 0 rgba(43, 43, 43, 0.1),
+                0 5px 8px 1.5px rgba(43, 43, 43, 0.1);
+  }
+}
+
+@media all and (min-width: 1100px) and (max-width: 1440px)
 
 // footer
 .footer-container {
