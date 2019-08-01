@@ -343,6 +343,7 @@ ul, ol {margin-left: 25px; }
     position: $rel;
     margin: 0 auto;
     width: 100%;
+    top: .7em;
   }
 
   .normatec-logo,
@@ -354,6 +355,12 @@ ul, ol {margin-left: 25px; }
   }
 
   .stamina-logo {width: 50%;}
+
+  .whoop-btn, .nucalm-btn,
+  .stamina-btn {
+    width: 20%;
+    margin: 0 auto;
+  }
 
   .normatec-container,
   .whoop-container,
@@ -404,13 +411,8 @@ ul, ol {margin-left: 25px; }
     position: $rel;
     margin: 0 auto;
     width: 90%;
+    top: 1.5em;
   }
-
-  .breakpoint-1 {top: 1.5em;}
-  .breakpoint-2 {top: 1.5em;}
-  .breakpoint-3 {top: 1.5em;}
-  .breakpoint-4 {top: 1.5em;}
-
 
   .normatec-logo,
   .whoop-logo,
@@ -427,28 +429,36 @@ ul, ol {margin-left: 25px; }
   }
 
   .naboso-logo {
-    //position: relative;
     width: 35%;
     float: left;
     margin-right: 48px;
   }
 
+  .nucalm-header,.nucalm-text,
+  .whoop-header,.whoop-text,
+  .stamina-text,.stamina-header {
+    float: right;
+    width: 61%;
+  }
+
+  .whoop-btn, .nucalm-btn,
+  .stamina-btn {
+    width: 10%;
+    margin: 0 39%;
+  }
 
   .normatec-container {
     display: inline-grid;
     grid-template-columns: 105%;
     margin: 50px;
-  }
-
-  .normatec-btn {
-    float: right;
-    width: 118%;
+    top: 2em;
   }
 
   .whoop-container {
     display: inline-grid;
     grid-template-columns: 100%;
     margin: 20px;
+    top: 2em;
   }
 
   .nucalm-container {
@@ -456,29 +466,16 @@ ul, ol {margin-left: 25px; }
     position: $rel;
     grid-template-columns: 100%;
     margin: 40px;
+    top: 2em;
   }
 
-  .nucalm-header,
-  .nucalm-text,
-  .nucalm-btn,
-  .whoop-header,
-  .whoop-text,
-  .whoop-btn,
-  .stamina-text,
-  .stamina-header,
-  .stamina-btn {
-    float: right;
-    width: 59%;
-  }
-
-  .whoop-btn, .nucalm-btn, .stamina-btn
-  {width: 112%;}
 
   .stamina-container {
     display: inline-grid;
     position: $rel;
     grid-template-columns: 100%;
     margin: 25px;
+    top: 2em;
   }
 
   .naboso-container {
@@ -486,6 +483,7 @@ ul, ol {margin-left: 25px; }
     position: $rel;
     grid-template-columns: 100%;
     margin: 50px;
+    top: 2em;
   }
 }
 
@@ -513,85 +511,71 @@ ul, ol {margin-left: 25px; }
   .breakpoint-4 {
     position: $rel;
     margin: 0 auto;
-    width: 65%;
+    width: 90%;
+    top: 2.5em
   }
 
-  .breakpoint-1 {top: 4.5em;}
-  .breakpoint-2 {top: 7.5em;}
-  .breakpoint-3 {top: 11.5em;}
-  .breakpoint-4 {top: 13.5em;}
-
-
-  .normatec-logo {
+  .normatec-logo,
+  .whoop-logo,
+  .nucalm-logo,
+  .stamina-logo,
+  .naboso-logo {
     position: $rel;
-    width: 75%;
-    left: 4.5em;
-  }
-
-  .whoop-logo {
-    position: $rel;
-    width: 80%;
-    left: 3.5em;
-    top: 1em;
-  }
-
-  .nucalm-logo {
-    position: $rel;
-    width: 100%;
-    left: 1em;
-    top: 2em;
+    width: 30%;
+    float: left;
+    margin-right: 15px;
   }
 
   .stamina-logo {
-    position: $rel;
-    width: 55%;
-    left: 7.5em;
-    top: -1.5em;
+    width: 25%;
   }
 
-  .naboso-logo {
-    position: $rel;
-    width: 85%;
-    top: -3.5em;
-    left: 3em;
+  .nucalm-header,.nucalm-text,
+  .whoop-header,
+  .whoop-text,.stamina-text,
+  .stamina-header {
+    float: right;
+    width: 68%;
+  }
+
+  .whoop-btn, .nucalm-btn,
+  .stamina-btn {
+    width: 10%;
+    margin: 0 32%;
   }
 
   .normatec-container {
     display: inline-grid;
-    grid-template-columns: 37% 63%;
-    margin: 15px;
+    grid-template-columns: 115%;
+    margin: 50px;
   }
 
   .whoop-container {
     display: inline-grid;
     position: $rel;
-    grid-template-columns: 36% 61%;
-    margin: 15px;
-    top: 5.5em;
+    grid-template-columns: 100%;
+    margin: 50px;
   }
 
   .nucalm-container {
     display: inline-grid;
     position: $rel;
-    grid-template-columns: 36% 64%;
-    margin: 15px;
-    top: 9.5em;
+    grid-template-columns: 100%;
+    margin: 50px;
   }
 
   .stamina-container {
     display: inline-grid;
     position: $rel;
-    grid-template-columns: 36% 62%;
-    margin: 15px;
-    top: 13.5em;
+    grid-template-columns: 100%;
+    margin: 50px;
   }
 
   .naboso-container {
     display: inline-grid;
     position: $rel;
-    grid-template-columns: 36% 63%;
-    margin: 15px;
-    top: 14.5em;
+    grid-template-columns: 100%;
+    margin: 50px;
   }
 }
 
