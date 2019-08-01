@@ -13,6 +13,7 @@ body {
 html, body {
   height: 100%;
   margin: 0;
+
 }
 
 /**
@@ -26,8 +27,8 @@ ul, ol, dl, figure,
 
 //main wrapper
 .main-wrapper {
-  min-height: 250vh;
-  margin-bottom: 125px;
+  //min-height: 250vh;
+  margin-bottom: 50%;
 }
 
 //background images per page
@@ -329,82 +330,53 @@ ul, ol {margin-left: 25px; }
     0 5px 8px 1.5px rgba(43, 43, 43, 0.1);
   }
 
-  .main-breakpoint,
+  .main-breakpoint {
+    position: $rel;
+    margin: 0 auto;
+    width: 65%;
+  }
+
   .breakpoint-1,
   .breakpoint-2,
   .breakpoint-3,
   .breakpoint-4 {
     position: $rel;
     margin: 0 auto;
-    width: 65%;
+    width: 100%;
   }
-
-  .breakpoint-1 {top: 4.5em;}
-  .breakpoint-2 {top: 8.5em;}
-  .breakpoint-3 {top: 11.5em;}
-  .breakpoint-4 {top: 14.5em;}
-
 
   .normatec-logo,
   .whoop-logo,
   .nucalm-logo,
   .naboso-logo {
     left: 0;
-    width: 100%;
+    width: 75%;
   }
 
-  .stamina-logo {
-    position: $rel;
-    left: 6.5em;
-    width: 50%;
-  }
+  .stamina-logo {width: 50%;}
 
-  .normatec-container {
-    display: inline-grid;
-    grid-template-rows: 75% 55%;
-    grid-template-columns: auto;
-    margin: 23px;
-    //text-align: center;
-  }
-
-  .whoop-container {
-    display: inline-grid;
-    position: $rel;
-    grid-template-rows: 45% 55%;
-    grid-template-columns: auto;
-    margin: 23px;
-    top: 5.5em;
-    //text-align: center;
-  }
-
-  .nucalm-container {
-    display: inline-grid;
-    position: $rel;
-    grid-template-rows: 45% 55%;
-    grid-template-columns: auto;
-    margin: 23px;
-    top: 8.5em;
-    //text-align: center;
-  }
-
-  .stamina-container {
-    display: inline-grid;
-    position: $rel;
-    grid-template-rows: 60% 55%;
-    grid-template-columns: auto;
-    margin: 23px;
-    top: 11.5em;
-    //text-align: center;
-  }
-
+  .normatec-container,
+  .whoop-container,
+  .nucalm-container,
+  .stamina-container,
   .naboso-container {
     display: inline-grid;
-    position: $rel;
-    grid-template-rows: 50% 55%;
-    grid-template-columns: auto;
-    margin: 23px;
-    top: 10.5em;
+    grid-template-rows: auto;
+    margin: 20px;
+    justify-content: center;
+    text-align: center;
   }
+
+  .normatec-container {grid-template-columns: 75%;}
+  .whoop-container {grid-template-columns: 95%;}
+  .nucalm-container {grid-template-columns: 85%;}
+  .stamina-container {grid-template-columns: 85%;}
+  .naboso-container {grid-template-columns: 100%;}
+
+  .stamina-header,
+  .normatec-header,
+  .whoop-header,
+  .nucalm-header {padding-top: 30px;}
 }
 
 @media all and (min-width: 641px) and (max-width: 1100px) {
@@ -431,75 +403,89 @@ ul, ol {margin-left: 25px; }
   .breakpoint-4 {
     position: $rel;
     margin: 0 auto;
-    width: 65%;
+    width: 90%;
   }
 
-  .breakpoint-1 {top: 4.5em;}
-  .breakpoint-2 {top: 6.5em;}
-  .breakpoint-3 {top: 8.5em;}
-  .breakpoint-4 {top: 9.5em;}
+  .breakpoint-1 {top: 1.5em;}
+  .breakpoint-2 {top: 1.5em;}
+  .breakpoint-3 {top: 1.5em;}
+  .breakpoint-4 {top: 1.5em;}
 
 
   .normatec-logo,
   .whoop-logo,
-  .naboso-logo {
-    position: $rel;
-    width: 75%;
-    left: 4em;
-  }
-
-  .whoop-logo {top: 5em;}
-
-  .nucalm-logo {
-    position: $rel;
-    width: 100%;
-    left: 1em;
-    top: 5em;
+  .nucalm-logo,
+  .stamina-logo {
+    width: 35%;
+    float: left;
+    margin-right: 32px;
   }
 
   .stamina-logo {
-    position: $rel;
-    width: 55%;
-    left: 7.5em;
-    top: -1.5em;
+    width: 25%;
+    margin-left: 55px;
   }
+
+  .naboso-logo {
+    //position: relative;
+    width: 35%;
+    float: left;
+    margin-right: 48px;
+  }
+
 
   .normatec-container {
     display: inline-grid;
-    grid-template-columns: 46% 48%;
-    margin: 15px;
+    grid-template-columns: 105%;
+    margin: 50px;
+  }
+
+  .normatec-btn {
+    float: right;
+    width: 118%;
   }
 
   .whoop-container {
     display: inline-grid;
-    position: $rel;
-    grid-template-columns: 46% 48%;
-    margin: 15px;
-    top: 5.5em;
+    grid-template-columns: 100%;
+    margin: 20px;
   }
 
   .nucalm-container {
     display: inline-grid;
     position: $rel;
-    grid-template-columns: 46% 48%;
-    margin: 15px;
-    top: 8.5em;
+    grid-template-columns: 100%;
+    margin: 40px;
   }
+
+  .nucalm-header,
+  .nucalm-text,
+  .nucalm-btn,
+  .whoop-header,
+  .whoop-text,
+  .whoop-btn,
+  .stamina-text,
+  .stamina-header,
+  .stamina-btn {
+    float: right;
+    width: 59%;
+  }
+
+  .whoop-btn, .nucalm-btn, .stamina-btn
+  {width: 112%;}
 
   .stamina-container {
     display: inline-grid;
     position: $rel;
-    grid-template-columns: 46% 54%;
-    margin: 15px;
-    top: 10.5em;
+    grid-template-columns: 100%;
+    margin: 25px;
   }
 
   .naboso-container {
     display: inline-grid;
     position: $rel;
-    grid-template-columns: 46% 47%;
-    margin: 15px;
-    top: 10.5em;
+    grid-template-columns: 100%;
+    margin: 50px;
   }
 }
 
@@ -611,8 +597,10 @@ ul, ol {margin-left: 25px; }
 
 // footer section
 .footer-container {
-  //position: sticky;
-  left: 0 ; right: 0; bottom: 0;
+  position: sticky;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .social-icons {
