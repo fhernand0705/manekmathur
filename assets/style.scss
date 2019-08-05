@@ -115,7 +115,6 @@ ul, ol {margin-left: 25px; }
   display: none;
 }
 
-
 // responsive navbar
 @media all and (max-width: 68.81em) {
   // .main-wrapper {
@@ -124,9 +123,7 @@ ul, ol {margin-left: 25px; }
   // }
 
   .navbar-container {display: none;}
-
   .home-image {background-position: 50%;}
-
   .about-image {background-position: 50%;}
 
   .overlay {
@@ -162,7 +159,6 @@ ul, ol {margin-left: 25px; }
   }
 
   .overlay-content a {display: block;}
-
 
   .mobile-logo, .manek-logo {
     display: inline;
@@ -653,6 +649,23 @@ ul, ol {margin-left: 25px; }
     grid-template-columns: 100%;
     margin: 50px;
     top: 2em;
+  }
+}
+
+// music section
+@media all and (max-width: 641px) {
+  .playlist-container {
+    display: grid;
+    position: $rel;
+    grid-row-gap: 2.5%;
+    justify-content: center;
+    top: 12em;
+  }
+
+  .playlist-header {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 500;
   }
 }
 
