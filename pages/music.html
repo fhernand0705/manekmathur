@@ -8,7 +8,7 @@ layouts: default
   <head>
     <meta charset="utf-8">
     <title>Music</title>
-    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/style.css">
   </head>
   <body class="music-img">
 
@@ -17,7 +17,7 @@ layouts: default
       {% include nav.html %}
 
       <div class="music-header">
-        <h1>Beats</h1>
+        <h1>Feel the Beat</h1>
         <hr class="main-bp">
       </div>
 
@@ -25,7 +25,7 @@ layouts: default
       <div class="solo-songs-container">
         <div class="soundcloud-song">
           <h4 class="soundcloud-title">so long girl (extended mix) - manek</h4>
-          <iframe width="300" height="380" scrolling="no" frameborder="no" allow="autoplay"
+          <iframe class="soundcloud-player" width="300" height="380" scrolling="no" frameborder="no" allow="autoplay"
           src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/546039189&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
           </iframe>
           <a href="#"><button class="soundcloud-btn" type="button" name="button">Click Me</button></a>
@@ -34,13 +34,12 @@ layouts: default
 
         <div class="spotify-song">
           <h4 class="spotify-title">crazy things at night (extended mix) - manek</h4>
-          <iframe src="https://open.spotify.com/embed?uri=spotify%3Aplaylist%3A4kG7dZ4HMrwzk9WNwgStSy"
+          <iframe class="spotify-player" src="https://open.spotify.com/embed?uri=spotify%3Aplaylist%3A4kG7dZ4HMrwzk9WNwgStSy"
           width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media">
           </iframe>
           <a href="#"><button class="spotify-btn" type="button" name="button">Click Me</button></a>
           <hr class="songs-bp-2">
         </div>
-
       </div>
 
       <!-- divider -->
