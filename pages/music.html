@@ -7,40 +7,69 @@ layouts: default
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Home</title>
+    <title>Music</title>
     <link rel="stylesheet" href="/assets/main.css">
   </head>
   <body class="music-img">
 
     <!-- wrapper for content -->
-    <div class="main-wrapper">
+  <div class="main-wrapper">
       {% include nav.html %}
 
-    <div class="playlist-container">
-      <h4 class="playlist-header">what i am currently listening to:</h4>
-      <div class="playlist-1">
-        <iframe src="https://open.spotify.com/embed?uri=spotify%3Aplaylist%3A6McjCwuwjiEKMHCJvULrBR"
-        width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media">
-        </iframe>
-        <hr class="breakpoint-1">
+      <div class="music-header">
+        <h1>Beats</h1>
+        <hr class="main-bp">
       </div>
 
-      <div class="playlist-2">
-        <iframe src="https://open.spotify.com/embed?uri=spotify%3Aplaylist%3A4kG7dZ4HMrwzk9WNwgStSy"
-        width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media">
-        </iframe>
-        <hr class="breakpoint-2">
+      <!-- solo songs section -->
+      <div class="solo-songs-container">
+        <div class="soundcloud-song">
+          <h4 class="soundcloud-title">so long girl (extended mix) - manek</h4>
+          <iframe width="300" height="380" scrolling="no" frameborder="no" allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/546039189&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+          </iframe>
+          <a href="#"><button class="soundcloud-btn" type="button" name="button">Click Me</button></a>
+          <hr class="songs-bp-1">
+        </div>
+
+        <div class="spotify-song">
+          <h4 class="spotify-title">crazy things at night (extended mix) - manek</h4>
+          <iframe src="https://open.spotify.com/embed?uri=spotify%3Aplaylist%3A4kG7dZ4HMrwzk9WNwgStSy"
+          width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media">
+          </iframe>
+          <a href="#"><button class="spotify-btn" type="button" name="button">Click Me</button></a>
+          <hr class="songs-bp-2">
+        </div>
+
       </div>
 
-      <div class="playlist-3">
-        <iframe src="https://open.spotify.com/embed?uri=spotify%3Aplaylist%3A6Eprqt9A2uqia8FExPC4eY"
-        width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media">
-        </iframe>
+      <!-- divider -->
+
+      <!-- spotify playlist section -->
+      <div class="playlist-container">
+        <h4 class="playlist-header">what i am currently listening to:</h4>
+        <div class="playlist-1">
+          <iframe src="https://open.spotify.com/embed?uri=spotify%3Aplaylist%3A6McjCwuwjiEKMHCJvULrBR"
+          width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media">
+          </iframe>
+          <hr class="playlist-bp-1">
+        </div>
+
+        <div class="playlist-2">
+          <iframe src="https://open.spotify.com/embed?uri=spotify%3Aplaylist%3A4kG7dZ4HMrwzk9WNwgStSy"
+          width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media">
+          </iframe>
+          <hr class="playlist-bp-2">
+        </div>
+
+        <div class="playlist-3">
+          <iframe src="https://open.spotify.com/embed?uri=spotify%3Aplaylist%3A6Eprqt9A2uqia8FExPC4eY"
+          width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media">
+          </iframe>
+        </div>
       </div>
 
-    </div>
-
-    </div>
+  </div>
       {% include footer.html %}
 
 
