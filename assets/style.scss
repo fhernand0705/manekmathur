@@ -773,7 +773,8 @@ ul, ol {margin-left: 25px; }
   }
 
   .soundcloud-btn:hover, .spotify-btn:hover {
-    background: linear-gradient(#8bc34aa3, 25%, rgba(0, 0, 0, .7);
+    background: linear-gradient(75deg, #8bc34aa3, 25%, whitesmoke);
+    transition: .5s;
   }
 
   .songs-bp-1 {margin-top: 2em;}
@@ -813,6 +814,12 @@ ul, ol {margin-left: 25px; }
         text-transform: uppercase;
         font-weight: 600;
     }
+
+    .soundcloud-btn:hover, .spotify-btn:hover {
+      background: linear-gradient(75deg, #8bc34aa3, 25%, whitesmoke);
+      transition: .5s;
+    }
+
 
     .songs-bp-1 {margin-top: 2em;}
     .songs-bp-2 {display: none;}
