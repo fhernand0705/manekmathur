@@ -715,7 +715,7 @@ ul, ol {margin-left: 25px; }
 
   .playlist-header {
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 600;
     margin: 7em 0;
   }
 
@@ -743,12 +743,20 @@ ul, ol {margin-left: 25px; }
 
   .playlist-container {grid-gap: .5%;}
 
+  .playlist-header,.spotify-title, .soundcloud-title {
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .playlist-header {margin: 7em 0;}
+
   .soundcloud-btn, .spotify-btn {
       padding: 10px;
       margin: 1em;
   }
 
   .songs-bp-1 {margin-top: 2em;}
+  .songs-bp-2 {display: none;}
   .playlist-bp-1, .playlist-bp-2 {margin: 1.5em 0;}
 }
 
@@ -762,11 +770,19 @@ ul, ol {margin-left: 25px; }
 
     .solo-songs-container {
         float: left;
-        grid-template-columns: 48%;
+        grid-template-columns: 44%;
         grid-gap: 5%;
     }
 
     .playlist-container {grid-gap: .5%;}
+    .soundcloud-player, .spotify-player {width: 100%;}
+
+    .playlist-header,.spotify-title, .soundcloud-title {
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .playlist-header {margin: 1.2em 0;}
 
     .soundcloud-btn, .spotify-btn {
         padding: 10px;
@@ -774,6 +790,7 @@ ul, ol {margin-left: 25px; }
     }
 
     .songs-bp-1 {margin-top: 2em;}
+    .songs-bp-2 {display: none;}
     .playlist-bp-1, .playlist-bp-2 {margin: 1.5em 0;}
 }
 
