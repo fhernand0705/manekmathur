@@ -25,10 +25,7 @@ ul, ol, dl, figure,
   margin-bottom: 15px; }
 
 //main wrapper
-.main-wrapper {
-  //min-height: 250vh;
-  margin-bottom: 50%;
-}
+.main-wrapper {min-height: 100%;}
 
 //background images per page
 .home-img {
@@ -42,7 +39,7 @@ ul, ol, dl, figure,
 }
 
 .about-img {
-  background: linear-gradient(#f5f5f575, 25%, rgba(0, 0, 0, .7)),
+  background: linear-gradient(#f5f5f575, 25%, #2a2a5ab0),
               url("/assets/images/manek-about.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -123,7 +120,7 @@ ul, ol {margin-left: 25px; }
 
 .nav-left {grid-template-columns: 73px 186px 201px;}
 
-.nav-right {grid-template-columns: 63px 175px 123px;}
+.nav-right {grid-template-columns: 73px 173px 123px;}
 
 .nav-left a, .nav-right a {
   text-decoration: none;
@@ -141,11 +138,6 @@ ul, ol {margin-left: 25px; }
 
 // mobile navbar responsiveness
 @media all and (max-width: 68.81em) {
-  // .main-wrapper {
-  //   min-height: 200vh;
-  //   margin-bottom: 200px;
-  // }
-
   .navbar-container {display: none;}
   .home-image {background-position: 50%;}
   .about-image {background-position: 50%;}
@@ -285,11 +277,10 @@ ul, ol {margin-left: 25px; }
 // about me section
 .about-wrapper {
   display: inline-grid;
-  grid-template-columns: 75%;
+  grid-template-columns: 85%;
   justify-content: center;
   text-align: center;
-  position: $rel;
-  top: -5em;
+  margin: 6em 0;
 }
 
 .about-wrapper p {
@@ -298,9 +289,13 @@ ul, ol {margin-left: 25px; }
 
 .about-header {
   color: white;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 // responsive brand partnerships section
+.brands-wrapper {margin: 5em 0;}
+
 @media all and (max-width: 640px) {
   .brands-header {
     display: grid;
@@ -381,19 +376,21 @@ ul, ol {margin-left: 25px; }
 }
 
 @media all and (min-width: 641px) and (max-width: 1100px) {
+  .brands-wrapper {margin: -4.5em 0;}
+
   .brands-header {
     display: grid;
     position: $rel;
     width: 100%;
     text-align: center;
-    top: -3.5em;
+    top: -.5em;
   }
 
   .main-breakpoint {
     position: $rel;
     margin: 0 auto;
     width: 45%;
-    top: -6em;
+    top: -1.5em;
     box-shadow: 0 0 9px 0 rgba(43, 43, 43, 0.1),
     0 5px 8px 1.5px rgba(43, 43, 43, 0.1);
   }
@@ -514,14 +511,14 @@ ul, ol {margin-left: 25px; }
     position: $rel;
     width: 100%;
     text-align: center;
-    top: -1.5em;
+    top: -.5em;
   }
 
   .main-breakpoint {
     position: $rel;
     margin: 0 auto;
     width: 30%;
-    top: -3.5em;
+    top: -1.5em;
     box-shadow: 0 0 9px 0 rgba(43, 43, 43, 0.1),
     0 5px 8px 1.5px rgba(43, 43, 43, 0.1);
   }
@@ -644,21 +641,21 @@ ul, ol {margin-left: 25px; }
 }
 
 // music section
-.music-header {
-  display: grid;
-  width: 100%;
-  position: $rel;
-  top: -6.5em;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 500;
-  color: whitesmoke;
-}
-
-.main-bp {
-  width: 25%;
-  margin: 0 auto;
-}
+// .music-header {
+//   display: grid;
+//   width: 100%;
+//   position: $rel;
+//   top: -6.5em;
+//   text-align: center;
+//   text-transform: uppercase;
+//   font-weight: 500;
+//   color: whitesmoke;
+// }
+//
+// .main-bp {
+//   width: 25%;
+//   margin: 0 auto;
+// }
 
 @media all and (max-width: 350px) {
   .playlist-container, .solo-songs-container {
@@ -773,10 +770,15 @@ ul, ol {margin-left: 25px; }
 
     .solo-songs-container {
         float: left;
+        margin: 6em 0;
         grid-template-columns: 44%;
     }
 
-    .playlist-container {grid-gap: .5%;}
+    .playlist-container {
+      grid-gap: .5%;
+      margin: 5em 0;
+    }
+
     .soundcloud-player, .spotify-player {width: 100%;}
 
     .playlist-header,.spotify-title, .soundcloud-title {
@@ -810,6 +812,7 @@ ul, ol {margin-left: 25px; }
 .form-container {
   display: grid;
   width: 100%;
+  margin: 7.5em 0;
   justify-content: center;
   grid-template-columns: 40%;
 }
@@ -829,6 +832,17 @@ ul, ol {margin-left: 25px; }
 
 label span {
   color: red;
+  text-shadow: .5px 1.5px black;
+}
+label {color: whitesmoke;}
+
+.contact-btn {
+  width: 93.5%;
+  border-radius: 5px;
+  height: 30px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 15px;
 }
 
 // responsive contact form
@@ -844,9 +858,7 @@ label span {
 // footer section
 .footer-container {
   position: sticky;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  margin-top: 7.5em;
 }
 
 .social-icons {
@@ -892,9 +904,9 @@ label span {
     position: relative;
     top: 2.5em;
     right: 2em;
-    grid-template-columns: 60px 12px 60px 12px
-    60px 12px 60px 12px
-    60px 12px;
+    grid-template-columns: 60px 2px 60px 2px
+                           60px 2px 60px 2px
+                           60px 2px;
     list-style: none;
   }
 

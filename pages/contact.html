@@ -32,12 +32,12 @@ layouts: default
 
         <label for="message">Message <span>&#42;</span></label><br>
         <textarea id="message-input" class="message" name="text" rows="10" cols="80" placeholder="Shoot me a quick note"></textarea><br>
-        <button type="button" onclick="submitToAPI(event)" name="button">Submit Form</button>
+        <button type="button" class="contact-btn" onclick="submitToAPI(event)" name="button">Submit Form</button>
       </form>
     </div>
+    {% include footer.html %}
   </div>
 
-    {% include footer.html %}
 
   </body>
 </html>
