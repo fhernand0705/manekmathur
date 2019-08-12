@@ -136,7 +136,7 @@ ul, ol {margin-left: 25px; }
   display: none;
 }
 
-// responsive navbar
+// mobile navbar responsiveness
 @media all and (max-width: 68.81em) {
   // .main-wrapper {
   //   min-height: 200vh;
@@ -248,35 +248,13 @@ ul, ol {margin-left: 25px; }
   .change .bar-3 {transform: rotate(45deg) translate(-7px, -8px);}
 
   .overlay.active {
-    opacity: .7;
+    background: linear-gradient(-45deg, #463841, 50%, whitesmoke);
+    opacity: 1;
     height: 100%;
     max-height: none;
   }
 
 //footer icons
-  .social-icons {
-    display: grid;
-    justify-content: center;
-    position: relative;
-    top: 2.5em;
-    right: 2em;
-    grid-template-columns: 60px 12px 60px 12px
-                           60px 12px 60px 12px
-                           60px 12px;
-    list-style: none;
-  }
-
-  .social-icons li {
-    padding: 5px 0;
-    text-align: center;
-
-  }
-
-  .fab {color: #e5e3e3;}
-
-  .social-icons hr {
-    background-color: black;
-  }
 }
 
 // full screen navbar responsiveness
@@ -286,6 +264,7 @@ ul, ol {margin-left: 25px; }
     float: left;
     left: 5.5em;
     margin-top: -9px;
+    height: 15em;
   }
 
   .center-logo span {
@@ -547,14 +526,14 @@ ul, ol {margin-left: 25px; }
     position: $rel;
     width: 100%;
     text-align: center;
-    top: -3.5em;
+    top: -1.5em;
   }
 
   .main-breakpoint {
     position: $rel;
     margin: 0 auto;
     width: 30%;
-    top: -6.5em;
+    top: -3.5em;
     box-shadow: 0 0 9px 0 rgba(43, 43, 43, 0.1),
     0 5px 8px 1.5px rgba(43, 43, 43, 0.1);
   }
@@ -915,5 +894,31 @@ label span {
   }
   .social-icons i {
     font-size: 1.5em;
+  }
+}
+
+@media all and (max-width: 68.81em) {
+  .social-icons {
+    display: grid;
+    justify-content: center;
+    position: relative;
+    top: 2.5em;
+    right: 2em;
+    grid-template-columns: 60px 12px 60px 12px
+    60px 12px 60px 12px
+    60px 12px;
+    list-style: none;
+  }
+
+  .social-icons li {
+    padding: 5px 0;
+    text-align: center;
+
+  }
+
+  .fab {color: #e5e3e3;}
+
+  .social-icons hr {
+    background-color: black;
   }
 }
