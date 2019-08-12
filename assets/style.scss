@@ -83,20 +83,23 @@ ul, ol, dl, figure,
 // navbar
 ul, ol {margin-left: 25px; }
 
-.navbar-container {display: initial;}
-
-.navbar-left {float:left;}
-.navbar-right {float:right;}
-
-.center-logo {
-  display: inline-grid;
-  position: $rel;
-  left: 7em;
-  margin-top: -13px;
-  height: 11em;
+.navbar-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 43% 22% 32%;
+  grid-template-rows: 100%;
+  justify-content: center;
 }
 
-.center-logo a {height: 10%;}
+.center-logo {
+  position: $rel;
+  margin-top: -13px;
+  margin: .5px 0;
+  height: 7em;
+  text-align: center;
+}
+
+.center-logo a {height: 20%;}
 
 .img-logo {
   position: $rel;
@@ -105,7 +108,7 @@ ul, ol {margin-left: 25px; }
 
 .header-tagline {
   position: $rel;
-  top: -14em;
+  top: -10.5em;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 15px;
@@ -253,25 +256,15 @@ ul, ol {margin-left: 25px; }
     height: 100%;
     max-height: none;
   }
-
-//footer icons
 }
 
 // full screen navbar responsiveness
 @media all and (min-width: 68.75em) and (max-width: 90em) {
-  .center-logo {
-    position: $rel;
-    float: left;
-    left: 5.5em;
-    margin-top: -9px;
-    height: 15em;
-  }
-
   .center-logo span {
     position: absolute;
-    top: 57px;
-    right: 75px;
-    color: black;
+    top: 3.5em;
+    left: 11.5em;
+    color: #463841;
   }
 
   .img-logo {
@@ -286,11 +279,6 @@ ul, ol {margin-left: 25px; }
     color: whitesmoke;
     text-transform: uppercase;
     font-size: 15px;
-  }
-
-  .navbar-right {
-    position: $rel;
-    right: .5em;
   }
 }
 
