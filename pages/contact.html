@@ -1,0 +1,43 @@
+---
+permalink: /contact
+layouts: default
+---
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Contact</title>
+    <link rel="stylesheet" href="/assets/main.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+
+  </head>
+  <body class="contact-img">
+
+    <!-- wrapper for content -->
+  <div class="main-wrapper">
+    {% include nav.html %}
+
+    <div class="form-container">
+      <form id="contact-form" method="post">
+        <label for="name">Name <span>&#42;</span></label><br>
+        <input id="fname-input" class="fname" type="text" name="name" placeholder="First Name">
+        <span><input id="lname-input" class="lname" type="text" name="name" placeholder="Last Name"></span><br>
+
+        <label for="email">Email <span>&#42;</span></label><br>
+        <input id="email-input" class="email" type="text" name="email" placeholder="Email"><br>
+
+        <label for="subject">Subject <span>&#42;</span></label><br>
+        <input id="subject-input" class="subject" type="text" name="subject" placeholder="Subject"><br>
+
+        <label for="message">Message <span>&#42;</span></label><br>
+        <textarea id="message-input" class="message" name="text" rows="10" cols="80" placeholder="Shoot me a quick note"></textarea><br>
+        <button type="button" onclick="submitToAPI(event)" name="button">Submit Form</button>
+      </form>
+    </div>
+  </div>
+
+    {% include footer.html %}
+
+  </body>
+</html>
