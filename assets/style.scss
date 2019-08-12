@@ -119,7 +119,6 @@ ul, ol {margin-left: 25px; }
 }
 
 .nav-left {grid-template-columns: 73px 186px 201px;}
-
 .nav-right {grid-template-columns: 73px 173px 123px;}
 
 .nav-left a, .nav-right a {
@@ -128,13 +127,21 @@ ul, ol {margin-left: 25px; }
   text-transform: uppercase;
   font-weight: 500;
   padding: 10px;
+  transition: border-width 0.25s linear;
+}
+
+.nav-left a:hover, .nav-right a:hover {
+  border-bottom: 3px solid whitesmoke;
+  border-width: 5px;
+}
+
+.nav-left a.active, .nav-right a.active {
+  border-bottom: 3px solid whitesmoke;
+  border-width: 5px;
 }
 
 .mobile-logo {display: none;}
-
-.overlay-content a {
-  display: none;
-}
+.overlay-content a {display: none;}
 
 // mobile navbar responsiveness
 @media all and (max-width: 68.81em) {

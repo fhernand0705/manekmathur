@@ -16,6 +16,14 @@
   });
 })();
 
+
+// adds active class for navbar items
+$(function() {
+     $('.nav-left a[href^="/' + location.pathname.split("/")[1] + '"]').addClass(' active');
+     $('.nav-right a[href^="/' + location.pathname.split("/")[1] + '"]').addClass(' active');
+  });
+
+
 // validates contact form user data + invokes aws gateway api
 function submitToAPI(e) {
        e.preventDefault();
