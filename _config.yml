@@ -30,6 +30,8 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-assets
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
 url: https://github.com/fhernand0705/
 baseurl: /manekmathur
