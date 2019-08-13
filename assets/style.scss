@@ -49,7 +49,7 @@ ul, ol, dl, figure,
 }
 
 .brands-img {
-  background: linear-gradient(15deg, whitesmoke, 75%, #633f81 100%);
+  background: linear-gradient(75deg, #c1d24cab, 50%, rgba(0, 0, 0, .65));
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -82,10 +82,15 @@ ul, ol {margin-left: 25px; }
 
 .navbar-container {
   display: grid;
+  position: fixed;
+  top: 0;
   width: 100%;
+  height: 50;
+  transition: top 0.3s;
   grid-template-columns: 43% 22% 32%;
   grid-template-rows: 100%;
   justify-content: center;
+  background-image: linear-gradient(45deg, rgba(39, 40, 33, 0.6), 25%, rgb(58, 46, 54));
 }
 
 .center-logo {
@@ -127,7 +132,7 @@ ul, ol {margin-left: 25px; }
   text-transform: uppercase;
   font-weight: 500;
   padding: 10px;
-  transition: border-width 0.25s linear;
+  transition: border-width 0.3s ease-in-out;
 }
 
 .nav-left a:hover, .nav-right a:hover {
@@ -287,7 +292,7 @@ ul, ol {margin-left: 25px; }
   grid-template-columns: 85%;
   justify-content: center;
   text-align: center;
-  margin: 6em 0;
+  margin: 11em 0;
 }
 
 .about-wrapper p {
@@ -302,6 +307,11 @@ ul, ol {margin-left: 25px; }
 
 // responsive brand partnerships section
 .brands-wrapper {margin: 5em 0;}
+.brands-wrapper p, h3 {color: whitesmoke;}
+.brands-wrapper h3 {
+  text-transform: uppercase;
+  font-weight: 600;
+}
 
 @media all and (max-width: 640px) {
   .brands-header {
@@ -383,21 +393,19 @@ ul, ol {margin-left: 25px; }
 }
 
 @media all and (min-width: 641px) and (max-width: 1100px) {
-  .brands-wrapper {margin: -4.5em 0;}
-
-  .brands-header {
+   .brands-header {
     display: grid;
     position: $rel;
     width: 100%;
     text-align: center;
-    top: -.5em;
+    top: -2em;
   }
 
   .main-breakpoint {
     position: $rel;
     margin: 0 auto;
     width: 45%;
-    top: -1.5em;
+    top: -3.5em;
     box-shadow: 0 0 9px 0 rgba(43, 43, 43, 0.1),
     0 5px 8px 1.5px rgba(43, 43, 43, 0.1);
   }
@@ -513,6 +521,8 @@ ul, ol {margin-left: 25px; }
 }
 
 @media all and (min-width: 1100px) and (max-width: 1500px) {
+  .brands-wrapper {margin: 10em 0;}
+  
   .brands-header {
     display: grid;
     position: $rel;
@@ -648,21 +658,6 @@ ul, ol {margin-left: 25px; }
 }
 
 // music section
-// .music-header {
-//   display: grid;
-//   width: 100%;
-//   position: $rel;
-//   top: -6.5em;
-//   text-align: center;
-//   text-transform: uppercase;
-//   font-weight: 500;
-//   color: whitesmoke;
-// }
-//
-// .main-bp {
-//   width: 25%;
-//   margin: 0 auto;
-// }
 
 @media all and (max-width: 350px) {
   .playlist-container, .solo-songs-container {
@@ -819,9 +814,9 @@ ul, ol {margin-left: 25px; }
 .form-container {
   display: grid;
   width: 100%;
-  margin: 7.5em 0;
+  margin: 15em 0;
   justify-content: center;
-  grid-template-columns: 40%;
+  grid-template-columns: 45%;
 }
 
 .fname, .lname,

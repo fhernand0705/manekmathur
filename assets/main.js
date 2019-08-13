@@ -19,9 +19,34 @@
 
 // adds active class for navbar items
 $(function() {
-     $('.nav-left a[href^="/' + location.pathname.split("/")[1] + '"]').addClass(' active');
-     $('.nav-right a[href^="/' + location.pathname.split("/")[1] + '"]').addClass(' active');
+     let homePage = document.getElementById('home').pathname;
+     let navbar = document.getElementById("navbar");
+
+     if(location.pathname === homePage) {
+       $('.nav-left a[href^="/' + location.pathname.split("/")[1] + '"]').removeClass(' active');
+       $('.nav-right a[href^="/' + location.pathname.split("/")[1] + '"]').removeClass(' active');
+       navbar.style.backgroundImage = "none";
+     } else {
+       $('.nav-left a[href^="/' + location.pathname.split("/")[1] + '"]').addClass(' active');
+       $('.nav-right a[href^="/' + location.pathname.split("/")[1] + '"]').addClass(' active');
+     }
   });
+
+// hides/shows navbar on scroll down/up
+  var prevScrollPos = window.pageYOffset;
+window.onscroll = function() {
+  let navbar = document.getElementById("navbar");
+  let currentScrollPos = window.pageYOffset;
+
+  if(prevScrollPos > currentScrollPos) {
+    navbar.style.top = "0";
+    navbar.style.zIndex = "1";
+  } else {
+    navbar.style.top = "-120px";
+  }
+
+  prevScrollPos = currentScrollPos;
+}
 
 
 // validates contact form user data + invokes aws gateway api
