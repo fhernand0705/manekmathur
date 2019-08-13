@@ -203,7 +203,7 @@ ul, ol {margin-left: 25px; }
 
   .mobile-logo span {
     position: absolute;
-    color: black;
+    color: #1e66e2;
     top: 82px;
     right: 28px;
   }
@@ -268,7 +268,7 @@ ul, ol {margin-left: 25px; }
     position: absolute;
     top: 3.5em;
     left: 11.5em;
-    color: #463841;
+    color: #1e66e2;
   }
 
   .img-logo {
@@ -522,7 +522,7 @@ ul, ol {margin-left: 25px; }
 
 @media all and (min-width: 1100px) and (max-width: 1500px) {
   .brands-wrapper {margin: 10em 0;}
-  
+
   .brands-header {
     display: grid;
     position: $rel;
@@ -723,17 +723,23 @@ ul, ol {margin-left: 25px; }
 @media all and (min-width: 901px) and (max-width: 1100px) {
   .solo-songs-container, .playlist-container {
     display: grid;
-    width: 50%;
+    width: 30%;
     justify-content: center;
     text-align: center;
   }
 
   .solo-songs-container {
-      float: left;
-      grid-template-columns: 60%;
+    float: left;
+    grid-gap: 5%;
+    margin: 11em 0;
   }
 
-  .playlist-container {grid-gap: .5%;}
+  .playlist-container {
+    grid-gap: .5%;
+    grid-template-columns: 60%;
+    width: 50%;
+    margin: 10em 0;
+  }
 
   .playlist-header,.spotify-title, .soundcloud-title {
     text-transform: uppercase;
@@ -772,13 +778,14 @@ ul, ol {margin-left: 25px; }
 
     .solo-songs-container {
         float: left;
-        margin: 6em 0;
+        margin: 10em 0;
         grid-template-columns: 44%;
+        grid-gap: 5%;
     }
 
     .playlist-container {
       grid-gap: .5%;
-      margin: 5em 0;
+      margin: 9em 0;
     }
 
     .soundcloud-player, .spotify-player {width: 100%;}
@@ -845,6 +852,14 @@ label {color: whitesmoke;}
   text-transform: uppercase;
   font-weight: 600;
   font-size: 15px;
+  transition: all .25s ease-in-out;
+  cursor: pointer;
+}
+
+.contact-btn:hover {
+  background-color: #3A2E36;
+  color: whitesmoke;
+  border: 1px solid #3A2E36;
 }
 
 // responsive contact form
