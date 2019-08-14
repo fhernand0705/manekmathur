@@ -19,26 +19,37 @@
 
 // adds active class for navbar items
 (function() {
+     let wrapper = document.getElementsByClassName('main-wrapper')[0];
+
      //access pathnames for each navbar item
      let homePage = document.getElementById('home').pathname;
      let aboutPage = document.getElementById('about').pathname;
      let brandsPage = document.getElementById('brands').pathname;
      let musicPage = document.getElementById('music').pathname;
      let contactPage = document.getElementById('contact').pathname;
+     let doublesPage = document.getElementById('doubles').pathname;
+     let eventsPage = document.getElementById('events').pathname;
 
      // access navbar items
-     let navbar = document.getElementById("navbar");
+     let navbar = document.getElementById('navbar');
      let about = document.getElementById('about');
      let brands = document.getElementById('brands');
      let music = document.getElementById('music');
      let contact = document.getElementById('contact');
+     let doubles = document.getElementById('doubles');
+     let events = document.getElementById('events');
 
      // check location and add active class
-     return location.pathname === homePage ? navbar.style.backgroundImage = "none"
-           :location.pathname === aboutPage ? about.classList.add("active")
+     // return location.pathname === homePage ? navbar.style.backgroundImage = "none"
+    return  location.pathname === aboutPage ? about.classList.add("active")
+           :location.pathname === homePage ? (
+             wrapper.style.minHeight = "82%", navbar.style.backgroundImage = "none"
+             )
            :location.pathname === brandsPage ? brands.classList.add("active")
            :location.pathname === musicPage ? music.classList.add("active")
            :location.pathname === contactPage ? contact.classList.add("active")
+           :location.pathname === doublesPage ? doubles.classList.add("active")
+           :location.pathname === eventsPage ? events.classList.add("active")
            :null;
 
   })();
@@ -58,7 +69,6 @@ window.onscroll = function() {
 
   prevScrollPos = currentScrollPos;
 }
-
 
 // validates contact form user data + invokes aws gateway api
 function submitToAPI(e) {
