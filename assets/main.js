@@ -20,15 +20,26 @@
 // adds active class for navbar items
 $(function() {
      let homePage = document.getElementById('home').pathname;
+     let aboutPage = document.getElementById('about').pathname;
+     let brandsPage = document.getElementById('about').pathname;
+     let musicPage = document.getElementById('about').pathname;
+     let contactPage = document.getElementById('about').pathname;
+
+
      let navbar = document.getElementById("navbar");
+     let about = document.getElementById('about');
+     let brands = document.getElementById('about');
+     let music = document.getElementById('about');
+     let contact = document.getElementById('about');
 
      if(location.pathname === homePage) {
        $('.nav-left a[href^="/' + location.pathname.split("/")[1] + '"]').removeClass(' active');
        $('.nav-right a[href^="/' + location.pathname.split("/")[1] + '"]').removeClass(' active');
        navbar.style.backgroundImage = "none";
-     } else {
-       $('.nav-left a[href^="/' + location.pathname.split("/")[1] + '"]').addClass(' active');
-       $('.nav-right a[href^="/' + location.pathname.split("/")[1] + '"]').addClass(' active');
+     }
+        if(location.pathname === aboutPage) {
+
+       about.classList.add('active');
      }
   });
 
