@@ -25,9 +25,7 @@ ul, ol, dl, figure,
   margin-bottom: 15px; }
 
 //main wrapper
-.main-wrapper {
-  min-height: 100%;
-}
+.main-wrapper {min-height: 100%;}
 
 //background images per page
 .home-img {
@@ -89,7 +87,7 @@ ul, ol {margin-left: 25px; }
   width: 100%;
   height: 120px;
   transition: top 0.3s;
-  grid-template-columns: 47% 21% .5% 38%;
+  grid-template-columns: 45% 13% 38%;
   grid-template-rows: 100%;
   justify-content: center;
   background-image: linear-gradient(45deg, rgba(39, 40, 33, 0.6), 25%, rgb(58, 46, 54));
@@ -97,8 +95,7 @@ ul, ol {margin-left: 25px; }
 
 .center-logo {
   position: $rel;
-  margin-top: -13px;
-  margin: .5px 0;
+  margin: 0;
   height: 7em;
   text-align: center;
 }
@@ -116,9 +113,11 @@ ul, ol {margin-left: 25px; }
 .header-tagline {
   position: $rel;
   top: -10.5em;
+  margin: 0 -43px;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 15px;
+  color: whitesmoke;
 }
 
 .nav-left, .nav-right {
@@ -152,6 +151,29 @@ ul, ol {margin-left: 25px; }
 
 .mobile-logo {display: none;}
 .overlay-content a {display: none;}
+
+// full screen navbar responsiveness
+@media all and (min-width: 68.75em) and (max-width: 90em) {
+  .center-logo span {
+    position: absolute;
+    top: 3.5em;
+    left: 9em;
+    color: #1e66e2;
+  }
+
+  .img-logo {
+    position: $rel;
+    top: -5.5em;
+  }
+
+  .header-tagline {
+    position: $rel;
+    top: -11em;
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+}
 
 // mobile navbar responsiveness
 @media all and (max-width: 68.81em) {
@@ -196,6 +218,11 @@ ul, ol {margin-left: 25px; }
 
   .overlay-content a {display: block;}
 
+  .overlay-content a:hover {
+    background-color: #3A2E36;
+    color: whitesmoke;
+  }
+
   .mobile-logo, .manek-logo {
     display: inline;
     position: $rel;
@@ -209,18 +236,17 @@ ul, ol {margin-left: 25px; }
   .mobile-logo span {
     position: absolute;
     color: #1e66e2;
-    top: 82px;
+    top: 100px;
     right: 28px;
   }
 
   .mobile-tagline {
     position: $rel;
-    top: -10.5em;
+    top: -9.5em;
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 9.4px;
-    color: #e5e3e3;
-    margin-top: 121%;
+    color: whitesmoke;
     left: .8em;
   }
 
@@ -267,29 +293,6 @@ ul, ol {margin-left: 25px; }
   }
 }
 
-// full screen navbar responsiveness
-@media all and (min-width: 68.75em) and (max-width: 90em) {
-  .center-logo span {
-    position: absolute;
-    top: 3.5em;
-    left: 11em;
-    color: #1e66e2;
-  }
-
-  .img-logo {
-    position: $rel;
-    top: -5.5em;
-  }
-
-  .header-tagline {
-    position: $rel;
-    top: -11em;
-    right: 2em;
-    color: whitesmoke;
-    text-transform: uppercase;
-    font-size: 15px;
-  }
-}
 
 // about me section
 .about-wrapper {
@@ -442,9 +445,14 @@ ul, ol {margin-left: 25px; }
     margin-right: 30px;
   }
 
+  .whoop-logo,.nucalm-logo {
+    position: $rel;
+    top: 4em;
+  }
+
   .stamina-logo {
-    width: 18%;
-    margin: 0 10%;
+    width: 20%;
+    margin: 0 8%;
   }
 
   .naboso-logo {
@@ -487,21 +495,21 @@ ul, ol {margin-left: 25px; }
 
   .normatec-container {
     display: inline-block;
-    grid-template-columns: 105%;
+    grid-template-columns: 100%;
     margin: 50px;
   }
 
   .whoop-container {
     display: grid;
     position: $rel;
-    grid-template-columns: 100%;
-    margin: 10px;
+    grid-template-columns: 95%;
+    margin: 2%;
   }
 
   .nucalm-container {
     display: grid;
     position: $rel;
-    grid-template-columns: 100%;
+    grid-template-columns: 95%;
     margin: 10px;
     top: 2em;
   }
@@ -509,8 +517,8 @@ ul, ol {margin-left: 25px; }
   .stamina-container {
     display: inline-grid;
     position: $rel;
-    grid-template-columns: 100%;
-    margin: 25px;
+    grid-template-columns: 90%;
+    margin: 2%;
     top: 3em;
   }
 
@@ -572,16 +580,21 @@ ul, ol {margin-left: 25px; }
     width: 30%;
     float: left;
     margin-right: 15px;
+    top: 1em;
   }
+
+  .naboso-logo {top: 0;}
 
   .stamina-logo {
     width: 20%;
     margin: 0 5%;
+    top: 0;
   }
 
   .lulu-logo {
     width: 20%;
     margin: 0 5.5%;
+    top: 0;
   }
 
   .nucalm-header,.nucalm-text,
@@ -631,8 +644,8 @@ ul, ol {margin-left: 25px; }
 
   .normatec-container {
     display: inline-grid;
-    grid-template-columns: 130%;
-    margin: 50px;
+    grid-template-columns: 110%;
+    margin: 7%;
   }
 
   .whoop-container {
@@ -871,14 +884,14 @@ ul, ol {margin-left: 25px; }
 .fname, .lname,
 .email, .subject,
 .message {
-  width: 45.2%;
+  width: 48.2%;
   margin: .5em 0 1.5em;
   height: 25px;
   border: 1px solid lightgray;
   border-radius: 2.5px;
 }
 
-.email, .subject, .message {width: 92%;}
+.email, .subject, .message {width: 98%;}
 .message {height: 125px;}
 
 label span {
@@ -888,7 +901,7 @@ label span {
 label {color: whitesmoke;}
 
 .contact-btn {
-  width: 93.5%;
+  width: 99%;
   border-radius: 5px;
   height: 30px;
   text-transform: uppercase;
@@ -905,20 +918,26 @@ label {color: whitesmoke;}
 }
 
 // responsive contact form
-@media all and (max-width: 680px) {
+@media all and (max-width: 679px) and (min-width: 300px) {
   .form-container {
     grid-template-columns: 90%;
     margin: 0;
   }
+  .fname, .lname {
+    width: 100%;
+  }
 }
 
-@media all and (max-width: 1100px) {
+@media all and (min-width: 680px) and (max-width: 1100px) {
   .form-container {
-    grid-template-columns: 90%;
+    grid-template-columns: 60%;
     margin: 0;
   }
 }
 
+@media all and (min-width: 1100px) and (max-width: 1440px) {
+  .form-container {grid-template-columns: 60%;}
+}
 
 // footer section
 .footer-container {
