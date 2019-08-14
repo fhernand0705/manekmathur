@@ -25,10 +25,7 @@ ul, ol, dl, figure,
   margin-bottom: 15px; }
 
 //main wrapper
-.main-wrapper {
-  display: grid;
-  min-height: 100%;
-}
+.main-wrapper {min-height: 100%;}
 
 //background images per page
 .home-img {
