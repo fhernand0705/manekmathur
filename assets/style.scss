@@ -106,7 +106,10 @@ ul, ol {margin-left: 25px; }
   text-align: center;
 }
 
-.center-logo a {height: 20%;}
+.center-logo a {
+  display: inline-block;
+  height: 100%;
+}
 
 .img-logo {
   position: $rel;
