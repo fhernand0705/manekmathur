@@ -905,11 +905,17 @@ label {color: whitesmoke;}
 
 // responsive contact form
 @media all and (max-width: 680px) {
-  .form-container {grid-template-columns: 90%;}
+  .form-container {
+    grid-template-columns: 90%;
+    margin: 0;
+  }
 }
 
 @media all and (max-width: 1100px) {
-  .form-container {grid-template-columns: 70%;}
+  .form-container {
+    grid-template-columns: 90%;
+    margin: 0;
+  }
 }
 
 
