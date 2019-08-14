@@ -42,14 +42,21 @@
      // check location and add active class
      // return location.pathname === homePage ? navbar.style.backgroundImage = "none"
     return  location.pathname === aboutPage ? about.classList.add("active")
-           :location.pathname === homePage ? (
-             wrapper.style.minHeight = "82%", navbar.style.backgroundImage = "none"
-             )
            :location.pathname === brandsPage ? brands.classList.add("active")
            :location.pathname === musicPage ? music.classList.add("active")
            :location.pathname === contactPage ? contact.classList.add("active")
-           :location.pathname === doublesPage ? doubles.classList.add("active")
-           :location.pathname === eventsPage ? events.classList.add("active")
+           :location.pathname === homePage ? (
+             wrapper.style.minHeight = "82%",
+             navbar.style.backgroundImage = "none"
+             )
+           :location.pathname === doublesPage ? (
+             wrapper.style.minHeight = "82%",
+             navbar.style.backgroundImage = "none"
+           )
+           :location.pathname === eventsPage ? (
+             wrapper.style.minHeight = "82%",
+             navbar.style.backgroundImage = "none"
+         )
            :null;
 
   })();
