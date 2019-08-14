@@ -3,20 +3,20 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/style.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{{ "/assets/style.css" | relative_url }}">
   </head>
   <body>
 
     <!-- mobile overlay -->
     <div id="menu-overlay" class="overlay">
       <div class="overlay-content"></>
-        <a href="/about/">About</a>
+        <a href="/manekmathur/about/">About</a>
         <a href="#">Doubles Tutorials</a>
-        <a href="/partnerships/">Brand Partnerships</a>
-        <a href="/music/">Music</a>
+        <a href="/manekmathur/partnerships/">Brand Partnerships</a>
+        <a href="/manekmathur/music/">Music</a>
         <a href="#">Upcoming Events</a>
-        <a href="/contact/">Contact Me</a>
+        <a href="/manekmathur/contact/">Contact Me</a>
       </div>
     </div>
 
@@ -32,7 +32,7 @@
 
       <!-- mobile logo -->
       <div class="mobile-logo">
-        <a href="#"><img src="/assets/images/manek-logo.png" class="manek-logo" alt="Manek Mathur"><span>&#8226</span></a>
+        <a href="#"><img src="/manekmathur/assets/images/manek-logo.png" class="manek-logo" alt="Manek Mathur"><span>&#8226</span></a>
         <div class="mobile-tagline">Squash Pro &#8226 Producer &#8226 DJ</div>
       </div>
 
@@ -42,28 +42,28 @@
     <div id="navbar" class="navbar-container">
       <div class="navbar-left">
         <ul id="nav-left" class="nav-left">
-          <li><a href="/about/" class="">About</a></li>
+          <li><a href="/manekmathur/about/" id="about" class="">About</a></li>
           <li><a href="#" class="">Doubles Tutorials</a></li>
-          <li><a href="/partnerships/" class="">Brand Partnerships</a></li>
+          <li><a href="/manekmathur/partnerships/" id="brands" class="">Brand Partnerships</a></li>
         </ul>
       </div>
       <div class="center-logo">
-        <a href="/" id="home">
-          <img class="img-logo" src="/assets/images/manek-logo.png" max-width="200px" width="200px" alt="Manek Mathur">
+        <a href="/manekmathur/" id="home">
+          <img class="img-logo" src="/manekmathur/assets/images/manek-logo.png" max-width="200px" width="200px" alt="Manek Mathur">
           <span>&#8226</span>
         </a>
         <div class="header-tagline">Squash Pro &#8226 Producer &#8226 DJ</div>
       </div>
       <div class="navbar-right">
         <ul class="nav-right">
-          <li><a href="/music/" class="">Music</a></li>
+          <li><a href="/manekmathur/music/" id="music" class="">Music</a></li>
           <li><a href="#" class="">Upcoming Events</a></li>
-          <li><a href="/contact/" class="">Contact Me</a></li>
+          <li><a href="/manekmathur/contact/" id="contact" class="">Contact Me</a></li>
         </ul>
       </div>
     </div>
 
-<script src="/assets/main.js"></script>
 
+  <script src="/assets/main.js"></script>
   </body>
 </html>
