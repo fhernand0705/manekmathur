@@ -33,13 +33,9 @@
      let music = document.getElementById('music');
      let contact = document.getElementById('contact');
 
-     if(location.pathname === homePage) {
-       $('.nav-left a[href^="/' + location.pathname.split("/")[1] + '"]').removeClass(' active');
-       $('.nav-right a[href^="/' + location.pathname.split("/")[1] + '"]').removeClass(' active');
-       navbar.style.backgroundImage = "none";
-     }
-
-     return location.pathname === aboutPage ? about.classList.add("active")
+     // check location and add active class
+     return location.pathname === homePage ? navbar.style.backgroundImage = "none"
+           :location.pathname === aboutPage ? about.classList.add("active")
            :location.pathname === brandsPage ? brands.classList.add("active")
            :location.pathname === musicPage ? music.classList.add("active")
            :location.pathname === contactPage ? contact.classList.add("active")
