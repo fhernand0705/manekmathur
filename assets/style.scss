@@ -999,9 +999,11 @@ label {color: whitesmoke;}
 .social-icons li {
   padding: 10px 0;
   text-align: center;
+  transition: all .25s ease-in-out;
 }
 
 .fab {color: whitesmoke;}
+.social-icons li:hover {padding: 0 2.5px;}
 
 .social-icons hr {
   background-color: black;
