@@ -3,6 +3,7 @@
 
 // global variables
 $rel: relative;
+$black: #3A2E36;
 
 // global rules
 body {
@@ -86,7 +87,7 @@ ul, ol, dl, figure,
 }
 
 .contact-img {
-  background: linear-gradient(#79554873, 25%, rgba(0, 0, 0, .7)),
+  background-image: linear-gradient(#79554873, 25%, rgba(0, 0, 0, .7)),
               url("/manekmathur/assets/images/manek-contact.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -100,6 +101,7 @@ ul, ol {margin-left: 25px; }
 
 .navbar-container {
   display: grid;
+  display: -ms-grid;
   position: fixed;
   top: 0;
   width: 100%;
@@ -221,7 +223,7 @@ ul, ol {margin-left: 25px; }
     padding: 8px;
     text-decoration: none;
     font-size: 30px;
-    color: black;
+    color: $black;
     display: block;
     transition: 0.3s;
   }
@@ -237,14 +239,14 @@ ul, ol {margin-left: 25px; }
   .overlay-content a {display: block;}
 
   .overlay-content a:hover {
-    background-color: #3A2E36;
+    background-color: $black;
     color: whitesmoke;
   }
 
   .mobile-logo, .manek-logo {
     display: inline;
     position: $rel;
-    top: -1.5em;
+    top: -2em;
     max-width: 200px;
     width: 175px;
     float: left;
@@ -297,11 +299,19 @@ ul, ol {margin-left: 25px; }
   }
 
 // toggle effects
-  .change .bar-1 {transform: rotate(-45deg) translate(-5px, 6px);}
-
   .change .bar-2 {opacity: 0;}
 
-  .change .bar-3 {transform: rotate(45deg) translate(-7px, -8px);}
+  .change .bar-1 {
+    -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+    -ms-transform: rotate(-45deg) translate(-5px, 6px);
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .change .bar-3 {
+    -webkit-transform: rotate(45deg) translate(-7px, -8px);
+    -ms-transform: rotate(45deg) translate(-7px, -8px);
+    transform: rotate(45deg) translate(-7px, -8px);
+  }
 
   .overlay.active {
     background: linear-gradient(-45deg, #463841, 50%, #e5e3e3);
@@ -339,16 +349,7 @@ ul, ol {margin-left: 25px; }
 // doubles tutorials section
 .doubles-message {
   display: grid;
-  text-align: center;
-  position: $rel;
-  width: 100%;
-  top: 15em;
-  text-transform: uppercase;
-}
-
-// upcoming events section
-.events-message {
-  display: grid;
+  display: -ms-grid;
   text-align: center;
   position: $rel;
   width: 100%;
@@ -359,9 +360,26 @@ ul, ol {margin-left: 25px; }
 @media all and (max-width: 1100px) {
   .doubles-message {
     position: unset;
-
   }
 }
+
+// upcoming events section
+.events-message {
+  display: grid;
+  display: -ms-grid;
+  text-align: center;
+  position: $rel;
+  width: 100%;
+  top: 15em;
+  text-transform: uppercase;
+}
+
+@media all and (max-width: 1100px) {
+  .events-message {
+    position: unset;
+  }
+}
+
 
 // responsive brand partnerships section
 .brands-wrapper {margin: -1em 0;}
@@ -373,12 +391,13 @@ ul, ol {margin-left: 25px; }
 
 .brands-header {
   display: grid;
+  display: -ms-grid;
   position: $rel;
   top: -2.5em;
   width: 100%;
   text-align: center;
   text-transform: uppercase;
-  color: #3A2E36;
+  color: $black;
 }
 
 @media all and (max-width: 640px) {
@@ -538,6 +557,7 @@ ul, ol {margin-left: 25px; }
 
   .whoop-container {
     display: grid;
+    display: -ms-grid;
     position: $rel;
     grid-template-columns: 95%;
     margin: 2%;
@@ -545,6 +565,7 @@ ul, ol {margin-left: 25px; }
 
   .nucalm-container {
     display: grid;
+    display: -ms-grid;
     position: $rel;
     grid-template-columns: 95%;
     margin: 10px;
@@ -663,9 +684,9 @@ ul, ol {margin-left: 25px; }
   .whoop-btn:hover, .nucalm-btn:hover,
   .stamina-btn:hover, .naboso-btn:hover,
   .lulu-btn:hover, .normatec-btn:hover {
-    background: #3A2E36;
+    background: $black;
     color: whitesmoke;
-    border-color: #3A2E36;
+    border-color: $black;
   }
 
   .whoop-link, .stamina-link, .nucalm-link {
@@ -718,10 +739,31 @@ ul, ol {margin-left: 25px; }
 }
 
 // music section
+.playlist-header, .soundcloud-title-1, .soundcloud-title-2  {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: whitesmoke;
+}
 
-@media all and (max-width: 350px) {
+.soundcloud-btn-1, .soundcloud-btn-2 {
+  padding: 10px;
+  margin: 1em;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.soundcloud-btn-1:hover, .soundcloud-btn-2:hover {
+  background: linear-gradient(75deg, #8bc34aa3, 25%, whitesmoke);
+  transition: .5s;
+}
+
+@media all and (max-width: 355px) and (min-width: 250px) {
   .playlist-container, .solo-songs-container {
     display: grid;
+    display: -ms-grid;
+    width: 100%;
     grid-row-gap: 5%;
     justify-content: center;
     text-align: center;
@@ -731,8 +773,6 @@ ul, ol {margin-left: 25px; }
     grid-template-rows: 10%;
     grid-row-gap: 0;
   }
-
-  .solo-songs-container {grid-template-columns: 85%;}
 
   .playlist-header {
     text-transform: uppercase;
@@ -746,25 +786,13 @@ ul, ol {margin-left: 25px; }
   }
 
   .playlist-bp-1, .playlist-bp-2 {margin-top: 1em;}
-
-  .soundcloud-btn, .spotify-btn {
-    padding: 10px;
-    margin: 1em;
-    border-radius: 5px;
-    background-color: whitesmoke;
-    text-transform: uppercase;
-    font-weight: 600;
-  }
-
-  .soundcloud-btn:hover, .spotify-btn:hover {
-    background: linear-gradient(75deg, #8bc34aa3, 25%, whitesmoke);
-    transition: .5s;
-  }
+  .songs-bp-1, .songs-bp-2 {margin: auto 1.5em;}
 }
 
 @media all and (max-width: 900px) and (min-width: 355px) {
   .playlist-container, .solo-songs-container {
     display: grid;
+    display: -ms-grid;
     width: 100%;
     grid-row-gap: 5%;
     justify-content: center;
@@ -776,7 +804,7 @@ ul, ol {margin-left: 25px; }
     grid-row-gap: 0;
   }
 
-  .soundcloud-player, .spotify-player {width: 100%;}
+  .soundcloud-player-1, .soundcloud-player-2 {width: 75%;}
 
   .playlist-header {
     text-transform: uppercase;
@@ -785,32 +813,20 @@ ul, ol {margin-left: 25px; }
     color: whitesmoke;
   }
 
-  .soundcloud-title, .spotify-title {
+  .soundcloud-title-1, .soundcloud-title-2 {
     text-transform: uppercase;
     font-weight: 600;
     color: whitesmoke;
   }
 
+  .songs-bp-1, .songs-bp-2 {margin: auto 3em;}
   .playlist-bp-1, .playlist-bp-2 {margin-top: 1em;}
-
-  .soundcloud-btn, .spotify-btn {
-    padding: 10px;
-    margin: 1em;
-    border-radius: 5px;
-    background-color: whitesmoke;
-    text-transform: uppercase;
-    font-weight: 600;
-  }
-
-  .soundcloud-btn:hover, .spotify-btn:hover {
-    background: linear-gradient(75deg, #8bc34aa3, 25%, whitesmoke);
-    transition: .5s;
-  }
 }
 
-@media all and (min-width: 901px) and (max-width: 1100px) {
+@media all and (min-width: 900px) and (max-width: 1100px) {
   .solo-songs-container, .playlist-container {
     display: grid;
+    display: -ms-grid;
     width: 100%;
     justify-content: center;
     text-align: center;
@@ -826,48 +842,29 @@ ul, ol {margin-left: 25px; }
 
   .playlist-container {
     grid-gap: .5%;
-    margin: 10em 0;
-  }
-
-  .playlist-header,.spotify-title, .soundcloud-title {
-    text-transform: uppercase;
-    font-weight: 600;
-    color: whitesmoke;
+    position: $rel;
+    top: 10em;
+    margin: 12em 0;
   }
 
   .playlist-header {margin: 1.2em 0;}
-
-  .soundcloud-btn, .spotify-btn {
-      padding: 10px;
-      margin: 1em;
-      border-radius: 5px;
-      background-color: whitesmoke;
-      text-transform: uppercase;
-      font-weight: 600;
-  }
-
-  .soundcloud-btn:hover, .spotify-btn:hover {
-    background: linear-gradient(75deg, #8bc34aa3, 25%, whitesmoke);
-    transition: .5s;
-  }
-
-  .songs-bp-1 {margin-top: 2em;}
-  .songs-bp-2 {display: none;}
+  .songs-bp-1, .songs-bp-2 {margin-top: 2em;}
   .playlist-bp-1, .playlist-bp-2 {margin: 1.5em 0;}
 }
 
 @media all and (min-width: 1100px) and (max-width: 1440px) {
     .solo-songs-container, .playlist-container {
       display: grid;
+      display: -ms-grid;
       width: 50%;
       justify-content: center;
       text-align: center;
     }
 
     .solo-songs-container {
-        float: left;
-        grid-template-columns: 44%;
-        grid-gap: 2.5%;
+      float: left;
+      grid-template-columns: 44%;
+      grid-gap: 2.5%;
     }
 
     .playlist-container {
@@ -875,30 +872,8 @@ ul, ol {margin-left: 25px; }
       margin: 9em 0;
     }
 
-    .soundcloud-player, .spotify-player {width: 100%;}
-
-    .playlist-header,.spotify-title, .soundcloud-title {
-      text-transform: uppercase;
-      font-weight: 600;
-      color: whitesmoke;
-    }
-
+    .soundcloud-player-1, .soundcloud-player-2 {width: 100%;}
     .playlist-header {margin: 1.2em 0;}
-
-    .soundcloud-btn, .spotify-btn {
-      padding: 10px;
-      margin: 1em;
-      border-radius: 5px;
-      background-color: whitesmoke;
-      text-transform: uppercase;
-      font-weight: 600;
-    }
-
-    .soundcloud-btn:hover, .spotify-btn:hover {
-      background: linear-gradient(75deg, #8bc34aa3, 25%, whitesmoke);
-      transition: .5s;
-    }
-
     .songs-bp-1 {margin-top: 2em;}
     .songs-bp-2 {display: none;}
     .playlist-bp-1, .playlist-bp-2 {margin: 1.5em 0;}
@@ -907,6 +882,7 @@ ul, ol {margin-left: 25px; }
 // contact form section
 .form-container {
   display: grid;
+  display: -ms-grid;
   width: 100%;
   margin: 15em 0;
   justify-content: center;
@@ -929,12 +905,13 @@ ul, ol {margin-left: 25px; }
 
 label span {
   color: red;
-  text-shadow: .5px 1.5px black;
+  text-shadow: .5px 1.5px $black;
 }
 label {color: whitesmoke;}
 
 .contact-btn {
   width: 99%;
+  background-color: whitesmoke;
   border-radius: 5px;
   height: 30px;
   text-transform: uppercase;
@@ -945,9 +922,9 @@ label {color: whitesmoke;}
 }
 
 .contact-btn:hover {
-  background-color: #3A2E36;
+  background-color: $black;
   color: whitesmoke;
-  border: 1px solid #3A2E36;
+  border: 1px solid $black;
 }
 
 // responsive contact form
@@ -980,6 +957,7 @@ label {color: whitesmoke;}
 
 .social-icons {
   display: grid;
+  display: -ms-grid;
   justify-content: center;
   position: $rel;
   grid-template-columns: 6.5% 1px 6.5% 1px 6.5% 1px 6.5% 1px 6.5%;
@@ -996,7 +974,7 @@ label {color: whitesmoke;}
 .social-icons li:hover {padding: 0 2.5px;}
 
 .social-icons hr {
-  background-color: black;
+  background-color: $black;
   position: $rel;
   top: .5em;
   height: 20px;
