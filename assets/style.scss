@@ -52,6 +52,7 @@ ul, ol, dl, figure,
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position-y: 20%;
   width: 100%;
   height: 100%;
 }
@@ -75,7 +76,8 @@ ul, ol, dl, figure,
 }
 
 .brands-img {
-  background: linear-gradient(75deg, #b7343480, 35%, rgba(0, 0, 0, .65));
+  background: linear-gradient(75deg, #8e35357a, 35%, rgba(0, 0, 0, .65)),
+              url("/manekmathur/assets/images/manek-brands.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -210,7 +212,10 @@ ul, ol {margin-left: 25px; }
   .about-img {background-position: 50%;}
   .music-img {background-position: 50%;}
   .contact-img {background-position: 50%;}
-  .brands-img {background-position: 50%;}
+  .brands-img {
+    background-position: 50%;
+    background-position-y: 0;
+  }
 
   .overlay {
     height: 100%;
@@ -395,7 +400,7 @@ ul, ol {margin-left: 25px; }
 
 
 // responsive brand partnerships section
-.brands-wrapper {margin: -1em 0;}
+.brands-wrapper {margin: 0 0 4em;}
 .brands-wrapper p, h3 {color: whitesmoke;}
 .brands-wrapper h3 {
   text-transform: uppercase;
@@ -410,7 +415,15 @@ ul, ol {margin-left: 25px; }
   width: 100%;
   text-align: center;
   text-transform: uppercase;
-  color: $black;
+  color: whitesmoke;
+}
+
+.whoop-btn:hover, .nucalm-btn:hover,
+.stamina-btn:hover, .naboso-btn:hover,
+.lulu-btn:hover, .normatec-btn:hover {
+  background: $black;
+  color: whitesmoke;
+  border-color: $black;
 }
 
 @media all and (max-width: 640px) {
@@ -448,13 +461,14 @@ ul, ol {margin-left: 25px; }
   .whoop-btn, .nucalm-btn,
   .stamina-btn, .naboso-btn,
   .lulu-btn, .normatec-btn {
-    background: linear-gradient(75deg, #633f81, 20%, whitesmoke);
+    background: whitesmoke;
     width: fit-content;
     height: 50px;
     font-weight: 650;
     border-radius: 5px;
     border-color: whitesmoke;
     margin: 0 auto;
+    transition: all .3s ease-in-out;
   }
 
   .normatec-container,
@@ -522,11 +536,11 @@ ul, ol {margin-left: 25px; }
 
   .stamina-logo {
     width: 20%;
-    margin: 0 8%;
+    margin: 3% 7%;
   }
 
   .naboso-logo {
-    width: 35%;
+    width: 30%;
     float: left;
     margin-right: 48px;
     margin: 0 2%;
@@ -534,7 +548,7 @@ ul, ol {margin-left: 25px; }
 
   .lulu-logo {
     width: 20%;
-    margin: 0 10%;
+    margin: 0 7%;
   }
 
   .nucalm-header,.nucalm-text,
@@ -553,19 +567,22 @@ ul, ol {margin-left: 25px; }
   .whoop-btn, .nucalm-btn,
   .stamina-btn, .naboso-btn,
   .lulu-btn, .normatec-btn {
-    background: linear-gradient(75deg, #633f81, 20%, whitesmoke);
+    background: whitesmoke;
     width: 20em;
     height: 50px;
     font-weight: 650;
     border-radius: 5px;
     border-color: whitesmoke;
-    margin: 0 39%;
+    margin: 0 34%;
+    transition: all .3s ease-in-out;
   }
 
+  .normatec-btn {margin: 0 39%;}
+
   .normatec-container {
-    display: inline-block;
+    display: grid;
     grid-template-columns: 100%;
-    margin: 50px;
+    margin: 0 1em;
   }
 
   .whoop-container {
@@ -573,7 +590,8 @@ ul, ol {margin-left: 25px; }
     display: -ms-grid;
     position: $rel;
     grid-template-columns: 95%;
-    margin: 2%;
+    margin: 1.5em .5em;
+    top: 1em;
   }
 
   .nucalm-container {
@@ -581,7 +599,7 @@ ul, ol {margin-left: 25px; }
     display: -ms-grid;
     position: $rel;
     grid-template-columns: 95%;
-    margin: 10px;
+    margin: 0 -1em;
     top: 2em;
   }
 
@@ -589,15 +607,15 @@ ul, ol {margin-left: 25px; }
     display: inline-grid;
     position: $rel;
     grid-template-columns: 90%;
-    margin: 2%;
-    top: 3em;
+    margin: 1em 1em;
+    top: 5em;
   }
 
   .naboso-container {
     display: inline-grid;
     position: $rel;
     grid-template-columns: 100%;
-    margin: 50px;
+    margin: 5em 1em;
     top: 2em;
   }
 
@@ -605,8 +623,8 @@ ul, ol {margin-left: 25px; }
     display: inline-grid;
     position: $rel;
     grid-template-columns: 100%;
-    margin: 50px;
-    top: 2em;
+    margin: 1em 1em;
+    top: 0;
   }
 }
 
@@ -691,18 +709,11 @@ ul, ol {margin-left: 25px; }
     border-radius: 5px;
     border-color: whitesmoke;
     margin: 0 auto;
-    transition: .5s;
+    transition: all .3s ease-in-out;
   }
 
-  .whoop-btn:hover, .nucalm-btn:hover,
-  .stamina-btn:hover, .naboso-btn:hover,
-  .lulu-btn:hover, .normatec-btn:hover {
-    background: $black;
-    color: whitesmoke;
-    border-color: $black;
-  }
-
-  .whoop-link, .stamina-link, .nucalm-link {
+  .whoop-link, .stamina-link,
+  .nucalm-link, .normatec-link {
     display: inline-block;
     width: 0;
     margin: 0 32%;
@@ -710,7 +721,7 @@ ul, ol {margin-left: 25px; }
 
   .normatec-container {
     display: inline-grid;
-    grid-template-columns: 110%;
+    grid-template-columns: 105%;
     margin: 7%;
   }
 
