@@ -46,7 +46,7 @@
            :location.pathname === musicPage ? music.classList.add("active")
            :location.pathname === contactPage ? contact.classList.add("active")
            :location.pathname === homePage ? (
-             wrapper.style.minHeight = "82%",
+             wrapper.style.minHeight = "76%",
              navbar.style.backgroundImage = "none"
              )
 
