@@ -49,14 +49,18 @@
              wrapper.style.minHeight = "82%",
              navbar.style.backgroundImage = "none"
              )
-           :location.pathname === doublesPage ? (
-             wrapper.style.minHeight = "82%",
-             navbar.style.backgroundImage = "none"
-           )
-           :location.pathname === eventsPage ? (
-             wrapper.style.minHeight = "82%",
-             navbar.style.backgroundImage = "none"
-         )
+
+             :location.pathname === doublesPage ? (
+             wrapper.style.minHeight = "76%",
+             navbar.style.backgroundImage = "none",
+             doubles.classList.add("active")
+             )
+
+             :location.pathname === eventsPage ? (
+             wrapper.style.minHeight = "76%",
+             navbar.style.backgroundImage = "none",
+             events.classList.add("active")
+             )
            :null;
 
   })();
