@@ -154,7 +154,7 @@ ul, ol {margin-left: 25px; }
   list-style: none;
 }
 
-.nav-left {grid-template-columns: 25% 25% 58%;}
+.nav-left {grid-template-columns: 27% 62% 19%;}
 .nav-right {grid-template-columns: 45% 42% 7%;}
 
 .nav-left a, .nav-right a {
@@ -186,22 +186,6 @@ ul, ol {margin-left: 25px; }
   color: #1e66e2;
 }
 
-// full screen navbar responsiveness
-@media all and (min-width: 68.75em) and (max-width: 90em) {
-
-  // .img-logo {
-  //   position: $rel;
-  //   top: -5.5em;
-  // }
-
-  // .header-tagline {
-  //   position: $rel;
-  //   top: -11em;
-  //   color: whitesmoke;
-  //   text-transform: uppercase;
-  //   font-size: 15px;
-  // }
-}
 
 // mobile navbar responsiveness
 @media all and (max-width: 68.81em) {
@@ -247,7 +231,10 @@ ul, ol {margin-left: 25px; }
     margin-top: 30px;
   }
 
-  .overlay-content a {display: block;}
+  .overlay-content a {
+    display: block;
+    font-size: 1.5em;
+  }
 
   .overlay-content a:hover {
     background-color: $black;
@@ -823,7 +810,9 @@ ul, ol {margin-left: 25px; }
   .playlist-container, .solo-songs-container {
     display: grid;
     display: -ms-grid;
+    position: $rel;
     width: 100%;
+    top: -3em;
     grid-row-gap: 5%;
     justify-content: center;
     text-align: center;
@@ -839,7 +828,7 @@ ul, ol {margin-left: 25px; }
   .playlist-header {
     text-transform: uppercase;
     font-weight: 600;
-    margin: 7em 0;
+    margin: 4.5em 0;
     color: whitesmoke;
   }
 
@@ -849,7 +838,7 @@ ul, ol {margin-left: 25px; }
     color: whitesmoke;
   }
 
-  .songs-bp-1, .songs-bp-2 {margin: auto 3em;}
+  .songs-bp-1, .songs-bp-2 {margin: auto 2em;}
   .playlist-bp-1, .playlist-bp-2 {margin-top: 1em;}
 }
 
@@ -998,7 +987,7 @@ label {color: whitesmoke;}
   display: -ms-grid;
   justify-content: center;
   position: $rel;
-  grid-template-columns: 6.5% 1px 6.5% 1px 6.5% 1px 6.5% 1px 6.5%;
+  grid-template-columns: 5% 2px 5% 2px 5% 2px 5% 2px 5%;
   list-style: none;
   margin-left: 0;
   padding: 0;
@@ -1027,9 +1016,9 @@ label {color: whitesmoke;}
 // responsive footer
 @media all and (min-width: 225px) and (max-width: 450px) {
   .social-icons {
-    grid-template-columns: 20% 1px 20% 1px
-                           20% 1px 20% 1px
-                           20%;
+    grid-template-columns: 16% 1px 16% 1px
+                           16% 1px 16% 1px
+                           16%;
   }
   .social-icons i {
     font-size: .5em;
@@ -1044,9 +1033,10 @@ label {color: whitesmoke;}
   }
 }
 
-// @media all and (max-width: 68.81em) {
-//   .social-icons {
-//     top: 2.5em;
-//     grid-template-columns: 7% 1px 7% 1px 7% 1px 7% 1px 7%;
-//   }
-// }
+@media all and (min-width: 700px) and (max-width: 1100px) {
+  .social-icons {
+    grid-template-columns: 6% 1px 6% 1px
+                           6% 1px 6% 1px
+                           6%;
+  }
+}
