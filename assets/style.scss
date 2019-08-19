@@ -7,8 +7,15 @@ $black: #3A2E36;
 
 // global rules
 body {
-  font: 400 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  // font: 400 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: #111;
+  font-family: noodle;
+  font-size: 25px;
+}
+
+@font-face {
+  font-family: noodle;
+  src: url(/manekmathur/assets/big_noodle_titling.ttf);
 }
 
 html, body {
@@ -45,6 +52,7 @@ ul, ol, dl, figure,
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position-y: 20%;
   width: 100%;
   height: 100%;
 }
@@ -68,7 +76,8 @@ ul, ol, dl, figure,
 }
 
 .brands-img {
-  background: linear-gradient(75deg, #b7343480, 35%, rgba(0, 0, 0, .65));
+  background: linear-gradient(75deg, #8e35357a, 35%, rgba(0, 0, 0, .65)),
+              url("/manekmathur/assets/images/manek-brands.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -107,7 +116,7 @@ ul, ol {margin-left: 25px; }
   width: 100%;
   height: 120px;
   transition: top 0.3s;
-  grid-template-columns: 45% 13% 38%;
+  grid-template-columns: 39% 13% 40%;
   grid-template-rows: 100%;
   justify-content: center;
   background-image: linear-gradient(45deg, rgba(39, 40, 33, 0.6), 25%, rgb(58, 46, 54));
@@ -127,28 +136,26 @@ ul, ol {margin-left: 25px; }
 
 .img-logo {
   position: $rel;
-  top: -6.5em;
+  top: -3.5em;
 }
 
 .header-tagline {
   position: $rel;
-  top: -10.5em;
+  top: -8em;
   margin: 0 -43px;
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 21px;
   color: whitesmoke;
 }
 
 .nav-left, .nav-right {
   display: inline-grid;
-  position: $rel;
-  margin: 20px;
   list-style: none;
 }
 
-.nav-left {grid-template-columns: 73px 186px 201px;}
-.nav-right {grid-template-columns: 73px 173px 123px;}
+.nav-left {grid-template-columns: 25% 25% 58%;}
+.nav-right {grid-template-columns: 45% 42% 7%;}
 
 .nav-left a, .nav-right a {
   text-decoration: none;
@@ -172,27 +179,28 @@ ul, ol {margin-left: 25px; }
 .mobile-logo {display: none;}
 .overlay-content a {display: none;}
 
+.center-logo span {
+  position: absolute;
+  top: 2.3em;
+  left: 5.8em;
+  color: #1e66e2;
+}
+
 // full screen navbar responsiveness
 @media all and (min-width: 68.75em) and (max-width: 90em) {
-  .center-logo span {
-    position: absolute;
-    top: 3.5em;
-    left: 9em;
-    color: #1e66e2;
-  }
 
-  .img-logo {
-    position: $rel;
-    top: -5.5em;
-  }
+  // .img-logo {
+  //   position: $rel;
+  //   top: -5.5em;
+  // }
 
-  .header-tagline {
-    position: $rel;
-    top: -11em;
-    color: whitesmoke;
-    text-transform: uppercase;
-    font-size: 15px;
-  }
+  // .header-tagline {
+  //   position: $rel;
+  //   top: -11em;
+  //   color: whitesmoke;
+  //   text-transform: uppercase;
+  //   font-size: 15px;
+  // }
 }
 
 // mobile navbar responsiveness
@@ -202,7 +210,10 @@ ul, ol {margin-left: 25px; }
   .about-img {background-position: 50%;}
   .music-img {background-position: 50%;}
   .contact-img {background-position: 50%;}
-  .brands-img {background-position: 50%;}
+  .brands-img {
+    background-position: 50%;
+    background-position-y: 0;
+  }
 
   .overlay {
     height: 100%;
@@ -246,33 +257,33 @@ ul, ol {margin-left: 25px; }
   .mobile-logo, .manek-logo {
     display: inline;
     position: $rel;
-    top: -2em;
+    top: -1.5em;
     max-width: 200px;
     width: 175px;
     float: left;
-    left: .8em;
+    left: 0;
   }
 
   .mobile-logo-link {
     display: block;
-    margin-bottom: 14em;
+    margin-bottom: 5em;
   }
 
   .mobile-logo span {
     position: absolute;
     color: #1e66e2;
-    top: 100px;
-    right: 28px;
+    top: 3.5em;
+    right: 1.7em;
   }
 
   .mobile-tagline {
     position: $rel;
-    top: -9.5em;
+    top: -8em;
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 9.4px;
+    font-size: 13px;
     color: whitesmoke;
-    left: .8em;
+    left: 1em;
   }
 
   .mobile-navbar-container {display: inline;}
@@ -281,8 +292,8 @@ ul, ol {margin-left: 25px; }
     position: $rel;
     cursor: pointer;
     float: right;
-    right: 1.5em;
-    top: 2.5em;
+    right: 1em;
+    top: 1em;
   }
 
   .bar-1, .bar-3 {
@@ -332,7 +343,7 @@ ul, ol {margin-left: 25px; }
   grid-template-columns: 85%;
   justify-content: center;
   text-align: center;
-  margin: 11em 0;
+  margin: 5em 0;
 }
 
 .about-wrapper p {
@@ -358,7 +369,7 @@ ul, ol {margin-left: 25px; }
   text-align: center;
   position: $rel;
   width: 100%;
-  top: 15em;
+  top: 9em;
   text-transform: uppercase;
 }
 
@@ -375,7 +386,7 @@ ul, ol {margin-left: 25px; }
   text-align: center;
   position: $rel;
   width: 100%;
-  top: 15em;
+  top: 9em;
   text-transform: uppercase;
 }
 
@@ -387,7 +398,7 @@ ul, ol {margin-left: 25px; }
 
 
 // responsive brand partnerships section
-.brands-wrapper {margin: -1em 0;}
+.brands-wrapper {margin: 0 0 4em;}
 .brands-wrapper p, h3 {color: whitesmoke;}
 .brands-wrapper h3 {
   text-transform: uppercase;
@@ -402,7 +413,15 @@ ul, ol {margin-left: 25px; }
   width: 100%;
   text-align: center;
   text-transform: uppercase;
-  color: $black;
+  color: whitesmoke;
+}
+
+.whoop-btn:hover, .nucalm-btn:hover,
+.stamina-btn:hover, .naboso-btn:hover,
+.lulu-btn:hover, .normatec-btn:hover {
+  background: $black;
+  color: whitesmoke;
+  border-color: $black;
 }
 
 @media all and (max-width: 640px) {
@@ -440,13 +459,16 @@ ul, ol {margin-left: 25px; }
   .whoop-btn, .nucalm-btn,
   .stamina-btn, .naboso-btn,
   .lulu-btn, .normatec-btn {
-    background: linear-gradient(75deg, #633f81, 20%, whitesmoke);
+    background: whitesmoke;
     width: fit-content;
     height: 50px;
     font-weight: 650;
+    font-size: 18px;
+    font-family: noodle;
     border-radius: 5px;
     border-color: whitesmoke;
     margin: 0 auto;
+    transition: all .3s ease-in-out;
   }
 
   .normatec-container,
@@ -514,11 +536,11 @@ ul, ol {margin-left: 25px; }
 
   .stamina-logo {
     width: 20%;
-    margin: 0 8%;
+    margin: 3% 7%;
   }
 
   .naboso-logo {
-    width: 35%;
+    width: 30%;
     float: left;
     margin-right: 48px;
     margin: 0 2%;
@@ -526,7 +548,7 @@ ul, ol {margin-left: 25px; }
 
   .lulu-logo {
     width: 20%;
-    margin: 0 10%;
+    margin: 0 7%;
   }
 
   .nucalm-header,.nucalm-text,
@@ -545,19 +567,24 @@ ul, ol {margin-left: 25px; }
   .whoop-btn, .nucalm-btn,
   .stamina-btn, .naboso-btn,
   .lulu-btn, .normatec-btn {
-    background: linear-gradient(75deg, #633f81, 20%, whitesmoke);
-    width: 20em;
+    background: whitesmoke;
+    width: 12em;
     height: 50px;
     font-weight: 650;
+    font-size: 18px;
+    font-family: noodle;
     border-radius: 5px;
     border-color: whitesmoke;
-    margin: 0 39%;
+    margin: 0 34%;
+    transition: all .3s ease-in-out;
   }
 
+  .normatec-btn {margin: 0 39%;}
+
   .normatec-container {
-    display: inline-block;
+    display: grid;
     grid-template-columns: 100%;
-    margin: 50px;
+    margin: 0 1em;
   }
 
   .whoop-container {
@@ -565,7 +592,8 @@ ul, ol {margin-left: 25px; }
     display: -ms-grid;
     position: $rel;
     grid-template-columns: 95%;
-    margin: 2%;
+    margin: 1.5em .5em;
+    top: 1em;
   }
 
   .nucalm-container {
@@ -573,7 +601,7 @@ ul, ol {margin-left: 25px; }
     display: -ms-grid;
     position: $rel;
     grid-template-columns: 95%;
-    margin: 10px;
+    margin: 0 -1em;
     top: 2em;
   }
 
@@ -581,15 +609,15 @@ ul, ol {margin-left: 25px; }
     display: inline-grid;
     position: $rel;
     grid-template-columns: 90%;
-    margin: 2%;
-    top: 3em;
+    margin: 1em 1em;
+    top: 5em;
   }
 
   .naboso-container {
     display: inline-grid;
     position: $rel;
     grid-template-columns: 100%;
-    margin: 50px;
+    margin: 5em 1em;
     top: 2em;
   }
 
@@ -597,8 +625,8 @@ ul, ol {margin-left: 25px; }
     display: inline-grid;
     position: $rel;
     grid-template-columns: 100%;
-    margin: 50px;
-    top: 2em;
+    margin: 1em 1em;
+    top: 0;
   }
 }
 
@@ -676,25 +704,20 @@ ul, ol {margin-left: 25px; }
   .stamina-btn, .naboso-btn,
   .lulu-btn, .normatec-btn {
     background: whitesmoke;
-    width: 19em;
+    width: 12em;
     cursor: pointer;
     height: 50px;
     font-weight: 650;
+    font-size: 18px;
+    font-family: noodle;
     border-radius: 5px;
     border-color: whitesmoke;
     margin: 0 auto;
-    transition: .5s;
+    transition: all .3s ease-in-out;
   }
 
-  .whoop-btn:hover, .nucalm-btn:hover,
-  .stamina-btn:hover, .naboso-btn:hover,
-  .lulu-btn:hover, .normatec-btn:hover {
-    background: $black;
-    color: whitesmoke;
-    border-color: $black;
-  }
-
-  .whoop-link, .stamina-link, .nucalm-link {
+  .whoop-link, .stamina-link,
+  .nucalm-link, .normatec-link {
     display: inline-block;
     width: 0;
     margin: 0 32%;
@@ -702,7 +725,7 @@ ul, ol {margin-left: 25px; }
 
   .normatec-container {
     display: inline-grid;
-    grid-template-columns: 110%;
+    grid-template-columns: 105%;
     margin: 7%;
   }
 
@@ -757,6 +780,8 @@ ul, ol {margin-left: 25px; }
   background-color: whitesmoke;
   text-transform: uppercase;
   font-weight: 600;
+  font-size: 20px;
+  font-family: noodle;
 }
 
 .soundcloud-btn-1:hover, .soundcloud-btn-2:hover {
@@ -888,10 +913,9 @@ ul, ol {margin-left: 25px; }
 .form-container {
   display: grid;
   display: -ms-grid;
-  width: 100%;
-  margin: 15em 0;
-  justify-content: center;
-  grid-template-columns: 45%;
+  width: 80%;
+  margin: 5.5em 3.5em;
+  grid-template-columns: 40%;
 }
 
 .fname, .lname,
@@ -920,8 +944,9 @@ label {color: whitesmoke;}
   border-radius: 5px;
   height: 30px;
   text-transform: uppercase;
+  font-family: noodle;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 25px;
   transition: all .25s ease-in-out;
   cursor: pointer;
 }
@@ -933,9 +958,13 @@ label {color: whitesmoke;}
 }
 
 // responsive contact form
-@media all and (max-width: 679px) and (min-width: 300px) {
+@media all and (max-width: 680px) and (min-width: 250px) {
   .form-container {
+    position: $rel;
+    top: -1.5em;
     grid-template-columns: 90%;
+    width: 100%;
+    justify-content: center;
     margin: 0;
   }
   .fname, .lname {
@@ -945,13 +974,17 @@ label {color: whitesmoke;}
 
 @media all and (min-width: 680px) and (max-width: 1100px) {
   .form-container {
-    grid-template-columns: 60%;
+    position: $rel;
+    top: -2.5em;
+    grid-template-columns: 50%;
+    width: 100%;
+    justify-content: center;
     margin: 0;
   }
 }
 
 @media all and (min-width: 1100px) and (max-width: 1440px) {
-  .form-container {grid-template-columns: 60%;}
+  .form-container {grid-template-columns: 40%;}
 }
 
 // footer section
@@ -967,6 +1000,8 @@ label {color: whitesmoke;}
   position: $rel;
   grid-template-columns: 6.5% 1px 6.5% 1px 6.5% 1px 6.5% 1px 6.5%;
   list-style: none;
+  margin-left: 0;
+  padding: 0;
 }
 
 .social-icons li {
@@ -975,32 +1010,43 @@ label {color: whitesmoke;}
   transition: all .25s ease-in-out;
 }
 
-.fab {color: whitesmoke;}
+.fab {
+  color: whitesmoke;
+  font-size: 1.5em !important;
+}
+
 .social-icons li:hover {padding: 0 2.5px;}
 
 .social-icons hr {
   background-color: $black;
   position: $rel;
-  top: .5em;
-  height: 20px;
+  top: .2em;
+  height: 25px;
 }
 
 // responsive footer
-@media all and (max-width: 330px) {
+@media all and (min-width: 225px) and (max-width: 450px) {
   .social-icons {
-    grid-template-columns: 35px 2px 35px 2px
-                           35px 2px 35px 2px
-                           35px;
+    grid-template-columns: 20% 1px 20% 1px
+                           20% 1px 20% 1px
+                           20%;
   }
   .social-icons i {
-    font-size: 1.5em;
+    font-size: .5em;
   }
 }
 
-@media all and (max-width: 68.81em) {
+@media all and (min-width: 450px) and (max-width: 700px) {
   .social-icons {
-    top: 2.5em;
-    right: 2em;
-    grid-template-columns: 15% 1px 15% 1px 15% 1px 15% 1px 15%;
+    grid-template-columns: 12% 1px 12% 1px
+                           12% 1px 12% 1px
+                           12%;
   }
 }
+
+// @media all and (max-width: 68.81em) {
+//   .social-icons {
+//     top: 2.5em;
+//     grid-template-columns: 7% 1px 7% 1px 7% 1px 7% 1px 7%;
+//   }
+// }
