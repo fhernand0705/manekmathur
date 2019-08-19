@@ -122,7 +122,7 @@ function submitToAPI(e) {
 
        $.ajax({
          type: "POST",
-         url : URL,
+         url: URL,
          dataType: "json",
          crossDomain: "true",
          contentType: "application/json; charset=utf-8",
