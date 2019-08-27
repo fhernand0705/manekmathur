@@ -152,10 +152,11 @@ ul, ol {margin-left: 25px; }
 .nav-left, .nav-right {
   display: inline-grid;
   list-style: none;
+  text-align: center;
 }
 
-.nav-left {grid-template-columns: 27% 62% 19%;}
-.nav-right {grid-template-columns: 45% 42% 7%;}
+.nav-left {grid-template-columns: 26% 26% 59%;}
+.nav-right {grid-template-columns: 45% 42% 23%;}
 
 .nav-left a, .nav-right a {
   text-decoration: none;
@@ -493,7 +494,7 @@ ul, ol {margin-left: 25px; }
     position: $rel;
     margin: 0 auto;
     width: 45%;
-    top: -4em;
+    top: -3em;
     box-shadow: 0 0 9px 0 rgba(43, 43, 43, 0.1),
     0 5px 8px 1.5px rgba(43, 43, 43, 0.1);
   }
