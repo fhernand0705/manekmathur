@@ -34,7 +34,7 @@ plugins:
   - jekyll-seo-tag
 
 url: https://github.com/fhernand0705/
-baseurl: /manekmathur
+baseurl: /
 
 
 

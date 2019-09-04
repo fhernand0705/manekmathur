@@ -9,7 +9,7 @@
   let overlay = document.getElementsByClassName("overlay")[0];
   let bars = document.getElementsByClassName("menu-bars")[0];
 
-  burgerIcon.style.zIndex = "1";
+  this.style.zIndex = "1";
   bars.classList.toggle("change");
   overlay.classList.toggle("active");
 
@@ -40,20 +40,14 @@
      let events = document.getElementById('events');
 
      // check location and add active class
-     // return location.pathname === homePage ? navbar.style.backgroundImage = "none"
     return  location.pathname === aboutPage ? about.classList.add("active")
            :location.pathname === brandsPage ? brands.classList.add("active")
            :location.pathname === musicPage ? music.classList.add("active")
            :location.pathname === contactPage ? contact.classList.add("active")
+           :location.pathname === doublesPage ? doubles.classList.add("active")
            :location.pathname === homePage ? (
              wrapper.style.minHeight = "76%",
              navbar.style.backgroundImage = "none"
-             )
-
-             :location.pathname === doublesPage ? (
-             wrapper.style.minHeight = "76%",
-             navbar.style.backgroundImage = "none",
-             doubles.classList.add("active")
              )
 
              :location.pathname === eventsPage ? (

@@ -15,7 +15,7 @@ body {
 
 @font-face {
   font-family: noodle;
-  src: url(/manekmathur/assets/big_noodle_titling.ttf);
+  src: url(/assets/big_noodle_titling.ttf);
 }
 
 html, body {
@@ -38,7 +38,7 @@ ul, ol, dl, figure,
 //background images per page
 .home-img {
   background-image: linear-gradient(#f5f5f575, 25%, rgba(0, 0, 0, .7)),
-                    url("/manekmathur/assets/images/manek-home.jpg");
+                    url("/assets/images/manek-home.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -48,7 +48,7 @@ ul, ol, dl, figure,
 
 .about-img {
   background: linear-gradient(#f5f5f575, 25%, #2a2a5ab0),
-              url("/manekmathur/assets/images/manek-about.jpg");
+              url("/assets/images/manek-about.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -77,7 +77,7 @@ ul, ol, dl, figure,
 
 .brands-img {
   background: linear-gradient(75deg, #8e35357a, 35%, rgba(0, 0, 0, .65)),
-              url("/manekmathur/assets/images/manek-brands.jpg");
+              url("/assets/images/manek-brands.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -87,7 +87,7 @@ ul, ol, dl, figure,
 
 .music-img {
   background: linear-gradient(#8bc34aa3, 25%, rgba(0, 0, 0, .7)),
-              url("/manekmathur/assets/images/manek-music.jpg");
+              url("/assets/images/manek-music.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -97,7 +97,7 @@ ul, ol, dl, figure,
 
 .contact-img {
   background-image: linear-gradient(#79554873, 25%, rgba(0, 0, 0, .7)),
-              url("/manekmathur/assets/images/manek-contact.jpg");
+              url("/assets/images/manek-contact.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -186,7 +186,6 @@ ul, ol {margin-left: 25px; }
   left: 5.8em;
   color: #1e66e2;
 }
-
 
 // mobile navbar responsiveness
 @media all and (max-width: 68.81em) {
@@ -354,21 +353,43 @@ ul, ol {margin-left: 25px; }
 }
 
 // doubles tutorials section
-.doubles-message {
+.doubles-container {
   display: grid;
   display: -ms-grid;
+  justify-content: center;
   text-align: center;
-  position: $rel;
   width: 100%;
-  top: 9em;
-  text-transform: uppercase;
+  margin-top: 5em;
 }
+.frame-4 {border-radius: 5px;}
 
 @media all and (max-width: 1100px) {
-  .doubles-message {
-    position: unset;
+  .doubles-container {
+    position: $rel;
+    top: -4em;
+    margin-top: 0;
   }
+
+  .video-4 {margin: 1em;}
 }
+
+// @media all and (min-width: 450px) and (max-width: 675px) {
+//   .doubles-container {
+//     position: $rel;
+//     top: -3.5em;
+//   }
+//
+//   .video-4 {margin: 1em;}
+// }
+//
+// @media all and (min-width: 675px) and (max-width: 1100px) {
+//   .doubles-container {
+//     position: $rel;
+//     top: -3.5em;
+//   }
+//
+//   .video-4 {margin: 1em;}
+// }
 
 // upcoming events section
 .events-message {
@@ -386,7 +407,6 @@ ul, ol {margin-left: 25px; }
     position: unset;
   }
 }
-
 
 // responsive brand partnerships section
 .brands-wrapper {margin: 0 0 4em;}
