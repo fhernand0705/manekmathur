@@ -2,26 +2,23 @@
 ---
 
 // toggles nav menu overlay
-(function initMenuOverlay() {
   let burgerIcon = document.getElementById("menu-icon");
 
   burgerIcon.addEventListener("click", function() {
-  let overlay = document.getElementsByClassName("overlay")[0];
-  let bars = document.getElementsByClassName("menu-bars")[0];
+    let overlay = document.querySelector(".overlay");
+    let bars = document.querySelector(".menu-bars");
 
-  this.style.zIndex = "1";
-  bars.classList.toggle("change");
-  overlay.classList.toggle("active");
+    this.style.zIndex = "1";
+    bars.classList.toggle("change");
+    overlay.classList.toggle("active");
 
-  });
-})();
+ });
 
-
-// adds active class for navbar items
-(function() {
+// adds 'active' link to navbar items
+(function activeLink() {
      let wrapper = document.getElementsByClassName('main-wrapper')[0];
 
-     //access pathnames for each navbar item
+     // access pathnames for each navbar item
      let homePage = document.getElementById('home').pathname;
      let aboutPage = document.getElementById('about').pathname;
      let brandsPage = document.getElementById('brands').pathname;
