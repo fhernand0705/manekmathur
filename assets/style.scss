@@ -76,8 +76,8 @@ ul, ol, dl, figure,
 }
 
 .brands-img {
-  background: linear-gradient(75deg, #8e35357a, 35%, rgba(0, 0, 0, .65)),
-              url("/assets/images/manek-brands.jpg");
+  background: linear-gradient(75deg, #8e35357a, 35%, rgba(0, 0, 0, .25)),
+              url("/assets/images/manek-brands2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -193,13 +193,10 @@ ul, ol {margin-left: 25px; }
   .home-img {background-position: 50%;}
   .music-img {background-position: 50%;}
   .contact-img {background-position: 50%;}
+  .brands-img {background-position: 30%;}
   .about-img {
     background-position: 50%;
     background-position-y: 20%;
-  }
-  .brands-img {
-    background-position: 50%;
-    background-position-y: 0;
   }
 
   .overlay {
@@ -387,24 +384,6 @@ ul, ol {margin-left: 25px; }
     margin: 1em;
   }
 }
-
-// @media all and (min-width: 450px) and (max-width: 675px) {
-//   .doubles-container {
-//     position: $rel;
-//     top: -3.5em;
-//   }
-//
-//   .video-4 {margin: 1em;}
-// }
-//
-// @media all and (min-width: 675px) and (max-width: 1100px) {
-//   .doubles-container {
-//     position: $rel;
-//     top: -3.5em;
-//   }
-//
-//   .video-4 {margin: 1em;}
-// }
 
 // upcoming events section
 .events-message {
