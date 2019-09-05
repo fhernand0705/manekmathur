@@ -429,6 +429,7 @@ ul, ol {margin-left: 25px; }
 .brands-wrapper h3 {
   text-transform: uppercase;
   font-weight: 600;
+  text-shadow: 2px 2px black;
 }
 
 .brands-header {
@@ -957,7 +958,7 @@ ul, ol {margin-left: 25px; }
   border-radius: 2.5px;
 }
 
-.email, .subject, .message {width: 98%;}
+.email, .subject, .message {width: 100%;}
 .message {height: 125px;}
 
 label span {
@@ -996,7 +997,7 @@ label {color: whitesmoke;}
     margin: 0;
   }
   .fname, .lname {
-    width: 98%;
+    width: 100%;
   }
 }
 
