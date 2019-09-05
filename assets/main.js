@@ -1,19 +1,6 @@
 ---
 ---
 
-// toggles nav menu overlay
-  let burgerIcon = document.getElementById("menu-icon");
-
-  burgerIcon.addEventListener("click", function() {
-    let overlay = document.querySelector(".overlay");
-    let bars = document.querySelector(".menu-bars");
-
-    this.style.zIndex = "1";
-    bars.classList.toggle("change");
-    overlay.classList.toggle("active");
-
- });
-
 // adds 'active' link to navbar items
 (function activeLink() {
      let wrapper = document.getElementsByClassName('main-wrapper')[0];
@@ -55,6 +42,19 @@
            :null;
 
   })();
+
+  // toggles nav menu overlay
+   let burgerIcon = document.querySelector("#menu-icon");
+
+   burgerIcon.addEventListener("click", function() {
+       let overlay = document.querySelector(".overlay");
+       let bars = document.querySelector(".menu-bars");
+
+       this.style.zIndex = "1";
+       bars.classList.toggle("change");
+       overlay.classList.toggle("active");
+
+    });
 
 // hides/shows navbar on scroll down/up
   var prevScrollPos = window.pageYOffset;
