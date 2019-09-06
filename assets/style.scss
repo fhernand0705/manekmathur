@@ -937,7 +937,7 @@ ul, ol {margin-left: 25px; }
   border-radius: 2.5px;
 }
 
-.email, .subject, .message {width: 100%;}
+.email, .subject, .message {width: 98%;}
 .message {height: 125px;}
 
 label span {
@@ -971,7 +971,7 @@ label {color: whitesmoke;}
     position: $rel;
     top: -1.5em;
     grid-template-columns: 90%;
-    width: 100%;
+    width: 98%;
     justify-content: center;
     margin: 0;
   }
@@ -1032,6 +1032,25 @@ label {color: whitesmoke;}
   height: 25px;
 }
 
+// .fh-wrapper {
+//   text-align: center;
+//   margin: 1.5em 0;
+// }
+//
+// .fh-logo {
+//   width: 2.5%;
+//   position: $rel;
+//   top: .25em;
+//   transition: all .4s ease-in-out;
+// }
+//
+// .fh-logo:hover {
+//   transform: rotate(360deg) translate(0px, 0px);
+//   width: 4%;
+// }
+//
+// .fh-header {color: lightgray;}
+
 // responsive footer
 @media all and (min-width: 225px) and (max-width: 450px) {
   .social-icons {
@@ -1042,6 +1061,8 @@ label {color: whitesmoke;}
   .social-icons i {
     font-size: .5em;
   }
+
+  // .fh-logo {width: 9.5%;}
 }
 
 @media all and (min-width: 450px) and (max-width: 700px) {
@@ -1050,6 +1071,8 @@ label {color: whitesmoke;}
                            12% 1px 12% 1px
                            12%;
   }
+
+  // .fh-logo {width: 6.5%;}
 }
 
 @media all and (min-width: 700px) and (max-width: 1100px) {
@@ -1058,4 +1081,6 @@ label {color: whitesmoke;}
                            6% 1px 6% 1px
                            6%;
   }
+
+  // .fh-logo {width: 3.5%;}
 }
