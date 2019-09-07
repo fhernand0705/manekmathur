@@ -180,13 +180,6 @@ ul, ol {margin-left: 25px; }
 .mobile-logo {display: none;}
 .overlay-content a {display: none;}
 
-.center-logo span {
-  position: absolute;
-  top: 2.3em;
-  left: 5.8em;
-  color: #1e66e2;
-}
-
 // mobile navbar responsiveness
 @media all and (max-width: 68.81em) {
   .navbar-container {display: none;}
@@ -253,13 +246,6 @@ ul, ol {margin-left: 25px; }
   .mobile-logo-link {
     display: block;
     margin-bottom: 5em;
-  }
-
-  .mobile-logo span {
-    position: absolute;
-    color: #1e66e2;
-    top: 3.5em;
-    right: 1.7em;
   }
 
   .mobile-tagline {
@@ -944,6 +930,7 @@ label span {
   color: red;
   text-shadow: .5px 1.5px $black;
 }
+
 label {color: whitesmoke;}
 
 .contact-btn {
@@ -971,12 +958,12 @@ label {color: whitesmoke;}
     position: $rel;
     top: -1.5em;
     grid-template-columns: 90%;
-    width: 98%;
+    width: 100%;
     justify-content: center;
     margin: 0;
   }
   .fname, .lname {
-    width: 100%;
+    width: 98%;
   }
 }
 
