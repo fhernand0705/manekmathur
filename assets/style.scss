@@ -18,6 +18,11 @@ body {
   src: url(/assets/big_noodle_titling.ttf);
 }
 
+@font-face {
+  font-family: memories;
+  src: url(/assets/QForTheMemories-Z3ql.ttf);
+}
+
 html, body {
   height: 100%;
   margin: 0;
@@ -59,7 +64,7 @@ ul, ol, dl, figure,
 }
 
 .doubles-img {
-  background: linear-gradient(#79554873, 25%, rgba(0, 0, 0, .35)),
+  background: linear-gradient(#79554873, 25%, rgba(0, 0, 0, .5)),
               url("/assets/images/manek-doubles.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -320,17 +325,20 @@ ul, ol {margin-left: 25px; }
   grid-template-columns: 85%;
   justify-content: center;
   text-align: center;
-  margin: 5em 0;
+  margin: 5.5em 0;
 }
 
 .about-wrapper p {
   color: whitesmoke;
+  font-family: memories;
+  font-size: 20px;
 }
 
 .about-header {
   color: whitesmoke;
   text-transform: uppercase;
-  font-weight: 600;
+  font-family: memories;
+  font-weight: 500;
 }
 
 @media all and (max-width: 1100px) {
@@ -391,8 +399,18 @@ ul, ol {margin-left: 25px; }
 }
 
 // responsive brand partnerships section
-.brands-wrapper {margin: 0 0 4em;}
-.brands-wrapper p, h3 {color: whitesmoke;}
+.brands-wrapper {
+  margin: 0 0 4em;
+  font-family: memories;
+  font-size: 20px;
+  text-shadow: 2px 2px black;
+}
+
+.brands-wrapper p, h3 {
+  color: whitesmoke;
+  font-family: memories;
+}
+
 .brands-wrapper h3 {
   text-transform: uppercase;
   font-weight: 600;
@@ -408,6 +426,21 @@ ul, ol {margin-left: 25px; }
   text-align: center;
   text-transform: uppercase;
   color: whitesmoke;
+}
+
+.whoop-btn, .nucalm-btn,
+.stamina-btn, .naboso-btn,
+.lulu-btn, .normatec-btn {
+  font-family: memories;
+  background: whitesmoke;
+  width: fit-content;
+  height: 50px;
+  font-weight: 650;
+  font-size: 18px;
+  border-radius: 5px;
+  border-color: whitesmoke;
+  margin: 0 auto;
+  transition: all .3s ease-in-out;
 }
 
 .whoop-btn:hover, .nucalm-btn:hover,
@@ -449,21 +482,6 @@ ul, ol {margin-left: 25px; }
 
   .stamina-logo {width: 50%;}
   .lulu-logo {width: 45%;}
-
-  .whoop-btn, .nucalm-btn,
-  .stamina-btn, .naboso-btn,
-  .lulu-btn, .normatec-btn {
-    background: whitesmoke;
-    width: fit-content;
-    height: 50px;
-    font-weight: 650;
-    font-size: 18px;
-    font-family: noodle;
-    border-radius: 5px;
-    border-color: whitesmoke;
-    margin: 0 auto;
-    transition: all .3s ease-in-out;
-  }
 
   .normatec-container,
   .whoop-container,
@@ -552,28 +570,9 @@ ul, ol {margin-left: 25px; }
     width: 61%;
   }
 
-  .whoop-link, .stamina-link, .nucalm-link {
-    display: inline-block;
-    width: 0;
-    margin: 0 39%;
-  }
-
-  .whoop-btn, .nucalm-btn,
-  .stamina-btn, .naboso-btn,
-  .lulu-btn, .normatec-btn {
-    background: whitesmoke;
-    width: 12em;
-    height: 50px;
-    font-weight: 650;
-    font-size: 18px;
-    font-family: noodle;
-    border-radius: 5px;
-    border-color: whitesmoke;
-    margin: 0 34%;
-    transition: all .3s ease-in-out;
-  }
-
-  .normatec-btn {margin: 0 39%;}
+  .naboso-btn, .lulu-btn {margin: 0 34%;}
+  .normatec-btn, .whoop-btn, .nucalm-btn {margin: 0 39%;}
+  .stamina-btn {margin: 0 38%;}
 
   .normatec-container {
     display: grid;
@@ -662,7 +661,6 @@ ul, ol {margin-left: 25px; }
   }
 
   .naboso-logo {top: 0;}
-
   .stamina-logo {
     width: 20%;
     margin: 0 5%;
@@ -683,43 +681,20 @@ ul, ol {margin-left: 25px; }
     width: 68%;
   }
 
-  .whoop-btn, .nucalm-btn,
-  .stamina-btn {
-    width: 10%;
-    margin: 0 32%;
-  }
-
   .stamina-btn {
     position: $rel;
     top: -2em;
   }
 
-  .whoop-btn, .nucalm-btn,
-  .stamina-btn, .naboso-btn,
-  .lulu-btn, .normatec-btn {
-    background: whitesmoke;
-    width: 12em;
-    cursor: pointer;
-    height: 50px;
-    font-weight: 650;
-    font-size: 18px;
-    font-family: noodle;
-    border-radius: 5px;
-    border-color: whitesmoke;
-    margin: 0 auto;
-    transition: all .3s ease-in-out;
-  }
-
   .whoop-link, .stamina-link,
-  .nucalm-link, .normatec-link {
+  .nucalm-link {
     display: inline-block;
-    width: 0;
     margin: 0 32%;
   }
 
   .normatec-container {
     display: inline-grid;
-    grid-template-columns: 105%;
+    grid-template-columns: 100%;
     margin: 7%;
   }
 
@@ -762,6 +737,8 @@ ul, ol {margin-left: 25px; }
 
 // music section
 .playlist-header, .soundcloud-title-1, .soundcloud-title-2  {
+  font-family: memories;
+  font-size: 20px;
   text-transform: uppercase;
   font-weight: 600;
   color: whitesmoke;
@@ -774,13 +751,15 @@ ul, ol {margin-left: 25px; }
   background-color: whitesmoke;
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 20px;
-  font-family: noodle;
+  font-size: 15px;
+  font-family: memories;
+  transition: all .35s ease-in-out;
 }
 
 .soundcloud-btn-1:hover, .soundcloud-btn-2:hover {
-  background: linear-gradient(75deg, #8bc34aa3, 25%, whitesmoke);
-  transition: .5s;
+  background: $black;
+  color: whitesmoke;
+  border-color: $black;
 }
 
 @media all and (max-width: 355px) and (min-width: 250px) {
