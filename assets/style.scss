@@ -351,9 +351,18 @@ ul, ol {margin-left: 25px; }
 .doubles-container {
   display: grid;
   display: -ms-grid;
+  grid-template-columns: 50%;
   justify-content: left;
   text-align: center;
-  margin: 5em 4em;
+  margin: 6.5em 4em;
+}
+
+.video-1 h3, .video-2 h3,
+.video-3 h3, .video-4 h3,
+.video-5 h3 {
+  font-family: memories;
+  font-size: 20px;
+  text-shadow: 2px 2px $black;
 }
 
 .video-bp-1, .video-bp-2,
@@ -364,7 +373,8 @@ ul, ol {margin-left: 25px; }
 }
 
 .frame-1, .frame-2,
-.frame-3, .frame-4 {
+.frame-3, .frame-4,
+.frame-5 {
   border-radius: 5px;
 }
 
