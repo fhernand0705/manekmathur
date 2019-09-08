@@ -43,10 +43,10 @@
 
   })();
 
-  // toggles nav menu overlay
-   let burgerIcon = document.querySelector("#menu-icon");
+// toggles nav menu overlay
+  let burgerIcon = document.querySelector("#menu-icon");
 
-   burgerIcon.addEventListener("click", function() {
+  burgerIcon.addEventListener("click", function() {
        let overlay = document.querySelector(".overlay");
        let bars = document.querySelector(".menu-bars");
 
@@ -57,7 +57,8 @@
     });
 
 // hides/shows navbar on scroll down/up
-  var prevScrollPos = window.pageYOffset;
+var prevScrollPos = window.pageYOffset;
+
 window.onscroll = function() {
   let navbar = document.getElementById("navbar");
   let currentScrollPos = window.pageYOffset;
