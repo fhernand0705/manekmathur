@@ -3,7 +3,7 @@
 
 // adds 'active' link to navbar items
 (function activeLink() {
-     let wrapper = document.getElementsByClassName('main-wrapper')[0];
+     let wrapper = document.querySelector('.main-wrapper');
 
      // access pathnames for each navbar item
      let homePage = document.getElementById('home').pathname;
@@ -12,7 +12,6 @@
      let musicPage = document.getElementById('music').pathname;
      let contactPage = document.getElementById('contact').pathname;
      let doublesPage = document.getElementById('doubles').pathname;
-     let eventsPage = document.getElementById('events').pathname;
 
      // access navbar items
      let navbar = document.getElementById('navbar');
@@ -21,7 +20,6 @@
      let music = document.getElementById('music');
      let contact = document.getElementById('contact');
      let doubles = document.getElementById('doubles');
-     let events = document.getElementById('events');
 
      // check location and add active class
     return  location.pathname === aboutPage ? about.classList.add("active")
@@ -30,14 +28,8 @@
            :location.pathname === contactPage ? contact.classList.add("active")
            :location.pathname === doublesPage ? doubles.classList.add("active")
            :location.pathname === homePage ? (
-             wrapper.style.minHeight = "76%",
+             wrapper.style.minHeight = "76.2%",
              navbar.style.backgroundImage = "none"
-             )
-
-             :location.pathname === eventsPage ? (
-             wrapper.style.minHeight = "76%",
-             navbar.style.backgroundImage = "none",
-             events.classList.add("active")
              )
            :null;
 
