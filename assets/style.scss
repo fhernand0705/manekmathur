@@ -124,20 +124,18 @@ ul, ol {margin-left: 25px; }
   width: 100%;
   height: 120px;
   transition: top 0.3s;
-  grid-template-columns: 39% 13% 40%;
-  grid-template-rows: 100%;
+  grid-template-columns: 63% 79%;
   justify-content: center;
   background-image: linear-gradient(45deg, rgba(39, 40, 33, 0.6), 25%, rgb(58, 46, 54));
 }
 
-.center-logo {
+.navbar-logo {
   position: $rel;
-  margin: 0;
-  height: 7em;
+  height: 5em;
   text-align: center;
 }
 
-.center-logo a {
+.navbar-logo a {
   display: inline-block;
   height: 100%;
 }
@@ -157,16 +155,18 @@ ul, ol {margin-left: 25px; }
   color: whitesmoke;
 }
 
-.nav-left, .nav-right {
+.navbar-right {
   display: inline-grid;
   list-style: none;
   text-align: center;
 }
 
-.nav-left {grid-template-columns: 26% 26% 59%;}
-.nav-right {grid-template-columns: 45% 42% 23%;}
+.navbar-right {
+  grid-template-columns: 15% 15% 35% 35% 15%;
+  margin: 1.5em 0;
+}
 
-.nav-left a, .nav-right a {
+.navbar-right a {
   text-decoration: none;
   color: whitesmoke;
   text-transform: uppercase;
@@ -175,12 +175,12 @@ ul, ol {margin-left: 25px; }
   transition: border-width 0.3s ease-in-out;
 }
 
-.nav-left a:hover, .nav-right a:hover {
+.navbar-right a:hover {
   border-bottom: 3px solid whitesmoke;
   border-width: 5px;
 }
 
-.nav-left a.active, .nav-right a.active {
+.navbar-right a.active {
   border-bottom: 3px solid whitesmoke;
   border-width: 5px;
 }
