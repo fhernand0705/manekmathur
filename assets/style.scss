@@ -117,7 +117,7 @@ ul, ol {margin-left: 25px; }
   transition: top 0.3s;
   grid-template-columns: 42% 57%;
   justify-content: center;
-  background-image: linear-gradient(45deg, rgba(39, 40, 33, 0.6), 25%, rgb(58, 46, 54));
+  background-image: linear-gradient(-45deg, rgba(39, 40, 33, .65), 25%, rgb(58, 46, 54));
 }
 
 .navbar-logo {
@@ -193,7 +193,6 @@ ul, ol {margin-left: 25px; }
 }
 
 .navbar-right a.active:after {margin-top: 7px;}
-
 .navbar-right a.active:hover:after {
   content: "";
   border-bottom: 0;
@@ -340,6 +339,7 @@ ul, ol {margin-left: 25px; }
   justify-content: center;
   text-align: center;
   margin: 5.5em 0;
+  text-shadow: 2px 2px $black;
 }
 
 .about-wrapper p {
@@ -353,7 +353,6 @@ ul, ol {margin-left: 25px; }
   text-transform: uppercase;
   font-family: memories;
   font-weight: 500;
-  text-shadow: 2px 2px $black;
 }
 
 @media all and (max-width: 1100px) {
