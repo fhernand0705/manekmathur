@@ -3,7 +3,7 @@
 
 // adds 'active' link to navbar items
 (function activeLink() {
-     let wrapper = document.getElementsByClassName('main-wrapper')[0];
+     let wrapper = document.querySelector('.main-wrapper');
 
      // access pathnames for each navbar item
      let homePage = document.getElementById('home').pathname;
@@ -12,7 +12,6 @@
      let musicPage = document.getElementById('music').pathname;
      let contactPage = document.getElementById('contact').pathname;
      let doublesPage = document.getElementById('doubles').pathname;
-     let eventsPage = document.getElementById('events').pathname;
 
      // access navbar items
      let navbar = document.getElementById('navbar');
@@ -21,32 +20,28 @@
      let music = document.getElementById('music');
      let contact = document.getElementById('contact');
      let doubles = document.getElementById('doubles');
-     let events = document.getElementById('events');
 
      // check location and add active class
     return  location.pathname === aboutPage ? about.classList.add("active")
            :location.pathname === brandsPage ? brands.classList.add("active")
-           :location.pathname === musicPage ? music.classList.add("active")
            :location.pathname === contactPage ? contact.classList.add("active")
            :location.pathname === doublesPage ? doubles.classList.add("active")
-           :location.pathname === homePage ? (
-             wrapper.style.minHeight = "76%",
-             navbar.style.backgroundImage = "none"
+           :location.pathname === musicPage ? (
+             music.classList.add("active"),
+             wrapper.style.marginBottom = "42.5%"
              )
-
-             :location.pathname === eventsPage ? (
-             wrapper.style.minHeight = "76%",
-             navbar.style.backgroundImage = "none",
-             events.classList.add("active")
+           :location.pathname === homePage ? (
+             wrapper.style.minHeight = "76.2%",
+             navbar.style.backgroundImage = "none"
              )
            :null;
 
   })();
 
-  // toggles nav menu overlay
-   let burgerIcon = document.querySelector("#menu-icon");
+// toggles nav menu overlay
+  let burgerIcon = document.querySelector("#menu-icon");
 
-   burgerIcon.addEventListener("click", function() {
+  burgerIcon.addEventListener("click", function() {
        let overlay = document.querySelector(".overlay");
        let bars = document.querySelector(".menu-bars");
 
@@ -57,7 +52,8 @@
     });
 
 // hides/shows navbar on scroll down/up
-  var prevScrollPos = window.pageYOffset;
+var prevScrollPos = window.pageYOffset;
+
 window.onscroll = function() {
   let navbar = document.getElementById("navbar");
   let currentScrollPos = window.pageYOffset;

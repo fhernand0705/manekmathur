@@ -18,6 +18,11 @@ body {
   src: url(/assets/big_noodle_titling.ttf);
 }
 
+@font-face {
+  font-family: memories;
+  src: url(/assets/QForTheMemories-Z3ql.ttf);
+}
+
 html, body {
   height: 100%;
   margin: 0;
@@ -42,12 +47,13 @@ ul, ol, dl, figure,
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position-y: 15%;
   width: 100%;
   height: 100%;
 }
 
 .about-img {
-  background: linear-gradient(#f5f5f575, 25%, #2a2a5ab0),
+  background: linear-gradient(#79554873, 25%, rgba(0, 0, 0, .35)),
               url("/assets/images/manek-about.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -58,19 +64,12 @@ ul, ol, dl, figure,
 }
 
 .doubles-img {
-  background: linear-gradient(10deg, #040100b3, 25%, #d87455);
+  background: linear-gradient(#79554873, 25%, rgba(0, 0, 0, .2)),
+              url("/assets/images/manek-doubles.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  width: 100%;
-  height: 100%;
-}
-
-.events-img {
-  background: linear-gradient(10deg, #f5f5f575, 25%, #2196F3);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-position-y: 50%;
   width: 100%;
   height: 100%;
 }
@@ -86,7 +85,7 @@ ul, ol, dl, figure,
 }
 
 .music-img {
-  background: linear-gradient(#8bc34aa3, 25%, rgba(0, 0, 0, .7)),
+  background: linear-gradient(#79554873, 25%, rgba(0, 0, 0, .7)),
               url("/assets/images/manek-music.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -116,65 +115,87 @@ ul, ol {margin-left: 25px; }
   width: 100%;
   height: 120px;
   transition: top 0.3s;
-  grid-template-columns: 39% 13% 40%;
-  grid-template-rows: 100%;
+  grid-template-columns: 42% 57%;
   justify-content: center;
-  background-image: linear-gradient(45deg, rgba(39, 40, 33, 0.6), 25%, rgb(58, 46, 54));
+  background-image: linear-gradient(-45deg, rgba(39, 40, 33, .65), 25%, rgb(58, 46, 54));
 }
 
-.center-logo {
+.navbar-logo {
   position: $rel;
-  margin: 0;
-  height: 7em;
+  height: 5em;
   text-align: center;
 }
 
-.center-logo a {
+.navbar-logo a {
   display: inline-block;
-  height: 100%;
+  height: 93%;
 }
 
 .img-logo {
-  position: $rel;
+  position: absolute;
+  left: .5em;
   top: -3.5em;
 }
 
 .header-tagline {
   position: $rel;
-  top: -8em;
-  margin: 0 -43px;
+  top: -1.2em;
+  right: 8em;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 21px;
   color: whitesmoke;
 }
 
-.nav-left, .nav-right {
+.navbar-right {
   display: inline-grid;
   list-style: none;
   text-align: center;
 }
 
-.nav-left {grid-template-columns: 26% 26% 59%;}
-.nav-right {grid-template-columns: 45% 42% 23%;}
+.navbar-right {
+  grid-template-columns: 17.5% 17.5% 38% 38% 17.5%;
+  margin: 1.5em 0;
+}
 
-.nav-left a, .nav-right a {
+.navbar-right a {
+  display: inline-block;
+  position: $rel;
+  padding-bottom: 1px;
   text-decoration: none;
   color: whitesmoke;
   text-transform: uppercase;
   font-weight: 500;
-  padding: 10px;
-  transition: border-width 0.3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
-.nav-left a:hover, .nav-right a:hover {
-  border-bottom: 3px solid whitesmoke;
+.navbar-right a:after {
+  display: block;
+  content: "";
+  margin: auto;
+  margin-top: 10px;
+  height: 2px;
+  width: 0px;
+  background: transparent;
+  transition: width 0.55s ease, background-color .55s ease;
+}
+
+.navbar-right a:hover:after {
+  content: "";
+  border-bottom: 2.5px solid whitesmoke;
+  border-width: 3.5px;
+  width: 100%;
+}
+
+.navbar-right a.active {
+  border-bottom: 2.5px solid #000000;
   border-width: 5px;
 }
 
-.nav-left a.active, .nav-right a.active {
-  border-bottom: 3px solid whitesmoke;
-  border-width: 5px;
+.navbar-right a.active:after {margin-top: 7px;}
+.navbar-right a.active:hover:after {
+  content: "";
+  border-bottom: 0;
 }
 
 .mobile-logo {display: none;}
@@ -317,17 +338,21 @@ ul, ol {margin-left: 25px; }
   grid-template-columns: 85%;
   justify-content: center;
   text-align: center;
-  margin: 5em 0;
+  margin: 5.5em 0;
+  text-shadow: 2px 2px $black;
 }
 
 .about-wrapper p {
   color: whitesmoke;
+  font-family: memories;
+  font-size: 20px;
 }
 
 .about-header {
   color: whitesmoke;
   text-transform: uppercase;
-  font-weight: 600;
+  font-family: memories;
+  font-weight: 500;
 }
 
 @media all and (max-width: 1100px) {
@@ -340,10 +365,18 @@ ul, ol {margin-left: 25px; }
 .doubles-container {
   display: grid;
   display: -ms-grid;
-  justify-content: center;
+  grid-template-columns: 50%;
+  justify-content: left;
   text-align: center;
-  width: 100%;
-  margin-top: 5em;
+  margin: 6.5em 4em;
+}
+
+.video-1 h3, .video-2 h3,
+.video-3 h3, .video-4 h3,
+.video-5 h3 {
+  font-family: memories;
+  font-size: 20px;
+  text-shadow: 2px 2px $black;
 }
 
 .video-bp-1, .video-bp-2,
@@ -354,7 +387,8 @@ ul, ol {margin-left: 25px; }
 }
 
 .frame-1, .frame-2,
-.frame-3, .frame-4 {
+.frame-3, .frame-4,
+.frame-5 {
   border-radius: 5px;
 }
 
@@ -371,26 +405,36 @@ ul, ol {margin-left: 25px; }
   }
 }
 
-// upcoming events section
-.events-message {
-  display: grid;
-  display: -ms-grid;
-  text-align: center;
-  position: $rel;
-  width: 100%;
-  top: 9em;
-  text-transform: uppercase;
-}
-
-@media all and (max-width: 1100px) {
-  .events-message {
-    position: unset;
-  }
-}
+//  upcoming events section
+// .events-message {
+//   display: grid;
+//   display: -ms-grid;
+//   text-align: center;
+//   position: $rel;
+//   width: 100%;
+//   top: 9em;
+//   text-transform: uppercase;
+// }
+//
+// @media all and (max-width: 1100px) {
+//   .events-message {
+//     position: unset;
+//   }
+// }
 
 // responsive brand partnerships section
-.brands-wrapper {margin: 0 0 4em;}
-.brands-wrapper p, h3 {color: whitesmoke;}
+.brands-wrapper {
+  margin: 0 0 4em;
+  font-family: memories;
+  font-size: 20px;
+  text-shadow: 2px 2px black;
+}
+
+.brands-wrapper p, h3 {
+  color: whitesmoke;
+  font-family: memories;
+}
+
 .brands-wrapper h3 {
   text-transform: uppercase;
   font-weight: 600;
@@ -404,13 +448,31 @@ ul, ol {margin-left: 25px; }
   top: -1.5em;
   width: 100%;
   text-align: center;
+  text-shadow: 2px 2px black;
   text-transform: uppercase;
   color: whitesmoke;
 }
 
+.whoop-btn, .nucalm-btn,
+.stamina-btn, .naboso-btn,
+.lulu-btn, .normatec-btn,
+.greens-btn {
+  font-family: memories;
+  background: whitesmoke;
+  width: fit-content;
+  height: 50px;
+  font-weight: 650;
+  font-size: 18px;
+  border-radius: 5px;
+  border-color: whitesmoke;
+  margin: 0 auto;
+  transition: all .3s ease-in-out;
+}
+
 .whoop-btn:hover, .nucalm-btn:hover,
 .stamina-btn:hover, .naboso-btn:hover,
-.lulu-btn:hover, .normatec-btn:hover {
+.lulu-btn:hover, .normatec-btn:hover,
+.greens-btn:hover {
   background: $black;
   color: whitesmoke;
   border-color: $black;
@@ -418,76 +480,44 @@ ul, ol {margin-left: 25px; }
 
 @media all and (max-width: 640px) {
   .main-breakpoint {
+    position: $rel;
+    margin: 0 auto;
+    width: 65%;
     top: -3.5em;
     box-shadow: 0 0 9px 0 rgba(43, 43, 43, 0.1),
     0 5px 8px 1.5px rgba(43, 43, 43, 0.1);
   }
 
-  .main-breakpoint {
-    position: $rel;
-    margin: 0 auto;
-    width: 65%;
-  }
-
-  .breakpoint-1,
-  .breakpoint-2,
-  .breakpoint-3,
-  .breakpoint-4,
-  .breakpoint-5 {
+  .breakpoint-1, .breakpoint-2,
+  .breakpoint-3, .breakpoint-4,
+  .breakpoint-5, .breakpoint-6 {
     position: $rel;
     margin: 0 auto;
     width: 100%;
     top: .7em;
   }
 
-  .normatec-logo,
-  .whoop-logo,
-  .nucalm-logo,
-  .naboso-logo {width: 75%;}
-
+  .normatec-logo, .whoop-logo,
+  .nucalm-logo, .naboso-logo {width: 75%;}
+  .greens-logo {width: 55%;}
   .stamina-logo {width: 50%;}
   .lulu-logo {width: 45%;}
 
-  .whoop-btn, .nucalm-btn,
-  .stamina-btn, .naboso-btn,
-  .lulu-btn, .normatec-btn {
-    background: whitesmoke;
-    width: fit-content;
-    height: 50px;
-    font-weight: 650;
-    font-size: 18px;
-    font-family: noodle;
-    border-radius: 5px;
-    border-color: whitesmoke;
-    margin: 0 auto;
-    transition: all .3s ease-in-out;
-  }
-
-  .normatec-container,
-  .whoop-container,
-  .nucalm-container,
-  .stamina-container,
-  .naboso-container,
-  .lulu-container {
+  .normatec-container, .whoop-container,
+  .nucalm-container, .stamina-container,
+  .naboso-container, .lulu-container,
+  .greens-container {
     display: inline-grid;
     grid-template-rows: auto;
+    grid-template-columns: 100%;
     margin: 20px;
     justify-content: center;
     text-align: center;
   }
 
-  .normatec-container {grid-template-columns: 75%;}
-  .whoop-container {grid-template-columns: 95%;}
-  .nucalm-container {grid-template-columns: 85%;}
-  .stamina-container {grid-template-columns: 85%;}
-  .naboso-container {grid-template-columns: 100%;}
-  .lulu-container {grid-template-columns: 100%;}
-
-  .stamina-header,
-  .normatec-header,
-  .whoop-header,
-  .nucalm-header,
-  .lulu-header {padding-top: 30px;}
+  .stamina-header, .normatec-header,
+  .whoop-header, .nucalm-header,
+  .lulu-header, .greens-header {padding-top: 30px;}
 }
 
 @media all and (min-width: 641px) and (max-width: 1100px) {
@@ -500,34 +530,32 @@ ul, ol {margin-left: 25px; }
     0 5px 8px 1.5px rgba(43, 43, 43, 0.1);
   }
 
-  .breakpoint-1,
-  .breakpoint-2,
-  .breakpoint-3,
-  .breakpoint-4,
-  .breakpoint-5 {
+  .breakpoint-1, .breakpoint-2,
+  .breakpoint-3, .breakpoint-4,
+  .breakpoint-5, .breakpoint-6 {
     position: $rel;
     margin: 0 auto;
     width: 90%;
     top: 1.5em;
   }
 
-  .normatec-logo,
-  .whoop-logo,
-  .nucalm-logo,
-  .stamina-logo,
-  .lulu-logo {
+  .normatec-logo, .whoop-logo,
+  .nucalm-logo, .lulu-logo,
+  .greens-logo {
     width: 35%;
     float: left;
     margin-right: 30px;
   }
 
-  .whoop-logo,.nucalm-logo {
+  .whoop-logo, .nucalm-logo {
     position: $rel;
     top: 4em;
   }
 
   .stamina-logo {
     width: 20%;
+    float: left;
+    margin-right: 30px;
     margin: 3% 7%;
   }
 
@@ -543,40 +571,25 @@ ul, ol {margin-left: 25px; }
     margin: 0 7%;
   }
 
-  .nucalm-header,.nucalm-text,
-  .whoop-header,.whoop-text,
-  .stamina-text,.stamina-header {
+  .greens-logo {width: 29%;}
+
+  .nucalm-header, .nucalm-text,
+  .whoop-header, .whoop-text,
+  .stamina-header, .stamina-text {
     float: right;
     width: 61%;
   }
 
-  .whoop-link, .stamina-link, .nucalm-link {
-    display: inline-block;
-    width: 0;
-    margin: 0 39%;
-  }
-
-  .whoop-btn, .nucalm-btn,
-  .stamina-btn, .naboso-btn,
-  .lulu-btn, .normatec-btn {
-    background: whitesmoke;
-    width: 12em;
-    height: 50px;
-    font-weight: 650;
-    font-size: 18px;
-    font-family: noodle;
-    border-radius: 5px;
-    border-color: whitesmoke;
-    margin: 0 34%;
-    transition: all .3s ease-in-out;
-  }
-
-  .normatec-btn {margin: 0 39%;}
+  .greens-btn {margin: 0 33%;}
+  .naboso-btn, .lulu-btn {margin: 0 34%;}
+  .normatec-btn {margin: 0 38%;}
+  .whoop-btn, .nucalm-btn {margin: 0 39%;}
+  .stamina-btn {margin: 0 39%;}
 
   .normatec-container {
     display: grid;
     grid-template-columns: 100%;
-    margin: 0 1em;
+    margin: 0 1.5em;
   }
 
   .whoop-container {
@@ -584,7 +597,7 @@ ul, ol {margin-left: 25px; }
     display: -ms-grid;
     position: $rel;
     grid-template-columns: 95%;
-    margin: 1.5em .5em;
+    margin: 1.5em 1.5em;
     top: 1em;
   }
 
@@ -593,7 +606,6 @@ ul, ol {margin-left: 25px; }
     display: -ms-grid;
     position: $rel;
     grid-template-columns: 95%;
-    margin: 0 -1em;
     top: 2em;
   }
 
@@ -601,7 +613,7 @@ ul, ol {margin-left: 25px; }
     display: inline-grid;
     position: $rel;
     grid-template-columns: 90%;
-    margin: 1em 1em;
+    margin: 1em 1.5em;
     top: 5em;
   }
 
@@ -609,7 +621,7 @@ ul, ol {margin-left: 25px; }
     display: inline-grid;
     position: $rel;
     grid-template-columns: 100%;
-    margin: 5em 1em;
+    margin: 5em 2em;
     top: 2em;
   }
 
@@ -617,7 +629,15 @@ ul, ol {margin-left: 25px; }
     display: inline-grid;
     position: $rel;
     grid-template-columns: 100%;
-    margin: 1em 1em;
+    margin: 1em 1.5em;
+    top: 0;
+  }
+
+  .greens-container {
+    display: inline-grid;
+    position: $rel;
+    grid-template-columns: 100%;
+    margin: 1em 3em;
     top: 0;
   }
 }
@@ -635,23 +655,19 @@ ul, ol {margin-left: 25px; }
     0 5px 8px 1.5px rgba(43, 43, 43, 0.1);
   }
 
-  .breakpoint-1,
-  .breakpoint-2,
-  .breakpoint-3,
-  .breakpoint-4,
-  .breakpoint-5 {
+  .breakpoint-1, .breakpoint-2,
+  .breakpoint-3, .breakpoint-4,
+  .breakpoint-5, .breakpoint-6 {
     position: $rel;
     margin: 0 auto;
     width: 90%;
     top: 2.5em
   }
 
-  .normatec-logo,
-  .whoop-logo,
-  .nucalm-logo,
-  .stamina-logo,
-  .naboso-logo,
-  .lulu-logo {
+  .normatec-logo, .whoop-logo,
+  .nucalm-logo, .stamina-logo,
+  .naboso-logo, .lulu-logo,
+  .greens-logo {
     position: $rel;
     width: 30%;
     float: left;
@@ -673,18 +689,17 @@ ul, ol {margin-left: 25px; }
     top: 0;
   }
 
-  .nucalm-header,.nucalm-text,
-  .whoop-header,
-  .whoop-text,.stamina-text,
-  .stamina-header {
-    float: right;
-    width: 68%;
+  .greens-logo {
+    width: 25%;
+    margin: 0 2.5%;
+    top: 0;
   }
 
-  .whoop-btn, .nucalm-btn,
-  .stamina-btn {
-    width: 10%;
-    margin: 0 32%;
+  .nucalm-header,.nucalm-text,
+  .whoop-header, .whoop-text,
+  .stamina-header, .stamina-text {
+    float: right;
+    width: 68%;
   }
 
   .stamina-btn {
@@ -692,93 +707,58 @@ ul, ol {margin-left: 25px; }
     top: -2em;
   }
 
-  .whoop-btn, .nucalm-btn,
-  .stamina-btn, .naboso-btn,
-  .lulu-btn, .normatec-btn {
-    background: whitesmoke;
-    width: 12em;
-    cursor: pointer;
-    height: 50px;
-    font-weight: 650;
-    font-size: 18px;
-    font-family: noodle;
-    border-radius: 5px;
-    border-color: whitesmoke;
-    margin: 0 auto;
-    transition: all .3s ease-in-out;
+  .whoop-link, .stamina-link,
+  .nucalm-link {
+    display: inline-block;
+    margin: 0 32%;
   }
 
-  .whoop-link, .stamina-link,
-  .nucalm-link, .normatec-link {
-    display: inline-block;
-    width: 0;
-    margin: 0 32%;
+  .whoop-container, .nucalm-container,
+  .stamina-container, .naboso-container,
+  .lulu-container, .greens-container {
+    display: inline-grid;
+    position: $rel;
+    grid-template-columns: 100%;
+    margin: 50px;
   }
 
   .normatec-container {
     display: inline-grid;
-    grid-template-columns: 105%;
+    grid-template-columns: 100%;
     margin: 7%;
   }
 
-  .whoop-container {
-    display: inline-grid;
-    position: $rel;
-    grid-template-columns: 100%;
-    margin: 50px;
-  }
-
-  .nucalm-container {
-    display: inline-grid;
-    position: $rel;
-    grid-template-columns: 100%;
-    margin: 50px;
-  }
-
-  .stamina-container {
-    display: inline-grid;
-    position: $rel;
-    grid-template-columns: 100%;
-    margin: 50px;
-  }
-
-  .naboso-container {
-    display: inline-grid;
-    position: $rel;
-    grid-template-columns: 100%;
-    margin: 50px;
-  }
-
-  .lulu-container {
-    display: inline-grid;
-    position: $rel;
-    grid-template-columns: 100%;
-    margin: 50px;
-    top: 2em;
-  }
+  .lulu-container, .greens-container {top: 2em;}
 }
 
 // music section
-.playlist-header, .soundcloud-title-1, .soundcloud-title-2  {
+.playlist-header, .soundcloud-title-1,
+.soundcloud-title-2, .spotify-title-1  {
+  font-family: memories;
+  font-size: 20px;
   text-transform: uppercase;
   font-weight: 600;
   color: whitesmoke;
 }
 
-.soundcloud-btn-1, .soundcloud-btn-2 {
+.soundcloud-btn-1, .soundcloud-btn-2,
+.spotify-btn-1 {
   padding: 10px;
   margin: 1em;
   border-radius: 5px;
   background-color: whitesmoke;
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 20px;
-  font-family: noodle;
+  font-size: 15px;
+  font-family: memories;
+  transition: all .35s ease-in-out;
 }
 
-.soundcloud-btn-1:hover, .soundcloud-btn-2:hover {
-  background: linear-gradient(75deg, #8bc34aa3, 25%, whitesmoke);
-  transition: .5s;
+.soundcloud-btn-1:hover, .soundcloud-btn-2:hover,
+.spotify-btn-1:hover {
+  background: $black;
+  color: whitesmoke;
+  border-color: $black;
 }
 
 @media all and (max-width: 355px) and (min-width: 250px) {
@@ -823,9 +803,11 @@ ul, ol {margin-left: 25px; }
     text-align: center;
   }
 
+  .solo-songs-container {grid-template-columns: 50%;}
   .playlist-container {
     grid-template-rows: 10%;
     grid-row-gap: 0;
+    margin: 5em 0;
   }
 
   .soundcloud-player-1, .soundcloud-player-2 {width: 75%;}
@@ -837,10 +819,12 @@ ul, ol {margin-left: 25px; }
     color: whitesmoke;
   }
 
-  .soundcloud-title-1, .soundcloud-title-2 {
+  .soundcloud-title-1, .soundcloud-title-2,
+  .spotify-title-1 {
     text-transform: uppercase;
     font-weight: 600;
     color: whitesmoke;
+    margin: auto 2em;
   }
 
   .songs-bp-1, .songs-bp-2 {margin: auto 2em;}
@@ -860,18 +844,20 @@ ul, ol {margin-left: 25px; }
     float: left;
     grid-gap: 5%;
     margin: -4.5em 0;
-    grid-template-columns: 33%;
+    grid-template-columns: 37%;
     width: 100%;
   }
 
   .playlist-container {
     grid-gap: .5%;
     position: $rel;
-    top: 10em;
-    margin: 20em 0;
+    top: 12.5em;
   }
 
-  .playlist-header {margin: 1.2em 0;}
+  .playlist-header {margin: 1em 0;}
+  .soundcloud-title-1, .soundcloud-title-2,
+  .spotify-title-1 {margin: auto 2em;}
+
   .songs-bp-1, .songs-bp-2 {margin-top: 2em;}
   .playlist-bp-1, .playlist-bp-2 {margin: 1.5em 0;}
 }
@@ -896,10 +882,10 @@ ul, ol {margin-left: 25px; }
       margin: 9em 0;
     }
 
+    .spotify-player-1 {width: 98.5%;}
     .soundcloud-player-1, .soundcloud-player-2 {width: 100%;}
     .playlist-header {margin: 1.2em 0;}
-    .songs-bp-1 {margin-top: 2em;}
-    .songs-bp-2 {display: none;}
+    .songs-bp-1, .songs-bp-2 {margin-top: 2em;}
     .playlist-bp-1, .playlist-bp-2 {margin: 1.5em 0;}
 }
 
@@ -908,7 +894,9 @@ ul, ol {margin-left: 25px; }
   display: grid;
   display: -ms-grid;
   width: 80%;
-  margin: 5.5em 3.5em;
+  font-family: memories;
+  font-size: 20px;
+  margin: 7.5em 3.5em;
   grid-template-columns: 40%;
 }
 
@@ -939,9 +927,9 @@ label {color: whitesmoke;}
   border-radius: 5px;
   height: 30px;
   text-transform: uppercase;
-  font-family: noodle;
+  font-family: memories;
+  font-size: 18px;
   font-weight: 600;
-  font-size: 25px;
   transition: all .25s ease-in-out;
   cursor: pointer;
 }
