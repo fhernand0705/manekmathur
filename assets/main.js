@@ -31,7 +31,7 @@
              wrapper.style.marginBottom = "42.5%"
              )
            :location.pathname === homePage ? (
-             wrapper.style.minHeight = "76.2%",
+             wrapper.style.minHeight = "72%",
              navbar.style.backgroundImage = "none"
              )
            :null;
