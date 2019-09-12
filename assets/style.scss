@@ -204,7 +204,10 @@ ul, ol {margin-left: 25px; }
 // mobile navbar responsiveness
 @media all and (max-width: 68.81em) {
   .navbar-container {display: none;}
-  .music-img {background-position: 50%;}
+  .music-img {
+    background-position: 50%;
+    background-attachment: scroll;
+  }
   .contact-img {background-position: 50%;}
   .brands-img {background-position: 30%;}
   .home-img {
