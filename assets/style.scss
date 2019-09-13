@@ -5,7 +5,7 @@
 $rel: relative;
 $black: #3A2E36;
 $base-font-size: 1.5em; //24px
-$tagline-font-size: .9em; //19px
+$about-font-size: 1em; //20px
 $base-line-height: 1.5;
 
 //breakpoints
@@ -22,6 +22,7 @@ $mq-xxsmall: "(min-width: #{$bp-xxsmall})";
 $mq-xsmall: "(min-width: #{$bp-xsmall})";
 $mq-small: "(min-width: #{$bp-small})";
 $mq-medium: "(min-width: #{$bp-medium})";
+$mq-max-medium: "(max-width: #{$bp-medium})";
 $mq-large: "(min-width: #{$bp-large})";
 $mq-xlarge: "(min-width: #{$bp-xlarge})";
 $mq-xxlarge: "(min-width: #{$bp-xxlarge})";
@@ -34,20 +35,20 @@ body {
   font-size: $base-font-size;
 
   @media #{$mq-medium} {
-    font-size: $base-font-size * 1.1;
+    font-size: $base-font-size * 1.12;
     line-height: $base-line-height;
   }
 
   @media #{$mq-large} {
-    font-size: $base-font-size * 1.3;
+    font-size: $base-font-size * 1.35;
   }
 
   @media #{$mq-xlarge} {
-    font-size: $base-font-size * 1.4;
+    font-size: $base-font-size * 1.6;
   }
 
   @media #{$mq-xxlarge} {
-    font-size: $base-font-size * 1.6;
+    font-size: $base-font-size * 2;
   }
 }
 
@@ -164,18 +165,39 @@ ul, ol, dl, figure,
   top: 0;
   left: 0;
   width: 100%;
-  height: 120px;
+  height: 4.5em;
   transition: top 0.3s;
   justify-content: center;
   background-image: linear-gradient(-45deg, rgba(39, 40, 33, .65), 25%, rgb(58, 46, 54));
+
+  @media #{$mq-medium} {
+    height: 5.1em;
+  }
+
+  @media #{$mq-large} {
+    height: 5.5em;
+  }
+
+  @media #{$mq-xlarge} {
+    height: 7.5em;
+  }
+
+  @media #{$mq-xxlarge} {
+    height: 8em;
+  }
 }
 
 .navbar-right-wrapper {
   flex: .75;
 
-  // @media #{$mq-medium} {
-  //   flex: .75;
-  // }
+  @media #{$mq-large} {flex: .85;}
+
+  @media #{$mq-xlarge} {
+    flex: .55;
+    margin: 1em 0;
+  }
+
+  @media #{$mq-xxlarge} {flex: .65;}
 }
 
 .navbar-logo {
@@ -195,49 +217,49 @@ ul, ol, dl, figure,
 .img-logo {
   position: absolute;
   left: .5em;
-  top: -3.5em;
-  width: 45%;
+  top: -4.3em;
+  width: 53%;
 
   @media #{$mq-large} {
-    width: 50%;
+    width: 58%;
     top: -4em;
   }
 
   @media #{$mq-xlarge} {
-    width: 55%;
-    top: -4.5em;
+    width: 60%;
+    top: -6.5em;
   }
 
   @media #{$mq-xxlarge} {
-    width: 57%;
-    top: -6.3em;
+    width: 63.5%;
+    top: -7em;
   }
 }
 
-.header-tagline {
-  position: $rel;
-  top: 4em;
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: $tagline-font-size;
-  color: whitesmoke;
-  transition: all .5s ease-in;
-
-  @media #{$mq-large} {
-    top: 5.3em;
-    font-size: $tagline-font-size * 1;
-  }
-
-  @media #{$mq-xlarge} {
-    top: 6em;
-    font-size: $tagline-font-size * 1.25;
-  }
-
-  @media #{$mq-xxlarge} {
-    top: 5.5em;
-    font-size: $tagline-font-size * 1.45;
-  }
-}
+// .header-tagline {
+//   position: $rel;
+//   top: 4em;
+//   text-transform: uppercase;
+//   font-weight: 500;
+//   font-size: $tagline-font-size;
+//   color: whitesmoke;
+//   transition: all .5s ease-in;
+//
+//   @media #{$mq-large} {
+//     top: 5.3em;
+//     font-size: $tagline-font-size * 1;
+//   }
+//
+//   @media #{$mq-xlarge} {
+//     top: 6em;
+//     font-size: $tagline-font-size * 1.25;
+//   }
+//
+//   @media #{$mq-xxlarge} {
+//     top: 5.5em;
+//     font-size: $tagline-font-size * 1.45;
+//   }
+// }
 
 .navbar-right {
   display: inline-grid;
@@ -294,11 +316,9 @@ ul, ol, dl, figure,
 .overlay-content a {display: none;}
 
 // mobile navbar responsiveness
-@media all and (max-width: 71.88em) {
+@media #{$mq-max-medium} {
   .navbar-container {display: none;}
-  .music-img {
-    background-position: 50%;
-  }
+  .music-img {background-position: 50%;}
   .contact-img {background-position: 50%;}
   .brands-img {background-position: 30%;}
   .home-img {
@@ -354,9 +374,9 @@ ul, ol, dl, figure,
   .mobile-logo, .manek-logo {
     display: inline;
     position: $rel;
-    top: -1.5em;
-    max-width: 200px;
-    width: 175px;
+    top: -2em;
+    max-width: 250px;
+    width: 85%;
     float: left;
     left: 0;
   }
@@ -366,15 +386,15 @@ ul, ol, dl, figure,
     margin-bottom: 5em;
   }
 
-  .mobile-tagline {
-    position: $rel;
-    top: -8em;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 13px;
-    color: whitesmoke;
-    left: 1em;
-  }
+  // .mobile-tagline {
+  //   position: $rel;
+  //   top: -8em;
+  //   text-transform: uppercase;
+  //   font-weight: 600;
+  //   font-size: 13px;
+  //   color: whitesmoke;
+  //   left: 1em;
+  // }
 
   .mobile-navbar-container {display: inline;}
 
@@ -431,18 +451,33 @@ ul, ol, dl, figure,
 
 // about me section
 .about-wrapper {
-  display: inline-grid;
-  grid-template-columns: 85%;
-  justify-content: center;
+  display: grid;
+  position: $rel;
+  grid-template-columns: 50%;
+  justify-content: left;
   text-align: center;
   margin: 5.5em 0;
   text-shadow: 2px 2px $black;
-}
 
-.about-wrapper p {
-  color: whitesmoke;
-  font-family: memories;
-  font-size: 20px;
+  @media #{$mq-max-medium} {
+      margin: -2em 0;
+      grid-template-columns: 100%;
+      justify-content: center;
+      width: 100%;
+      top: -5em;
+  }
+
+  @media #{$mq-large} {
+    margin: 3.75em 0;
+  }
+
+  @media #{$mq-xlarge} {
+    margin: 6em 0;
+  }
+
+  @media #{$mq-xxlarge} {
+    margin: 7.5em 0;
+  }
 }
 
 .about-header {
@@ -450,12 +485,24 @@ ul, ol, dl, figure,
   text-transform: uppercase;
   font-family: memories;
   font-weight: 500;
+
+  @media #{$mq-large} {
+    font-size: 2em * 1.2;
+  }
+
+  @media #{$mq-xlarge} {
+    font-size: 2em * 1.4;
+  }
+
+  @media #{$mq-xxlarge} {
+    font-size: 2em * 1.6;
+  }
 }
 
-@media all and (max-width: 1100px) {
-  .about-wrapper {
-    margin: -3em 0 1.5em;
-  }
+.about-wrapper p {
+  color: whitesmoke;
+  font-family: memories;
+  font-size: $about-font-size;
 }
 
 // doubles tutorials section
