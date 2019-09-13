@@ -4,8 +4,8 @@
 // global variables
 $rel: relative;
 $black: #3A2E36;
-$base-font-size: 1.5em; //24px
-$about-font-size: 1em; //20px
+$nav-font-size: 1.5em; //24px
+$base-font-size: 1em; //16px
 $base-line-height: 1.5;
 
 //breakpoints
@@ -35,20 +35,20 @@ body {
   font-size: $base-font-size;
 
   @media #{$mq-medium} {
-    font-size: $base-font-size * 1.12;
+    font-size: $base-font-size * 1.2;
     line-height: $base-line-height;
   }
 
   @media #{$mq-large} {
-    font-size: $base-font-size * 1.35;
+    font-size: $base-font-size * 1.3;
   }
 
   @media #{$mq-xlarge} {
-    font-size: $base-font-size * 1.6;
+    font-size: $base-font-size * 1.4;
   }
 
   @media #{$mq-xxlarge} {
-    font-size: $base-font-size * 2;
+    font-size: $base-font-size * 1.6;
   }
 }
 
@@ -171,33 +171,24 @@ ul, ol, dl, figure,
   background-image: linear-gradient(-45deg, rgba(39, 40, 33, .65), 25%, rgb(58, 46, 54));
 
   @media #{$mq-medium} {
-    height: 5.1em;
+    height: 5.8em;
   }
 
   @media #{$mq-large} {
-    height: 5.5em;
+    height: 7em;
   }
 
   @media #{$mq-xlarge} {
-    height: 7.5em;
+    height: 10em;
   }
 
   @media #{$mq-xxlarge} {
-    height: 8em;
+    height: 12em;
   }
 }
 
 .navbar-right-wrapper {
   flex: .75;
-
-  @media #{$mq-large} {flex: .85;}
-
-  @media #{$mq-xlarge} {
-    flex: .55;
-    margin: 1em 0;
-  }
-
-  @media #{$mq-xxlarge} {flex: .65;}
 }
 
 .navbar-logo {
@@ -217,22 +208,22 @@ ul, ol, dl, figure,
 .img-logo {
   position: absolute;
   left: .5em;
-  top: -4.3em;
-  width: 53%;
+  width: 45%;
+  margin: -5.5em 0;
 
   @media #{$mq-large} {
-    width: 58%;
-    top: -4em;
+    width: 50%;
+    margin: -6em 0;
   }
 
   @media #{$mq-xlarge} {
-    width: 60%;
-    top: -6.5em;
+    width: 55%;
+    margin: -9em 0;
   }
 
   @media #{$mq-xxlarge} {
-    width: 63.5%;
-    top: -7em;
+    width: 60%;
+    margin: -11.5em 0;
   }
 }
 
@@ -270,6 +261,22 @@ ul, ol, dl, figure,
 .navbar-right {
   grid-template-columns: 17.5% 17.5% 38% 38% 17.5%;
   margin: 1.5em 0;
+
+  @media #{$mq-medium} {
+    margin: 1.2em 0;
+  }
+
+  @media #{$mq-large} {
+    margin: 1em 0;
+  }
+
+  @media #{$mq-xlarge} {
+    margin: 2.5em 0;
+  }
+
+  @media #{$mq-xlarge} {
+    margin: 3em 0;
+  }
 }
 
 .navbar-right a {
@@ -281,6 +288,23 @@ ul, ol, dl, figure,
   text-transform: uppercase;
   font-weight: 500;
   transition: all .3s ease-in-out;
+
+  @media #{$mq-medium} {
+    font-size: $nav-font-size;
+    line-height: $base-line-height * 1;
+  }
+
+  @media #{$mq-large} {
+    font-size: $nav-font-size * 1.2;
+  }
+
+  @media #{$mq-xlarge} {
+    font-size: $nav-font-size * 1.3;
+  }
+
+  @media #{$mq-xxlarge} {
+    font-size: $nav-font-size * 1.45;
+  }
 }
 
 .navbar-right a:after {
@@ -374,7 +398,7 @@ ul, ol, dl, figure,
   .mobile-logo, .manek-logo {
     display: inline;
     position: $rel;
-    top: -2em;
+    top: -3em;
     max-width: 250px;
     width: 85%;
     float: left;
@@ -460,23 +484,23 @@ ul, ol, dl, figure,
   text-shadow: 2px 2px $black;
 
   @media #{$mq-max-medium} {
-      margin: -2em 0;
-      grid-template-columns: 100%;
-      justify-content: center;
-      width: 100%;
-      top: -5em;
+    margin: -2em 0;
+    grid-template-columns: 100%;
+    justify-content: center;
+    width: 100%;
+    top: -5em;
   }
 
   @media #{$mq-large} {
-    margin: 3.75em 0;
+    margin: 6.5em 0;
   }
 
   @media #{$mq-xlarge} {
-    margin: 6em 0;
+    margin: 9em 0;
   }
 
   @media #{$mq-xxlarge} {
-    margin: 7.5em 0;
+    margin: 11.5em 0;
   }
 }
 
@@ -486,23 +510,23 @@ ul, ol, dl, figure,
   font-family: memories;
   font-weight: 500;
 
-  @media #{$mq-large} {
-    font-size: 2em * 1.2;
-  }
-
-  @media #{$mq-xlarge} {
-    font-size: 2em * 1.4;
-  }
-
-  @media #{$mq-xxlarge} {
-    font-size: 2em * 1.6;
-  }
+  // @media #{$mq-large} {
+  //   font-size: 2em * 1.2;
+  // }
+  //
+  // @media #{$mq-xlarge} {
+  //   font-size: 2em * 1.4;
+  // }
+  //
+  // @media #{$mq-xxlarge} {
+  //   font-size: 2em * 1.6;
+  // }
 }
 
 .about-wrapper p {
   color: whitesmoke;
   font-family: memories;
-  font-size: $about-font-size;
+  // font-size: $about-font-size;
 }
 
 // doubles tutorials section
@@ -630,6 +654,9 @@ ul, ol, dl, figure,
 
 // responsive brand partnerships section
 .brands-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   margin: 0 0 4em;
   font-family: memories;
   font-size: 20px;
@@ -648,8 +675,6 @@ ul, ol, dl, figure,
 }
 
 .brands-header {
-  display: grid;
-  display: -ms-grid;
   position: $rel;
   top: -1.5em;
   width: 100%;
@@ -684,7 +709,7 @@ ul, ol, dl, figure,
   border-color: $black;
 }
 
-@media all and (max-width: 640px) {
+@media all and (min-width: 20em) {
   .main-breakpoint {
     position: $rel;
     margin: 0 auto;
@@ -713,9 +738,6 @@ ul, ol, dl, figure,
   .nucalm-container, .stamina-container,
   .naboso-container, .lulu-container,
   .greens-container {
-    display: inline-grid;
-    grid-template-rows: auto;
-    grid-template-columns: 100%;
     margin: 20px;
     justify-content: center;
     text-align: center;
@@ -726,7 +748,7 @@ ul, ol, dl, figure,
   .lulu-header, .greens-header {padding-top: 30px;}
 }
 
-@media all and (min-width: 641px) and (max-width: 1100px) {
+@media all and (min-width: 40em) {
    .main-breakpoint {
     position: $rel;
     margin: 0 auto;
@@ -747,106 +769,100 @@ ul, ol, dl, figure,
 
   .normatec-logo, .whoop-logo,
   .nucalm-logo, .lulu-logo,
-  .greens-logo {
+  .greens-logo, .stamina-logo,
+  .naboso-logo {
     width: 35%;
     float: left;
-    margin-right: 30px;
   }
 
-  .whoop-logo, .nucalm-logo {
-    position: $rel;
-    top: 4em;
+  .normatec-logo {padding: .5em .2em;}
+  .whoop-logo {
+    width: 33%;
+    margin: 5em 0;
+    padding: 0 .6em;
+  }
+
+  .nucalm-logo {
+    margin: 5em 0;
+    padding: 0 .2em;
   }
 
   .stamina-logo {
     width: 20%;
-    float: left;
     margin-right: 30px;
-    margin: 3% 7%;
+    margin: 3% 6%;
+    padding: 2.5em .9em;
   }
 
   .naboso-logo {
     width: 30%;
-    float: left;
     margin-right: 48px;
-    margin: 0 2%;
+    margin: -4em 2%;
+    padding: 4.5em .5em;
   }
 
   .lulu-logo {
     width: 20%;
     margin: 0 7%;
+    padding: .5em .5em;
   }
 
-  .greens-logo {width: 29%;}
+  .greens-logo {
+    width: 29%;
+    padding: .5em 1.5em;
+  }
 
   .nucalm-header, .nucalm-text,
   .whoop-header, .whoop-text,
   .stamina-header, .stamina-text {
     float: right;
-    width: 61%;
+    width: 64%;
   }
 
-  .normatec-btn {margin: 0 40%;}
-  .naboso-btn, .lulu-btn, .greens-btn {margin: 0 34%;}
-  .whoop-btn, .nucalm-btn, .stamina-btn {margin: 0 39%;}
-
   .normatec-container {
-    display: grid;
-    grid-template-columns: 100%;
     margin: 0 1.5em;
+    text-align: unset;
   }
 
   .whoop-container {
-    display: grid;
-    display: -ms-grid;
     position: $rel;
-    grid-template-columns: 95%;
     margin: 1.5em 1.5em;
-    top: 1em;
+    text-align: unset;
   }
 
   .nucalm-container {
-    display: grid;
-    display: -ms-grid;
     position: $rel;
-    grid-template-columns: 95%;
-    top: 2em;
+    text-align: unset;
   }
 
   .stamina-container {
-    display: inline-grid;
     position: $rel;
-    grid-template-columns: 90%;
-    margin: 1em 1.5em;
-    top: 5em;
+    margin: 0 1.5em;
+    text-align: unset;
   }
 
   .naboso-container {
-    display: inline-grid;
     position: $rel;
-    grid-template-columns: 100%;
     margin: 5em 2em;
-    top: 2em;
+    text-align: unset;
   }
 
   .lulu-container {
-    display: inline-grid;
     position: $rel;
-    grid-template-columns: 100%;
     margin: 1em 1.5em;
     top: 0;
+    text-align: unset;
   }
 
   .greens-container {
-    display: inline-grid;
     position: $rel;
-    grid-template-columns: 100%;
     margin: 1em 3em;
     top: 0;
+    text-align: unset;
   }
 }
 
-@media all and (min-width: 1100px) and (max-width: 1500px) {
+@media #{$mq-medium} {
   .brands-wrapper {margin: 10em 0;}
   .brands-header {top: -.5em;}
 
@@ -1177,7 +1193,7 @@ label {color: whitesmoke;}
 // footer section
 .footer-container {
   position: sticky;
-  margin: 0 0 2.5em;
+  margin: 4.5em 0 0.5em;
 }
 
 .social-icons {
