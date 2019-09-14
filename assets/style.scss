@@ -6,6 +6,7 @@ $rel: relative;
 $black: #3A2E36;
 $nav-font-size: 1.5em; //24px
 $base-font-size: 1em; //16px
+$btn-font-size: .75em; //12px
 $base-line-height: 1.5;
 
 //breakpoints
@@ -635,32 +636,27 @@ ul, ol, dl, figure,
   .video-3, .video-4 {width: 35%;}
 }
 
-//  upcoming events section
-// .events-message {
-//   display: grid;
-//   display: -ms-grid;
-//   text-align: center;
-//   position: $rel;
-//   width: 100%;
-//   top: 9em;
-//   text-transform: uppercase;
-// }
-//
-// @media all and (max-width: 1100px) {
-//   .events-message {
-//     position: unset;
-//   }
-// }
-
-// responsive brand partnerships section
+// brands page
 .brands-wrapper {
   display: flex;
   flex-direction: column;
   width: 100%;
   margin: 0 0 4em;
   font-family: memories;
-  font-size: 20px;
+  font-size: $base-font-size;
   text-shadow: 2px 2px black;
+
+  @media #{$mq-large} {
+    font-size: $base-font-size * 1.2;
+  }
+
+  @media #{$mq-xlarge} {
+    font-size: $base-font-size * 1.3;
+  }
+
+  @media #{$mq-xxlarge} {
+    font-size: $base-font-size * 1.5;
+  }
 }
 
 .brands-wrapper p, h3 {
@@ -668,8 +664,7 @@ ul, ol, dl, figure,
   font-family: memories;
 }
 
-.brands-wrapper h3 {
-  text-transform: uppercase;
+.brands-wrapper > h3 {
   font-weight: 600;
   text-shadow: 2px 2px black;
 }
@@ -680,7 +675,6 @@ ul, ol, dl, figure,
   width: 100%;
   text-align: center;
   text-shadow: 2px 2px black;
-  text-transform: uppercase;
   color: whitesmoke;
 }
 
@@ -691,13 +685,23 @@ ul, ol, dl, figure,
   font-family: memories;
   background: whitesmoke;
   width: fit-content;
-  height: 50px;
+  height: 2.5em;
   font-weight: 650;
-  font-size: 15px;
-  border-radius: 5px;
+  font-size: $btn-font-size;
+  border-radius: 1.5em;
   border-color: whitesmoke;
   margin: 0 auto;
   transition: all .3s ease-in-out;
+
+  @media #{$mq-large} {font-size: $btn-font-size * 1.2;}
+
+  @media #{$mq-xlarge} {
+    font-size: $btn-font-size * 1.3;
+    border-radius: 2.5em;
+    height: 3em;
+  }
+
+  @media #{$mq-xxlarge} {font-size: $btn-font-size * 1.5;}
 }
 
 .whoop-btn:hover, .nucalm-btn:hover,
@@ -780,7 +784,7 @@ ul, ol, dl, figure,
   .whoop-logo {
     width: 33%;
     float: left;
-    padding: 6.5em 0.35em;
+    padding: 6.5em 0.8em;
   }
 
   .stamina-logo {
@@ -789,7 +793,8 @@ ul, ol, dl, figure,
     margin: 0 .5%;
 
     @media (min-width: 62.50em) {
-      padding: 7em 3.2em;
+      padding: 6em 4em;
+      margin: 0 1em;
       width: 20%
     }
   }
@@ -819,7 +824,7 @@ ul, ol, dl, figure,
     padding: 4em 1.2em;
 
     @media (min-width: 62.50em) {
-      padding: .5em .85em;
+      padding: .5em 1.85em;
     }
   }
 
@@ -874,8 +879,20 @@ ul, ol, dl, figure,
   }
 }
 
+// breakpoint 1150px
 @media #{$mq-medium} {
-  .brands-wrapper {margin: 10em 0;}
+  .brands-wrapper {
+    margin: 10em 0;
+
+    @media #{$mq-xlarge} {
+      margin: 15em 0;
+    }
+
+    @media #{$mq-xxlarge} {
+      margin: 20em 0;
+    }
+  }
+
   .brands-header {top: -.5em;}
 
   .main-breakpoint {
@@ -904,18 +921,22 @@ ul, ol, dl, figure,
     width: 30%;
     float: left;
     top: 1em;
+  }
+
+  .normatec-logo {
+    margin: 0 .5em;
+    top: -.5em;
 
     @media #{$mq-large} {
       width: 35%;
+      top: 0;
       padding: 1.5em 0;
-      margin: 0 0 0 -1.5em;
+      margin: 0;
     }
-  }
 
-  .nucalm-logo {
-    @media #{$mq-large} {
-      width: 32%;
-      padding: 5em 0;
+    @media #{$mq-xlarge} {
+      width: 35%;
+      margin: 0 0 0 -1em;
     }
   }
 
@@ -923,33 +944,85 @@ ul, ol, dl, figure,
     padding: 5em 0;
 
     @media #{$mq-large} {
-      width: 32%;
-      padding: 5em 5px;
-      margin: 0 0 0 -.5em;
+      width: 35%;
+      padding: 5em 0;
+      margin: 0 0 0 -1.5em;
     }
+
+    @media #{$mq-xlarge} {
+      width: 39%;
+      margin: 0 0 0 -3.5em;
+    }
+
+    @media #{$mq-xxlarge} {
+      padding: 3em 0;
+    }
+  }
+
+  .nucalm-logo {
+    padding: 5em .5%;
+
+    @media #{$mq-large} {
+      width: 37%;
+      padding: 5em 0;
+      margin: 0 0 0 -2.5em;
+    }
+
+    @media #{$mq-xlarge} {
+      width: 40%;
+      margin: 0 0 0 -3.8em;
+    }
+
+    @media #{$mq-xxlarge} {padding: 3em 0;}
   }
 
   .stamina-logo {
     width: 20%;
     margin: 0;
-    padding: 2.5em 3em;
+    padding: 3.5em 2.5em;
     top: 0;
 
     @media #{$mq-large} {
       width: 22.5%;
-      padding: 2em 0;
-      margin: 0 2em;
+      padding: 4em 0;
+      margin: 0 1.5em;
+    }
+
+    @media #{$mq-xlarge} {
+      width: 25%;
+      padding: 2.5em 0;
+      margin: 0;
+      top: 1em;
+    }
+
+    @media #{$mq-xxlarge} {
+      padding: 3em 0;
+      top: 2.5em;
     }
   }
 
   .naboso-logo {
-    top: 0;
-    width: 27%;
+    top: -2em;
+    width: 26%;
+    padding: 3.5em .4em;
 
     @media #{$mq-large} {
-      width: 32%;
-      padding: 1em 0;
-      margin: 0;
+      width: 34%;
+      padding: 4em 0;
+      margin: 0 0 0 -1em;
+      top: -2em;
+    }
+
+    @media #{$mq-xlarge} {
+      width: 36%;
+      top: -2em;
+      padding: 4em 0;
+      margin: 0 0 0 -1.5em;
+    }
+
+    @media #{$mq-xxlarge} {
+      margin: -1em 0 0 -2em;
+      top: -4em;
     }
   }
 
@@ -957,12 +1030,31 @@ ul, ol, dl, figure,
     width: 20%;
     margin: 0 5.5%;
     top: 0;
+
+    @media #{$mq-large} {
+      width: 24%;
+      margin: 0 3.5%;
+      padding: 4em 0;
+    }
+
+    @media #{$mq-xlarge} {width: 25%;}
   }
 
   .greens-logo {
     width: 25%;
-    margin: 0 2.5%;
+    margin: 0;
     top: 0;
+
+    @media #{$mq-large} {
+      width: 30%;
+      padding: 1.5em 0;
+    }
+
+    @media #{$mq-xlarge} {
+      width: 33%;
+      top: -2em;
+      margin: 0 0 0 -1em;
+    }
   }
 
   .nucalm-header,.nucalm-text,
