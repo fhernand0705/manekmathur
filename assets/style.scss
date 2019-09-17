@@ -505,45 +505,66 @@ ul, ol, dl, figure,
   }
 }
 
-.about-header {
-  color: whitesmoke;
-  text-transform: uppercase;
-  font-family: memories;
-  font-weight: 500;
-
-  // @media #{$mq-large} {
-  //   font-size: 2em * 1.2;
-  // }
-  //
-  // @media #{$mq-xlarge} {
-  //   font-size: 2em * 1.4;
-  // }
-  //
-  // @media #{$mq-xxlarge} {
-  //   font-size: 2em * 1.6;
-  // }
-}
-
-.about-wrapper p {
+.about-header, .about-wrapper p {
   color: whitesmoke;
   font-family: memories;
-  // font-size: $about-font-size;
 }
 
 // doubles tutorials section
 .doubles-container {
   display: flex;
   flex-flow: column;
+  width: 100%;
   position: $rel;
+  text-align: -webkit-center;
+
+  @media (min-width: 19.50em) {
+    top: -4em;
+  }
+
+  @media #{$mq-medium} {
+    top: 1em;
+    margin: 8em 0;
+  }
+
+  @media #{$mq-large} {
+    top: 2em;
+  }
+
+  @media #{$mq-xlarge} {
+    top: 3em;
+    right: 4em;
+  }
+
+  @media #{$mq-xxlarge} {
+    top: 5em;
+  }
 }
 
 .video-1 h3, .video-2 h3,
 .video-3 h3, .video-4 h3,
 .video-5 h3 {
   font-family: memories;
-  font-size: 20px;
   text-shadow: 2px 2px $black;
   width: fit-content;
+
+  @media (min-width: 40em) {
+    padding: 0 6.5em;
+  }
+
+  @media (min-width: 46.88em) {
+    padding: 0 8em;
+  }
+
+  @media #{$mq-medium} {
+    padding: 0;
+    text-align: center;
+    width: inherit;
+  }
+
+  @media #{$mq-xlarge} {
+    width: unset;
+  }
 }
 
 .video-bp-1, .video-bp-2,
@@ -558,83 +579,46 @@ ul, ol, dl, figure,
   border-radius: 5px;
 }
 
-@media all and (max-width: 450px) and (min-width: 250px) {
-  .doubles-container {
-    width: 100%;
-    flex-flow: column;
-    text-align: -webkit-center;
-    top: -4em;
+.video-1 iframe, .video-2 iframe,
+.video-3 iframe, .video-4 iframe,
+.video-5 iframe {
+  @media (min-width: 19.50em) {width: 85%;}
+  @media (min-width: 40em) {width: 375px;}
+
+  @media #{$mq-xlarge} {
+    width: 75%;
+    height: 16em;
   }
 
-  .video-bp-1, .video-bp-2,
-  .video-bp-3, .video-bp-4 {margin: 1.5em 1em;}
-
-  .video-1 iframe, .video-2 iframe,
-  .video-3 iframe, .video-4 iframe,
-  .video-5 iframe {width: 85%;}
-}
-
-@media all and (max-width: 600px) and (min-width: 450px) {
-  .doubles-container {
-    width: 100%;
-    flex-flow: column;
-    text-align: -webkit-center;
-    top: -4em;
-  }
-
-  .video-bp-1, .video-bp-2,
-  .video-bp-3, .video-bp-4 {
-    margin: 1.5em 4.5em;
+  @media #{$mq-xxlarge} {
+    height: 17.5em;
   }
 }
 
-@media all and (max-width: 850px) and (min-width: 600px) {
-  .doubles-container {
-    width: 100%;
-    flex-flow: column;
-    text-align: -webkit-center;
-    top: -4em;
+.video-1, .video-2, .video-3,
+.video-4, .video-5 {
+  @media #{$mq-medium} {
+    position: $rel;
+    width: 60%;
   }
-
-  .video-bp-1, .video-bp-2,
-  .video-bp-3, .video-bp-4 {margin: 1.5em 10.5em;}
 }
 
-@media all and (max-width: 1100px) and (min-width: 850px) {
-  .doubles-container {
-    width: 100%;
-    flex-flow: column;
-    text-align: -webkit-center;
-    top: -4em;
+.video-bp-1, .video-bp-2,
+.video-bp-3, .video-bp-4 {
+  @media (min-width: 19.50em) {
+    margin: 1.5em 0;
+    width: 80%;
   }
 
-  .video-bp-1, .video-bp-2,
-  .video-bp-3, .video-bp-4 {margin: 1.5em 14.5em;}
-}
-
-@media all and (max-width: 1280px) and (min-width: 1100px) {
-  .doubles-container {
-    align-items: end;
-    margin: 7em 5em;
-    text-align: center;
+  @media (min-width: 40em) {
+    width: 17.44em;
   }
 
-  .video-bp-1, .video-bp-2,
-  .video-bp-3, .video-bp-4 {margin: 1.5em .5em;}
-  .video-3, .video-4 {width: 37.2%;}
-}
-
-@media all and (max-width: 1450px) and (min-width: 1280px) {
-  .doubles-container {
-    align-items: end;
-    margin: 7em 5em;
-    text-align: center;
+  @media #{$mq-xlarge} {
+    width: 20.75em;
   }
-
-  .video-bp-1, .video-bp-2,
-  .video-bp-3, .video-bp-4 {margin: 1.5em .5em;}
-  .video-3, .video-4 {width: 35%;}
 }
+
 
 // brands page
 .brands-wrapper {
