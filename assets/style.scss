@@ -131,7 +131,7 @@ ul, ol, dl, figure,
 
 .brands-img {
   background: linear-gradient(75deg, #8e35357a, 35%, rgba(0, 0, 0, .25)),
-              url("/assets/images/manek-brands2.jpg");
+              url("/assets/images/manek-brands.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -345,7 +345,6 @@ ul, ol, dl, figure,
   .navbar-container {display: none;}
   .music-img {background-position: 50%;}
   .contact-img {background-position: 50%;}
-  .brands-img {background-position: 30%;}
   .home-img {
     background-position: 50%;
     background-position-y: 20%;
@@ -388,12 +387,11 @@ ul, ol, dl, figure,
 
   .overlay-content a {
     display: block;
-    font-size: 1.5em;
+    font-size: 1.75em;
+    color: whitesmoke;
   }
 
-  .overlay-content a:hover {
-    background-color: $black;
-    color: whitesmoke;
+  .overlay-content a:hover {color: darkgray;
   }
 
   .mobile-logo, .manek-logo {
@@ -434,7 +432,7 @@ ul, ol, dl, figure,
   .bar-1, .bar-3 {
     width: 30px;
     height: 4px;
-    background-color: #e5e3e3;
+    background-color: whitesmoke;
     margin: 5px 0;
     border-radius: 5px;
     transition: 0.4s;
@@ -443,7 +441,7 @@ ul, ol, dl, figure,
   .bar-2 {
     width: 20px;
     height: 4px;
-    background-color: #e5e3e3;
+    background-color: whitesmoke;
     margin: 5px 0;
     border-radius: 5px;
     transition: 0.4s;
@@ -467,7 +465,7 @@ ul, ol, dl, figure,
   }
 
   .active {
-    background: linear-gradient(-50deg, #463841, 5%, whitesmoke 56%);
+    background: linear-gradient(to bottom left, whitesmoke, 25%, black 85%);
     opacity: 1;
     height: 100%;
     max-height: none;
