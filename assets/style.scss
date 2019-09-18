@@ -476,10 +476,10 @@ ul, ol, dl, figure,
 
 // about me section
 .about-wrapper {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   position: $rel;
-  grid-template-columns: 50%;
-  justify-content: left;
+  justify-content: center;
   text-align: center;
   margin: 5.5em 0;
   text-shadow: 2px 2px $black;
@@ -489,7 +489,7 @@ ul, ol, dl, figure,
     grid-template-columns: 100%;
     justify-content: center;
     width: 100%;
-    top: -5em;
+    top: -7.5em;
   }
 
   @media #{$mq-large} {
@@ -547,6 +547,7 @@ ul, ol, dl, figure,
   font-family: memories;
   text-shadow: 2px 2px $black;
   width: fit-content;
+  color: whitesmoke;
 
   @media (min-width: 40em) {
     padding: 0 6.5em;
@@ -1072,6 +1073,10 @@ ul, ol, dl, figure,
   color: whitesmoke;
   text-shadow: 2px 2px $black;
 
+  @media #{$mq-xxsmall} {
+    margin: 1em 0;
+  }
+
   @media #{$mq-medium} {
     padding: 0 4.5em;
   }
@@ -1148,17 +1153,17 @@ ul, ol, dl, figure,
   text-align: center;
   align-items: center;
 
-    @media (min-width: 40em) {
+    @media #{$mq-xxsmall} {
       top: -3em;
     }
 }
 
 .playlist-container {
-  @media (min-width: 19.50em) {
+  @media #{$mq-xxsmall} {
     margin: 2.5em 0;
   }
 
-  @media (min-width: 40em) {
+  @media #{$mq-xsmall} {
     margin: 2em 0;
   }
 
@@ -1175,21 +1180,8 @@ ul, ol, dl, figure,
 }
 
 .solo-songs-container a {
-  @media (min-width: 19.50em) {
+  @media #{$mq-xxsmall} {
     display: block;
-  }
-}
-
-.playlist-header, .soundcloud-title,
-.spotify-title {
-  @media (min-width: 19.50em) {
-    margin: 2.5em 0;
-  }
-}
-
-.playlist-header {
-  @media (min-width: 40em) {
-    margin: 1.5em 0;
   }
 }
 
@@ -1197,7 +1189,6 @@ ul, ol, dl, figure,
 .playlist-bp-1, .playlist-bp-2 {
   margin: 1.5em auto;
 }
-
 
 // contact form section
 .form-container {
