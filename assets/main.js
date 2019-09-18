@@ -26,12 +26,10 @@
            :location.pathname === brandsPage ? brands.classList.add("active")
            :location.pathname === contactPage ? contact.classList.add("active")
            :location.pathname === doublesPage ? doubles.classList.add("active")
-           :location.pathname === musicPage ? (
-             music.classList.add("active"),
-             wrapper.style.marginBottom = "42.5%"
-             )
+           :location.pathname === musicPage ? music.classList.add("active")
+             // wrapper.style.marginBottom = "42.5%"
            :location.pathname === homePage ? (
-             wrapper.style.minHeight = "76.2%",
+             wrapper.style.minHeight = "72%",
              navbar.style.backgroundImage = "none"
              )
            :null;
