@@ -27,7 +27,6 @@
            :location.pathname === contactPage ? contact.classList.add("active")
            :location.pathname === doublesPage ? doubles.classList.add("active")
            :location.pathname === musicPage ? music.classList.add("active")
-             // wrapper.style.marginBottom = "42.5%"
            :location.pathname === homePage ? (
              wrapper.style.minHeight = "72%",
              navbar.style.backgroundImage = "none"
@@ -60,7 +59,7 @@ window.onscroll = function() {
     navbar.style.top = "0";
     navbar.style.zIndex = "1";
   } else {
-    navbar.style.top = "-120px";
+    navbar.style.top = "-125px";
   }
 
   prevScrollPos = currentScrollPos;

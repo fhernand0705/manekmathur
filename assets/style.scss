@@ -190,11 +190,15 @@ ul, ol, dl, figure,
   background-image: linear-gradient(-45deg, rgba(39, 40, 33, .65), 25%, rgb(58, 46, 54));
 
   @media #{$mq-medium} {
-    height: 5.8em;
+    height: 6.5em;
   }
 
   @media #{$mq-large} {
     height: 7em;
+  }
+
+  @media (min-width: 103.13em) {
+    height: 8.5em;
   }
 
   @media #{$mq-xlarge} {
@@ -207,7 +211,15 @@ ul, ol, dl, figure,
 }
 
 .navbar-right-wrapper {
-  flex: .75;
+  flex: .85;
+
+  @media #{$mq-xlarge} {
+    flex: .7;
+  }
+
+  @media #{$mq-xxlarge} {
+    flex: .65;
+  }
 }
 
 .navbar-logo {
@@ -227,21 +239,24 @@ ul, ol, dl, figure,
 .img-logo {
   position: absolute;
   left: .5em;
-  width: 45%;
+  width: 50%;
   margin: -5.5em 0;
 
-  @media #{$mq-large} {
-    width: 50%;
-    margin: -6em 0;
+  // @media #{$mq-large} {
+  //   margin: -6em 0;
+  // }
+
+  @media (min-width: 103.13em) {
+    margin: -7em 0;
   }
 
   @media #{$mq-xlarge} {
-    width: 55%;
+    width: 52.50%;
     margin: -9em 0;
   }
 
   @media #{$mq-xxlarge} {
-    width: 60%;
+    width: 55%;
     margin: -11.5em 0;
   }
 }
@@ -282,19 +297,19 @@ ul, ol, dl, figure,
   margin: 1.5em 0;
 
   @media #{$mq-medium} {
-    margin: 1.2em 0;
+    margin: 1.5em 0;
   }
 
   @media #{$mq-large} {
-    margin: 1em 0;
-  }
-
-  @media #{$mq-xlarge} {
-    margin: 2.5em 0;
+    margin: 2em 0;
   }
 
   @media #{$mq-xlarge} {
     margin: 3em 0;
+  }
+
+  @media #{$mq-xxlarge} {
+    margin: 3.5em 0;
   }
 }
 
@@ -314,7 +329,7 @@ ul, ol, dl, figure,
   }
 
   @media #{$mq-large} {
-    font-size: $nav-font-size * 1.2;
+    font-size: $nav-font-size * 1.1;
   }
 
   @media #{$mq-xlarge} {
@@ -543,17 +558,23 @@ ul, ol, dl, figure,
   }
 
   @media #{$mq-large} {
-    top: 2em;
+    top: 2.5em;
   }
 
   @media #{$mq-xlarge} {
-    top: 3em;
+    top: 3.5em;
     right: 4em;
   }
 
   @media #{$mq-xxlarge} {
-    top: 5em;
+    top: 5.5em;
   }
+}
+
+#___ytsubscribe_0 {
+    position: $rel;
+    width: 50% !important;
+    top: 10em;
 }
 
 .video-1 h3, .video-2 h3,
