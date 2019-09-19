@@ -1087,6 +1087,7 @@ ul, ol, dl, figure,
 .playlist-header, .soundcloud-title-1,
 .soundcloud-title-2, .spotify-title-1  {
   font-family: memories;
+  font-size: 1.1em;
   color: whitesmoke;
   text-shadow: 2px 2px $black;
 
@@ -1096,6 +1097,7 @@ ul, ol, dl, figure,
 
   @media #{$mq-medium} {
     padding: 0 4.5em;
+    font-size: 1em;
   }
 
   @media #{$mq-large} {
@@ -1129,7 +1131,6 @@ ul, ol, dl, figure,
   border-color: $black;
 }
 
-//media query rules for music section
 .music-wrapper {
   @media (min-width: 56.25em) {
     display: grid;
@@ -1160,6 +1161,11 @@ ul, ol, dl, figure,
   }
 }
 
+.follow-spotify-btn {
+  display: grid;
+  justify-content: center;
+}
+
 .playlist-container, .solo-songs-container {
   display: flex;
   flex-direction: column;
@@ -1183,15 +1189,24 @@ ul, ol, dl, figure,
     margin: 2em 0;
   }
 
-  @media (min-width: 56.25em) {
+  @media (min-width: 900px) and (max-width: 1149px) {
+    top: -12.5em;
+  }
+
+  @media #{$mq-medium} {
     margin: 0;
     display: unset;
+    top: -2.8em;
   }
 }
 
 .solo-songs-container {
   @media (max-width: 40em) {
     top: -3.5em;
+  }
+
+  @media #{$mq-medium} {
+    top: -1.5em;
   }
 }
 
@@ -1213,7 +1228,6 @@ ul, ol, dl, figure,
   position: $rel;
   width: 100%;
   font-family: memories;
-  //font-size: 20px;
   margin: 7.5em 3.5em;
 
   @media #{$mq-xxsmall} {
