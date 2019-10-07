@@ -1362,24 +1362,26 @@ label {color: whitesmoke;}
   height: 25px;
 }
 
-// .fh-wrapper {
-//   text-align: center;
-//   margin: 1.5em 0;
-// }
-//
-// .fh-logo {
-//   width: 2.5%;
-//   position: $rel;
-//   top: .25em;
-//   transition: all .4s ease-in-out;
-// }
-//
-// .fh-logo:hover {
-//   transform: rotate(360deg) translate(0px, 0px);
-//   width: 4%;
-// }
-//
-// .fh-header {color: lightgray;}
+.fh-wrapper {
+  text-align: center;
+  margin: 1.5em 0;
+  font-size: 1em;
+  letter-spacing: .15em;
+}
+
+.fh-header {
+  color: whitesmoke;
+}
+
+.fh-name {
+  color: whitesmoke;
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+}
+
+.fh-name:hover {
+  color: lightgray;
+}
 
 // responsive footer
 @media all and (min-width: 225px) and (max-width: 450px) {
@@ -1392,13 +1394,6 @@ label {color: whitesmoke;}
   .social-icons i {
     font-size: .5em;
   }
-
-  // .fh-logo {width: 9.5%;}
-  //
-  // .fh-logo:hover {
-  //   // transform: rotate(360deg) translate(0px, 0px);
-  //   width: 11.5%;
-  // }
 }
 
 @media all and (min-width: 450px) and (max-width: 700px) {
@@ -1407,8 +1402,6 @@ label {color: whitesmoke;}
                            12% 1px 12% 1px
                            12%;
   }
-
-  // .fh-logo {width: 6.5%;}
 }
 
 @media all and (min-width: 700px) and (max-width: 1100px) {
@@ -1417,5 +1410,4 @@ label {color: whitesmoke;}
                            8% 2px 8% 2px
                            8%;
   }
-  // .fh-logo {width: 3.5%;}
 }
