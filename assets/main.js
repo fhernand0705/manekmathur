@@ -2,7 +2,7 @@
 ---
 
 // adds 'active' link to navbar items
-(function activeLink() {
+(function activeNavLink() {
      let wrapper = document.querySelector('.main-wrapper');
 
      // access pathnames for each navbar item
@@ -28,7 +28,7 @@
            :location.pathname === doublesPage ? doubles.classList.add("active")
            :location.pathname === musicPage ? music.classList.add("active")
            :location.pathname === homePage ? (
-             wrapper.style.minHeight = "72%",
+             wrapper.style.minHeight = "65%",
              navbar.style.backgroundImage = "none"
              )
            :null;
