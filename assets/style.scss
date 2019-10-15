@@ -709,9 +709,7 @@ ul, ol, dl, figure,
   }
 }
 
-.divider-1, .divider-2,
-.divider-3, .divider-4,
-.divider-5, .divider-6 {
+.divider {
   position: $rel;
   margin: 0 auto;
   width: 100%;
@@ -719,7 +717,6 @@ ul, ol, dl, figure,
 
   @media #{$mq-xxsmall} {
     width: 100%;
-    top: .7em;
   }
 
   @media #{$mq-xsmall} {
@@ -727,13 +724,13 @@ ul, ol, dl, figure,
     top: 1.5em;
   }
 
-  @media #{$mq-medium} {top: 2.5em;}
+  // @media #{$mq-medium} {top: 2.5em;}
 }
 
 .normatec-container, .whoop-container,
 .nucalm-container, .stamina-container,
 .naboso-container, .lulu-container,
-.greens-container {
+.greens-container, .lymbr-container {
   position: $rel;
 
   @media #{$mq-xxsmall} {
@@ -786,19 +783,19 @@ ul, ol, dl, figure,
 .normatec-content, .whoop-content,
 .nucalm-content, .stamina-content,
 .naboso-content, .lulu-content,
-.greens-content {
+.greens-content, .lymbr-content {
   display: flex;
   flex-direction: column;
 
   @media (max-width: 40em) {
     align-items: center;
-
   }
 }
 
 .normatec-logo, .nucalm-logo,
 .lulu-logo, .greens-logo,
-.stamina-logo, .naboso-logo {
+.stamina-logo, .naboso-logo,
+.lymbr-logo {
   position: $rel;
 
   @media #{$mq-xsmall} {
@@ -813,26 +810,27 @@ ul, ol, dl, figure,
 }
 
 .normatec-logo, .whoop-logo,
-.nucalm-logo, .naboso-logo {
+.nucalm-logo, .naboso-logo,
+.lymbr-logo {
   @media #{$mq-xxsmall} {width: 75%;}
 }
 
 .normatec-logo {
   @media #{$mq-xsmall} {
-    width: 35%;
-    padding: 3.5em .5em;
+    width: 26%;
+    margin: 1.7em;
+    top: 1em;
   }
 
   @media #{$mq-medium} {
-    width: 33%;
-    margin: 0;
-    top: -.5em;
+    width: 25%;
+    margin: 2em;
   }
 
   @media #{$mq-large} {
     width: 35%;
     top: 0;
-    padding: 1.5em 0;
+    padding: 2.5em 0;
     margin: 0;
   }
 
@@ -840,24 +838,23 @@ ul, ol, dl, figure,
 }
 
 .whoop-logo {
-  @media #{$mq-xsmall} {
-    width: 35%;
-    float: left;
-    padding: 6.5em 0;
-    margin: 0 .5em;
-  }
+  position: $rel;
 
-  @media (min-width: 62.50em) {
-    padding: 6.5em 0;
+  @media #{$mq-xsmall} {
+    float: left;
+    width: 26%;
+    top: 2em;
+    margin: 1em;
   }
 
   @media #{$mq-medium} {
-    width: 32%;
-    padding: 5em .5em;
+    width: 26%;
+    margin: 2em;
   }
 
   @media #{$mq-large} {
-    padding: 5em .1em;
+    width: 29%;
+    margin: 1.5em;
   }
 
   @media #{$mq-xlarge} {
@@ -872,18 +869,20 @@ ul, ol, dl, figure,
 
 .nucalm-logo {
   @media #{$mq-xsmall} {
-    width: 35%;
-    padding: 6.5em .5em;
+    width: 26%;
+    margin: .5em;
+    top: 3em;
   }
 
   @media #{$mq-medium} {
-    padding: 5em 0;
+    width: 31%;
+    padding: 1em 0;
+    margin: .5em;
   }
 
   @media #{$mq-large} {
-    width: 37%;
-    padding: 5em 0;
-    margin: 0 0 0 -1.5em;
+    width: 35%;
+    margin: 0;
   }
 
   @media #{$mq-xlarge} {
@@ -898,32 +897,19 @@ ul, ol, dl, figure,
   @media #{$mq-xxsmall} {width: 50%;}
 
   @media #{$mq-xsmall} {
-    width: 22%;
-    padding: 4.5em 2.8em;
-  }
-
-  @media (min-width: 52.50em) {
-    padding: 4.5em 3.5em;
-    top: -1em;
-  }
-
-  @media (min-width: 62.50em) {
-    padding: 3em 0;
-    margin: 0 5em;
     width: 20%;
+    margin: 2em;
   }
 
   @media #{$mq-medium} {
     width: 20%;
-    margin: 0;
-    padding: 3em 3.9em;
-    top: 0;
+    margin: 3.5em;
+    top: -1em;
   }
 
   @media #{$mq-large} {
     width: 22.5%;
-    padding: 4em .5em;
-    margin: 0 1.5em;
+    margin: 2.5em;
   }
 
   @media #{$mq-xlarge} {
@@ -941,26 +927,21 @@ ul, ol, dl, figure,
 
 .naboso-logo {
   @media #{$mq-xsmall} {
-    width: 30%;
+    width: 26%;
     top: -1em;
-    padding: 3em 1.5em;
-  }
-
-  @media (min-width: 62.50em) {
-    padding: 2em 1.5em;
+    //margin: 1.5em;
   }
 
   @media #{$mq-medium} {
-    top: -2em;
+    top: -3em;
     width: 26%;
-    padding: 3.5em 2em;
+    margin: 2em;
   }
 
   @media #{$mq-large} {
     width: 34%;
-    padding: 4em 0;
-    margin: 0 0 0 -1em;
-    top: -2em;
+    margin: 0;
+    top: -1em;
   }
 
   @media #{$mq-xlarge} {
@@ -980,23 +961,19 @@ ul, ol, dl, figure,
   @media #{$mq-xxsmall} {width: 45%;}
 
   @media #{$mq-xsmall} {
-    width: 22%;
-    margin: 0 3.5em;
-    padding: 4.5em 0;
-  }
-
-  @media (min-width: 62.50em) {
-    padding: 1.5em .5em;
+    width: 20%;
+    margin: 2em;
   }
 
   @media #{$mq-medium} {
-    width: 20%;
-    margin: 0 3em;
+    width: 21%;
+    margin: 3.5em;
+    top: -1em;
   }
 
   @media #{$mq-large} {
-    width: 24%;
-    margin: 0 4%;
+    width: 23%;
+    margin: 2.5em;
     padding: 4em 0;
   }
 
@@ -1007,24 +984,20 @@ ul, ol, dl, figure,
   @media #{$mq-xxsmall} {width: 55%;}
 
   @media #{$mq-xsmall} {
-    width: 29%;
-    padding: 0 1.5em;
-    top: 2em;
-  }
-
-  @media (min-width: 62.50em) {
-    padding: .5em 1.85em;
+    width: 20%;
+    margin: 1.5em;
   }
 
   @media #{$mq-medium} {
-    width: 25%;
-    margin: 0;
-    top: 0;
+    width: 26%;
+    margin: 2em;
+    top: -1em;
   }
 
   @media #{$mq-large} {
-    width: 30%;
+    width: 29%;
     padding: 1.5em 0;
+    margin: 1em;
   }
 
   @media #{$mq-xlarge} {
@@ -1034,9 +1007,30 @@ ul, ol, dl, figure,
   }
 }
 
+.lymbr-logo {
+  @media #{$mq-xsmall} {
+    width: 20%;
+    margin: 2em;
+  }
+
+  @media #{$mq-medium} {
+    width: 26%;
+    margin: 2.5em;
+    top: 0;
+  }
+
+  @media #{$mq-large} {
+    width: 27%;
+    margin: 2em;
+  }
+}
+
 .stamina-header, .normatec-header,
 .whoop-header, .nucalm-header,
-.lulu-header, .greens-header {
+.lulu-header, .greens-header,
+.lymbr-header, .naboso-header {
+  letter-spacing: .15em;
+
   @media #{$mq-xxsmall} {
     padding-top: 30px;
   }
@@ -1045,9 +1039,10 @@ ul, ol, dl, figure,
 .whoop-btn, .nucalm-btn,
 .stamina-btn, .naboso-btn,
 .lulu-btn, .normatec-btn,
-.greens-btn {
+.greens-btn, .lymbr-btn {
   font-family: memories;
   background: whitesmoke;
+  cursor: pointer;
   width: fit-content;
   height: 2.5em;
   font-size: $btn-font-size;
@@ -1070,14 +1065,13 @@ ul, ol, dl, figure,
 .whoop-btn:hover, .nucalm-btn:hover,
 .stamina-btn:hover, .naboso-btn:hover,
 .lulu-btn:hover, .normatec-btn:hover,
-.greens-btn:hover {
+.greens-btn:hover, .lymbr-btn:hover {
   background: $black;
   color: whitesmoke;
   border-color: $black;
 }
 
-.whoop-link, .stamina-link,
-.nucalm-link {
+.brands-wrapper a {
   display: inline-block;
   width: fit-content;
 }
