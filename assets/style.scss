@@ -721,14 +721,13 @@ ul, ol, dl, figure,
     width: 90%;
     top: 1.5em;
   }
-
-  // @media #{$mq-medium} {top: 2.5em;}
 }
 
 .normatec-container, .whoop-container,
 .nucalm-container, .stamina-container,
 .naboso-container, .lulu-container,
-.greens-container, .lymbr-container {
+.greens-container, .lymbr-container,
+.harrow-container, .pso-rite-container {
   position: $rel;
 
   @media #{$mq-xxsmall} {
@@ -762,7 +761,7 @@ ul, ol, dl, figure,
 }
 
 .naboso-container {
-  @media #{$mq-xsmall} {margin: 4em 2em;}
+  @media #{$mq-xsmall} {margin: 0 2em;}
 }
 
 .lulu-container {
@@ -775,13 +774,14 @@ ul, ol, dl, figure,
 }
 
 .greens-container {
-  @media #{$mq-xsmall} {margin: 1em 3em;}
+  @media #{$mq-xsmall} {margin: 2em 2em;}
 }
 
 .normatec-content, .whoop-content,
 .nucalm-content, .stamina-content,
 .naboso-content, .lulu-content,
-.greens-content, .lymbr-content {
+.greens-content, .lymbr-content,
+.harrow-content, .pso-rite-content {
   display: flex;
   flex-direction: column;
 
@@ -793,7 +793,8 @@ ul, ol, dl, figure,
 .normatec-logo, .nucalm-logo,
 .lulu-logo, .greens-logo,
 .stamina-logo, .naboso-logo,
-.lymbr-logo {
+.lymbr-logo, .harrow-logo,
+.pso-rite-logo {
   position: $rel;
 
   @media #{$mq-xsmall} {
@@ -809,8 +810,26 @@ ul, ol, dl, figure,
 
 .normatec-logo, .whoop-logo,
 .nucalm-logo, .naboso-logo,
-.lymbr-logo {
+.lymbr-logo, .pso-rite-logo {
   @media #{$mq-xxsmall} {width: 75%;}
+}
+
+.harrow-logo {
+  @media #{$mq-xxsmall} {width: 30%;}
+
+  @media #{$mq-medium} {
+    width: 13%;
+    margin: 0 6em;
+  }
+}
+
+.pso-rite-logo {
+  @media #{$mq-xxsmall} {width: 60%;}
+
+  @media #{$mq-medium} {
+    width: 25%;
+    margin: 0 2.5em;
+  }
 }
 
 .normatec-logo {
@@ -822,7 +841,7 @@ ul, ol, dl, figure,
 
   @media #{$mq-medium} {
     width: 25%;
-    margin: 2em;
+    margin: 2.5em;
   }
 
   @media #{$mq-large} {
@@ -847,7 +866,7 @@ ul, ol, dl, figure,
 
   @media #{$mq-medium} {
     width: 26%;
-    margin: 2em;
+    margin: 2.8em;
   }
 
   @media #{$mq-large} {
@@ -874,8 +893,7 @@ ul, ol, dl, figure,
 
   @media #{$mq-medium} {
     width: 31%;
-    padding: 1em 0;
-    margin: .5em;
+    margin: 1em 1em;
   }
 
   @media #{$mq-large} {
@@ -931,7 +949,7 @@ ul, ol, dl, figure,
   }
 
   @media #{$mq-medium} {
-    top: -3em;
+    top: -1.5em;
     width: 26%;
     margin: 2em;
   }
@@ -1026,7 +1044,8 @@ ul, ol, dl, figure,
 .stamina-header, .normatec-header,
 .whoop-header, .nucalm-header,
 .lulu-header, .greens-header,
-.lymbr-header, .naboso-header {
+.lymbr-header, .naboso-header,
+.harrow-header, .pso-rite-header {
   letter-spacing: .15em;
 
   @media #{$mq-xxsmall} {
@@ -1037,7 +1056,8 @@ ul, ol, dl, figure,
 .whoop-btn, .nucalm-btn,
 .stamina-btn, .naboso-btn,
 .lulu-btn, .normatec-btn,
-.greens-btn, .lymbr-btn {
+.greens-btn, .lymbr-btn,
+.harrow-btn, .pso-rite-btn {
   font-family: memories;
   background: whitesmoke;
   cursor: pointer;
@@ -1063,7 +1083,8 @@ ul, ol, dl, figure,
 .whoop-btn:hover, .nucalm-btn:hover,
 .stamina-btn:hover, .naboso-btn:hover,
 .lulu-btn:hover, .normatec-btn:hover,
-.greens-btn:hover, .lymbr-btn:hover {
+.greens-btn:hover, .lymbr-btn:hover,
+.harrow-btn:hover, .pso-rite-btn:hover {
   background: $black;
   color: whitesmoke;
   border-color: $black;
