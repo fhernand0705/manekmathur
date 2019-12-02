@@ -736,7 +736,7 @@ ul, ol, dl, figure,
     text-align: center;
   }
 
-  @media #{$mq-xsmall} {text-align: unset;}
+  @media #{$mq-xsmall} { text-align: unset; }
 }
 
 .normatec-container {
@@ -750,7 +750,7 @@ ul, ol, dl, figure,
 }
 
 .whoop-container {
-  @media #{$mq-xsmall} {margin: 0;}
+  @media #{$mq-xsmall} { margin: 0; }
 }
 
 .stamina-container {
@@ -758,10 +758,12 @@ ul, ol, dl, figure,
     top: 1.5em;
     margin: 0 1.5em;
   }
+
+  @media #{$mq-xlarge} { top: 0; }
 }
 
 .naboso-container {
-  @media #{$mq-xsmall} {margin: 0 2em;}
+  @media #{$mq-xsmall} { margin: 0 2em; }
 }
 
 .lulu-container {
@@ -770,11 +772,13 @@ ul, ol, dl, figure,
     margin: 1em 1.5em;
   }
 
-  @media #{$mq-medium} {top: -2.5em;}
+  @media #{$mq-medium} { top: -2.5em; }
+  @media #{$mq-xlarge} { top: 0; }
 }
 
 .greens-container {
-  @media #{$mq-xsmall} {margin: 2em 2em;}
+  @media #{$mq-xsmall} { margin: 2em 2em; }
+  @media #{$mq-xlarge} { margin: 4em 2em; }
 }
 
 .normatec-content, .whoop-content,
@@ -811,47 +815,42 @@ ul, ol, dl, figure,
 .normatec-logo, .whoop-logo,
 .nucalm-logo, .naboso-logo,
 .lymbr-logo, .pso-rite-logo {
-  @media #{$mq-xxsmall} {width: 75%;}
+  @media #{$mq-xxsmall} { width: 75%; }
 }
 
 .harrow-logo {
-  @media #{$mq-xxsmall} {width: 30%;}
+  @media #{$mq-xxsmall} { width: 30%; }
+
+  @media #{$mq-xsmall} {
+    width: 13%;
+    margin: 3.5em;
+  }
 
   @media #{$mq-medium} {
-    width: 13%;
+    width: 11%;
     margin: 0 6em;
   }
+
+  @media #{$mq-large} { margin: 0 5.5em; }
+  @media #{$mq-xlarge} { margin: 0 5em 0 6em; }
 }
 
-.pso-rite-logo {
-  @media #{$mq-xxsmall} {width: 60%;}
-
-  @media #{$mq-medium} {
-    width: 25%;
-    margin: 0 2.5em;
-  }
-}
-
-.normatec-logo {
+.lymbr-logo {
   @media #{$mq-xsmall} {
-    width: 26%;
-    margin: 1.7em;
-    top: 1em;
+    width: 20%;
+    margin: 2em;
   }
 
   @media #{$mq-medium} {
-    width: 25%;
-    margin: 2.5em;
+    width: 26%;
+    margin: 2em;
+    top: 0;
   }
 
   @media #{$mq-large} {
-    width: 35%;
-    top: 0;
-    padding: 2.5em 0;
-    margin: 0;
+    width: 27%;
+    margin: 2em;
   }
-
-  @media #{$mq-xlarge} {margin: 0 0 0 -1em;}
 }
 
 .whoop-logo {
@@ -860,13 +859,13 @@ ul, ol, dl, figure,
   @media #{$mq-xsmall} {
     float: left;
     width: 26%;
-    top: 2em;
+    top: 3em;
     margin: 1em;
   }
 
   @media #{$mq-medium} {
     width: 26%;
-    margin: 2.8em;
+    margin: 2.5em;
   }
 
   @media #{$mq-large} {
@@ -876,7 +875,7 @@ ul, ol, dl, figure,
 
   @media #{$mq-xlarge} {
     width: 39%;
-    margin: 0 0 0 -3.5em;
+    margin: 0 .5em 0 -1.5em;
   }
 
   @media #{$mq-xxlarge} {
@@ -886,9 +885,9 @@ ul, ol, dl, figure,
 
 .nucalm-logo {
   @media #{$mq-xsmall} {
-    width: 26%;
-    margin: .5em;
-    top: 3em;
+    width: 30%;
+    margin: 0;
+    top: 4em;
   }
 
   @media #{$mq-medium} {
@@ -903,10 +902,71 @@ ul, ol, dl, figure,
 
   @media #{$mq-xlarge} {
     width: 40%;
-    margin: 0 0 0 -3.8em;
+    margin: 0 0 0 -1.8em;
   }
 
-  @media #{$mq-xxlarge} {padding: 3em 0;}
+  @media #{$mq-xxlarge} {  padding: 3em 0;  }
+}
+
+.pso-rite-logo {
+  @media #{$mq-xxsmall} {  width: 60%;  }
+
+  @media #{$mq-xsmall} {
+    width: 25%;
+    margin: 2em 1em;
+  }
+
+  @media #{$mq-medium} { margin: 2em 2em; }
+
+  @media #{$mq-large} {
+    width: 28%;
+    margin: 2em 1.5em;
+  }
+}
+
+.normatec-logo {
+  @media #{$mq-xsmall} {
+    width: 26%;
+    margin: 1em;
+    top: 2em;
+  }
+
+  @media #{$mq-medium} {
+    width: 25%;
+    margin: 2.5em;
+  }
+
+  @media #{$mq-large} {
+    width: 35%;
+    top: 0;
+    padding: 2.5em 0;
+    margin: 0;
+  }
+
+  @media #{$mq-xlarge} { margin: 0 0 0 1em; }
+}
+
+.lulu-logo {
+  @media #{$mq-xxsmall} { width: 45%; }
+
+  @media #{$mq-xsmall} {
+    width: 20%;
+    margin: 2em;
+  }
+
+  @media #{$mq-medium} {
+    width: 21%;
+    margin: 3.5em;
+    top: -1em;
+  }
+
+  @media #{$mq-large} {
+    width: 23%;
+    margin: 2.5em;
+    padding: 1em 0;
+  }
+
+  @media #{$mq-xlarge} { width: 25%; }
 }
 
 .stamina-logo {
@@ -931,8 +991,6 @@ ul, ol, dl, figure,
   @media #{$mq-xlarge} {
     width: 25%;
     padding: 2.5em 0;
-    margin: 0;
-    top: 1em;
   }
 
   @media #{$mq-xxlarge} {
@@ -941,67 +999,12 @@ ul, ol, dl, figure,
   }
 }
 
-.naboso-logo {
-  @media #{$mq-xsmall} {
-    width: 26%;
-    top: -1em;
-    //margin: 1.5em;
-  }
-
-  @media #{$mq-medium} {
-    top: -1.5em;
-    width: 26%;
-    margin: 2em;
-  }
-
-  @media #{$mq-large} {
-    width: 34%;
-    margin: 0;
-    top: -1em;
-  }
-
-  @media #{$mq-xlarge} {
-    width: 36%;
-    top: -2em;
-    padding: 4em 0;
-    margin: 0 0 0 -1.5em;
-  }
-
-  @media #{$mq-xxlarge} {
-    margin: -1em 0 0 -2em;
-    top: -4em;
-  }
-}
-
-.lulu-logo {
-  @media #{$mq-xxsmall} {width: 45%;}
-
-  @media #{$mq-xsmall} {
-    width: 20%;
-    margin: 2em;
-  }
-
-  @media #{$mq-medium} {
-    width: 21%;
-    margin: 3.5em;
-    top: -1em;
-  }
-
-  @media #{$mq-large} {
-    width: 23%;
-    margin: 2.5em;
-    padding: 4em 0;
-  }
-
-  @media #{$mq-xlarge} {width: 25%;}
-}
-
 .greens-logo {
   @media #{$mq-xxsmall} {width: 55%;}
 
   @media #{$mq-xsmall} {
     width: 20%;
-    margin: 1.5em;
+    margin: 2em;
   }
 
   @media #{$mq-medium} {
@@ -1018,28 +1021,40 @@ ul, ol, dl, figure,
 
   @media #{$mq-xlarge} {
     width: 33%;
-    top: -2em;
-    margin: 0 0 0 -1em;
+    margin: 0 0 0 1em;
   }
 }
 
-.lymbr-logo {
+.naboso-logo {
   @media #{$mq-xsmall} {
-    width: 20%;
-    margin: 2em;
+    width: 26%;
+    top: 1em;
+    margin: 1em;
   }
 
   @media #{$mq-medium} {
+    top: -1.5em;
     width: 26%;
-    margin: 2.5em;
-    top: 0;
+    margin: 2em;
   }
 
   @media #{$mq-large} {
-    width: 27%;
-    margin: 2em;
+    width: 34%;
+    margin: 1em 0;
+  }
+
+  @media #{$mq-xlarge} {
+    width: 36%;
+    padding: 2em 0;
+    margin: 0 0 0 -1.5em;
+  }
+
+  @media #{$mq-xxlarge} {
+    margin: -1em 0 0 -2em;
+    top: -4em;
   }
 }
+
 
 .stamina-header, .normatec-header,
 .whoop-header, .nucalm-header,
