@@ -155,10 +155,6 @@ ul, ol, dl, figure,
 .music-img {
   background: linear-gradient(90deg, #ff98008a, rgba(0, 0, 0, 0.5)),
                               url(/assets/images/manek-music.jpg);
-  // background: -webkit-linear-gradient(90deg, #ff98008a, rgba(0, 0, 0, 0.5)),
-  //                             url(/assets/images/manek-music.jpg);
-  // background: -o-linear-gradient(90deg, #ff98008a, rgba(0, 0, 0, 0.5)),
-  //                             url(/assets/images/manek-music.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -266,31 +262,6 @@ ul, ol, dl, figure,
   }
 }
 
-// .header-tagline {
-//   position: $rel;
-//   top: 4em;
-//   text-transform: uppercase;
-//   font-weight: 500;
-//   font-size: $tagline-font-size;
-//   color: whitesmoke;
-//   transition: all .5s ease-in;
-//
-//   @media #{$mq-large} {
-//     top: 5.3em;
-//     font-size: $tagline-font-size * 1;
-//   }
-//
-//   @media #{$mq-xlarge} {
-//     top: 6em;
-//     font-size: $tagline-font-size * 1.25;
-//   }
-//
-//   @media #{$mq-xxlarge} {
-//     top: 5.5em;
-//     font-size: $tagline-font-size * 1.45;
-//   }
-// }
-
 .navbar-right {
   display: inline-grid;
   list-style: none;
@@ -380,9 +351,9 @@ ul, ol, dl, figure,
 
 // mobile navbar responsiveness
 @media #{$mq-max-medium} {
-  .navbar-container {display: none;}
-  .music-img {background-position: 50%;}
-  .contact-img {background-position: 50%;}
+  .navbar-container { display: none; }
+  .music-img { background-position: 50%; }
+  .contact-img { background-position: 50%; }
   .home-img {
     background-position: 50%;
     background-position-y: 20%;
@@ -429,7 +400,7 @@ ul, ol, dl, figure,
     color: whitesmoke;
   }
 
-  .overlay-content a:hover {color: darkgray;}
+  .overlay-content a:hover { color: darkgray; }
 
   .mobile-logo, .manek-logo {
     display: inline;
@@ -446,17 +417,7 @@ ul, ol, dl, figure,
     margin-bottom: 5em;
   }
 
-  // .mobile-tagline {
-  //   position: $rel;
-  //   top: -8em;
-  //   text-transform: uppercase;
-  //   font-weight: 600;
-  //   font-size: 13px;
-  //   color: whitesmoke;
-  //   left: 1em;
-  // }
-
-  .mobile-navbar-container {display: inline;}
+  .mobile-navbar-container { display: inline; }
 
   #menu-icon {
     position: $rel;
@@ -485,24 +446,24 @@ ul, ol, dl, figure,
   }
 
 // toggle effects
-  .change .bar-2 {opacity: 0;}
+  .change .bar-2 { opacity: 0; }
 
   .change .bar-1 {
     -webkit-transform: rotate(-45deg) translate(-5px, 6px);
     -ms-transform: rotate(-45deg) translate(-5px, 6px);
     transform: rotate(-45deg) translate(-5px, 6px);
-    background-color: #463841;
+    background-color: whitesmoke;
   }
 
   .change .bar-3 {
     -webkit-transform: rotate(45deg) translate(-7px, -8px);
     -ms-transform: rotate(45deg) translate(-7px, -8px);
     transform: rotate(45deg) translate(-7px, -8px);
-    background-color: #463841;
+    background-color: whitesmoke;
   }
 
   .overlay.active {
-    background-image: linear-gradient(to bottom left, whitesmoke, 25%, black 85%);
+    background-color: $black;
     opacity: 1;
     height: 100%;
     max-height: none;
@@ -916,7 +877,7 @@ ul, ol, dl, figure,
     margin: 2em 1em;
   }
 
-  @media #{$mq-medium} { margin: 2em 2em; }
+  @media #{$mq-medium} { margin: 2em 2.5em; }
 
   @media #{$mq-large} {
     width: 28%;
