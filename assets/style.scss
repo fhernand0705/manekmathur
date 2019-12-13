@@ -1155,31 +1155,19 @@ ul, ol, dl, figure,
 }
 
 .playlist-container, .solo-songs-container {
-  display: flex;
-  flex-direction: column;
   position: $rel;
-  width: 100%;
-  justify-content: center;
   text-align: center;
-  align-items: center;
+  width: 100%;
 
     @media #{$mq-xxsmall} {
+      display: flex;
+      flex-direction: column;
       top: -3em;
     }
 }
 
 .playlist-container {
-  @media #{$mq-xxsmall} {
-    margin: 2.5em 0;
-  }
-
-  @media #{$mq-xsmall} {
-    margin: 2em 0;
-  }
-
-  @media (min-width: 900px) and (max-width: 1149px) {
-    top: -12.5em;
-  }
+  @media #{$mq-xxsmall} { margin: -1.5em 0; }
 
   @media #{$mq-medium} {
     margin: 0;
@@ -1189,14 +1177,9 @@ ul, ol, dl, figure,
 }
 
 .solo-songs-container {
-
-  @media (max-width: 40em) {
-    top: -3.5em;
-  }
-
-  @media #{$mq-medium} {
-    top: -1.5em;
-  }
+  @media #{$mq-xxsmall} { margin-bottom: 3em; }
+  @media (max-width: 40em) { top: -3.5em; }
+  @media #{$mq-medium} { top: -1.5em; }
 }
 
 .solo-songs-container a {
