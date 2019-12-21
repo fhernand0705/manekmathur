@@ -56,7 +56,7 @@ window.onscroll = function() {
     navbar.style.top = "0";
     navbar.style.zIndex = "1";
   } else {
-    navbar.style.top = "-125px";
+    navbar.style.top = "-400px";
   }
 
   prevScrollPos = currentScrollPos;
