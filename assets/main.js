@@ -64,7 +64,6 @@ window.onscroll = function() {
 window.onload = openSongModal => {
   let homePage = document.getElementById('home').pathname;
   let songModal = document.getElementById('song-modal');
-  let songIframe = document.getElementById('song-iframe');
 
   if (location.pathname != homePage) return;
 
@@ -72,8 +71,10 @@ window.onload = openSongModal => {
     setTimeout(() => {
       songModal.style.display = "grid";
       songModal.style.gridTemplateColumns = "14em";
-      songIframe.setAttribute("src", "https://www.youtube.com/embed/vseGtE4NAb4?&autoplay=1");
     }, 1250);
+    
+    let songIframe = document.getElementById('song-iframe');
+    songIframe.setAttribute("src", "https://www.youtube.com/embed/vseGtE4NAb4?&autoplay=1");
 
     localStorage.setItem("visited", "true");
   }
