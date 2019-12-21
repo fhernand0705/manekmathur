@@ -25,7 +25,7 @@
            :location.pathname === doublesPage ? doubles.classList.add("active")
            :location.pathname === musicPage ? music.classList.add("active")
            :location.pathname === homePage ? (
-             wrapper.style.minHeight = "65%",
+             wrapper.style.minHeight = "60%",
              navbar.style.backgroundImage = "none"
              )
            :null;
@@ -33,17 +33,16 @@
   })();
 
 // toggles nav menu overlay
-  let burgerIcon = document.querySelector("#menu-icon");
+let burgerIcon = document.querySelector("#menu-icon");
 
-  burgerIcon.addEventListener("click", function() {
-       let overlay = document.querySelector(".overlay");
-       let bars = document.querySelector(".menu-bars");
+burgerIcon.addEventListener("click", function() {
+   let overlay = document.querySelector(".overlay");
+   let bars = document.querySelector(".menu-bars");
 
-       this.style.zIndex = "1";
-       bars.classList.toggle("change");
-       overlay.classList.toggle("active");
-
-    });
+   this.style.zIndex = "1";
+   bars.classList.toggle("change");
+   overlay.classList.toggle("active");
+  });
 
 // hides/shows navbar on scroll down/up
 var prevScrollPos = window.pageYOffset;
@@ -62,6 +61,32 @@ window.onscroll = function() {
   prevScrollPos = currentScrollPos;
 }
 
+window.onload = openSongModal => {
+  let homePage = document.getElementById('home').pathname;
+  let songModal = document.getElementById('song-modal');
+  let songIframe = document.getElementById('song-iframe');
+
+  if (location.pathname != homePage) return;
+
+  if (!localStorage.getItem("visited")) {
+    setTimeout(() => {
+      songModal.style.display = "grid";
+      songModal.style.gridTemplateColumns = "14em";
+      songIframe.setAttribute("src", "https://www.youtube.com/embed/vseGtE4NAb4?&autoplay=1");
+    }, 1250);
+
+    localStorage.setItem("visited", "true");
+  }
+}
+
+function closeModal()  {
+  let songModal = document.getElementById('song-modal');
+  let songIframe = document.getElementById('song-iframe');
+
+  songIframe.removeAttribute("src");
+  songModal.style.display = "none";
+}
+
 // validates contact form user data + invokes aws gateway api
 function submitToAPI(e) {
        e.preventDefault();
@@ -78,6 +103,7 @@ function submitToAPI(e) {
                 alert ("Name cannot be less than two characters");
                 return;
             }
+
             if ($("#email-input").val()=== "") {
                 alert ("Please enter your email address");
                 return;

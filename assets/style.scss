@@ -141,7 +141,7 @@ ul, ol, dl, figure,
 
 .brands-img {
   background: linear-gradient(75deg, #8e35357a, 35%, rgba(0, 0, 0, .25)),
-              url("/assets/images/manek-brands.jpg");            
+              url("/assets/images/manek-brands.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -467,6 +467,39 @@ ul, ol, dl, figure,
     opacity: 1;
     height: 100%;
     max-height: none;
+  }
+}
+
+// home page-song modal section
+.song-modal {
+  display: none;
+  position: relative;
+  width: 100%;
+  justify-content: right;
+  top: 6.5em;
+
+  .modal-title { color: whitesmoke; }
+
+  span {
+    color: black;
+    font-size: 1.5em;
+  }
+  .modal-dialog { margin: 0; }
+  .modal-content {
+    height: 15em;
+    background-color: unset;
+    border: none;
+  }
+  .modal-body {
+    display: grid;
+    justify-content: center;
+  }
+
+  @media #{$mq-max-medium} {
+      grid-template-columns: 17em !important;
+      justify-content: center;
+      top: -8em;
+    .modal-content { height: 20em; }
   }
 }
 
