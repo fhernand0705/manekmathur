@@ -67,15 +67,14 @@ window.onload = openSongModal => {
 
   if (location.pathname != homePage) return;
 
-  setTimeout(() => {
+  if (!localStorage.getItem("visited")) {
     let songOverlay = document.getElementById('song-overlay');
 
-    songOverlay.classList.toggle('show');
-    songModal.style.display = "grid";
-    songModal.style.gridTemplateColumns = "14em";
-  }, 1250);
-
-  if (!localStorage.getItem("visited")) {
+    setTimeout(() => {
+      songOverlay.classList.toggle('show');
+      songModal.style.display = "grid";
+      songModal.style.gridTemplateColumns = "14em";
+    }, 1250);
 
     localStorage.setItem("visited", "true");
   }
