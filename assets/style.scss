@@ -498,7 +498,8 @@ ul, ol, dl, figure,
   @media #{$mq-max-medium} {
       grid-template-columns: 17em !important;
       justify-content: center;
-      top: -8em;
+      top: 9em;
+
     .modal-content { height: 20em; }
   }
 }
