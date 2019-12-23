@@ -19,28 +19,27 @@ permalink: /
       </div>
 
        <!-- Modal -->
-       <div class="song-modal" id="song-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-         <div class="modal-dialog" role="document">
-           <div class="modal-content">
-             <div class="modal-header">
-               <h5 class="modal-title" id="exampleModalLabel">seeing ghosts (manek)</h5>
-               <button type="button" onclick="closeModal()" class="close" data-dismiss="modal" aria-label="Close">
-                 <span aria-hidden="true">&times;</span>
-               </button>
-             </div>
-             <div class="modal-body">
-                 <!-- <iframe src="https://open.spotify.com/embed/track/7qMDivSD9LPl8ppzsvz8x5"
-                  width="300" height="300" frameborder="0" allowtransparency="true" allow="autoplay">
-                 </iframe> -->
-                 <iframe id="song-iframe" width="300" height="300" src="https://www.youtube.com/embed/vseGtE4NAb4"
-                 frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+       <div class="overlay" id="song-overlay">
+         <div class="song-modal" id="song-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+           <div class="modal-dialog" role="document">
+             <div class="modal-content">
+               <div class="modal-header">
+                 <h5 class="modal-title" id="exampleModalLabel">seeing ghosts (manek)</h5>
+                 <button type="button" onclick="closeModal()" class="close" data-dismiss="modal" aria-label="Close">
+                   <span aria-hidden="true">&times;</span>
+                 </button>
+               </div>
+               <div class="modal-body">
+                 <iframe id="song-iframe" src="https://open.spotify.com/embed/track/7qMDivSD9LPl8ppzsvz8x5"
+                 width="300" height="300" frameborder="0" allowtransparency="true" allow="autoplay">
                  </iframe>
              </div>
            </div>
          </div>
        </div>
+      </div>
 
-</div>
+ </div>
 
        {% include footer.html %}
 
