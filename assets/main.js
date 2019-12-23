@@ -67,14 +67,15 @@ window.onload = openSongModal => {
 
   if (location.pathname != homePage) return;
 
+  setTimeout(() => {
+    let songOverlay = document.getElementById('song-overlay');
+
+    songOverlay.classList.toggle('show');
+    songModal.style.display = "grid";
+    songModal.style.gridTemplateColumns = "14em";
+  }, 1250);
+
   if (!localStorage.getItem("visited")) {
-    setTimeout(() => {
-      songModal.style.display = "grid";
-      songModal.style.gridTemplateColumns = "14em";
-    }, 1250);
-    
-    let songIframe = document.getElementById('song-iframe');
-    songIframe.setAttribute("src", "https://www.youtube.com/embed/vseGtE4NAb4?&autoplay=1");
 
     localStorage.setItem("visited", "true");
   }
@@ -82,9 +83,9 @@ window.onload = openSongModal => {
 
 function closeModal()  {
   let songModal = document.getElementById('song-modal');
-  let songIframe = document.getElementById('song-iframe');
+  let songOverlay = document.getElementById('song-overlay');
 
-  songIframe.removeAttribute("src");
+  songOverlay.classList.remove('show');
   songModal.style.display = "none";
 }
 
