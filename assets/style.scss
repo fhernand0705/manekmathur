@@ -1313,25 +1313,26 @@ label {color: whitesmoke;}
 
 // footer section
 .footer-container {
+  display: flex;
+  flex-direction: column;
   position: sticky;
-  margin: 4.5em 0 0.5em;
+  margin: 2em;
 }
 
 .social-icons {
   display: grid;
-  display: -ms-grid;
+  grid-template-columns: 5em .5em 5em .5em 5em .5em 5em .5em 5em;
   justify-content: center;
   position: $rel;
-  grid-template-columns: 5% 2px 5% 2px 5% 2px 5% 2px 5%;
-  list-style: none;
-  margin-left: 0;
   padding: 0;
+  top: 2em;
 }
 
 .social-icons li {
   padding: 10px 0;
   text-align: center;
   transition: all .25s ease-in-out;
+  list-style: none;
 }
 
 .fab {
@@ -1372,11 +1373,8 @@ label {color: whitesmoke;}
 // responsive footer
 @media all and (min-width: 225px) and (max-width: 450px) {
   .social-icons {
-    grid-template-columns: 16.5% 5px 16.5% 5px
-                           16.5% 5px 16.5% 5px
-                           16.5%;
+    grid-template-columns: 3em .5em 3em .5em 3em .5em 3em .5em 3em;
   }
-
   .social-icons i {
     font-size: .5em;
   }
@@ -1384,16 +1382,6 @@ label {color: whitesmoke;}
 
 @media all and (min-width: 450px) and (max-width: 700px) {
   .social-icons {
-    grid-template-columns: 12% 1px 12% 1px
-                           12% 1px 12% 1px
-                           12%;
-  }
-}
-
-@media all and (min-width: 700px) and (max-width: 1100px) {
-  .social-icons {
-    grid-template-columns: 8% 2px 8% 2px
-                           8% 2px 8% 2px
-                           8%;
+    grid-template-columns: 4em .5em 4em .5em 4em .5em 4em .5em 4em;
   }
 }
