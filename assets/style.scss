@@ -1315,14 +1315,13 @@ label {color: whitesmoke;}
 .footer-container {
   display: flex;
   flex-direction: column;
-  width: 95%;
   position: sticky;
   margin: 2em;
 }
 
 .social-icons {
   display: grid;
-  grid-template-columns: 5em .5em 5em .5em 5em .5em 5em .5em 5em;
+  grid-template-columns: 3em .5em 3em .5em 3em .5em 3em .5em 3em;
   justify-content: center;
   position: $rel;
   padding: 0;
@@ -1369,20 +1368,4 @@ label {color: whitesmoke;}
 
 .fh-name:hover {
   color: lightgray;
-}
-
-// responsive footer
-@media all and (min-width: 225px) and (max-width: 450px) {
-  .social-icons {
-    grid-template-columns: 3em .5em 3em .5em 3em .5em 3em .5em 3em;
-  }
-  .social-icons i {
-    font-size: .5em;
-  }
-}
-
-@media all and (min-width: 450px) and (max-width: 700px) {
-  .social-icons {
-    grid-template-columns: 4em .5em 4em .5em 4em .5em 4em .5em 4em;
-  }
 }
