@@ -513,6 +513,11 @@ ul, ol, dl, figure,
 .about-header, .about-wrapper p {
   color: whitesmoke;
   font-family: memories;
+
+  b {
+    color: black;
+    text-shadow: 2px 2px darkgray;
+  }
 }
 
 // doubles tutorials section

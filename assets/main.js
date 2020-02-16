@@ -61,32 +61,32 @@ window.onscroll = function() {
   prevScrollPos = currentScrollPos;
 }
 
-window.onload = openSongModal => {
-  let homePage = document.getElementById('home').pathname;
-  let songModal = document.getElementById('song-modal');
-
-  if (location.pathname != homePage) return;
-
-  if (!localStorage.getItem("visited")) {
-    let songOverlay = document.getElementById('song-overlay');
-
-    setTimeout(() => {
-      songOverlay.classList.toggle('show');
-      songModal.style.display = "grid";
-      songModal.style.gridTemplateColumns = "14em";
-    }, 1250);
-
-    localStorage.setItem("visited", "true");
-  }
-}
-
-function closeModal()  {
-  let songModal = document.getElementById('song-modal');
-  let songOverlay = document.getElementById('song-overlay');
-
-  songOverlay.classList.remove('show');
-  songModal.style.display = "none";
-}
+// window.onload = openSongModal => {
+//   let homePage = document.getElementById('home').pathname;
+//   let songModal = document.getElementById('song-modal');
+//
+//   if (location.pathname != homePage) return;
+//
+//   if (!localStorage.getItem("visited")) {
+//     let songOverlay = document.getElementById('song-overlay');
+//
+//     setTimeout(() => {
+//       songOverlay.classList.toggle('show');
+//       songModal.style.display = "grid";
+//       songModal.style.gridTemplateColumns = "14em";
+//     }, 1250);
+//
+//     localStorage.setItem("visited", "true");
+//   }
+// }
+//
+// function closeModal()  {
+//   let songModal = document.getElementById('song-modal');
+//   let songOverlay = document.getElementById('song-overlay');
+//
+//   songOverlay.classList.remove('show');
+//   songModal.style.display = "none";
+// }
 
 // validates contact form user data + invokes aws gateway api
 function submitToAPI(e) {
