@@ -775,7 +775,7 @@ ul, ol, dl, figure,
 .lulu-logo, .greens-logo,
 .stamina-logo, .naboso-logo,
 .lymbr-logo, .harrow-logo,
-.pso-rite-logo, .chili-logo {
+.pso-rite-logo {
   position: $rel;
 
   @media #{$mq-xsmall} { width: 35%; }
@@ -790,6 +790,12 @@ ul, ol, dl, figure,
 .naboso-logo, .lymbr-logo,
 .pso-rite-logo {
   @media #{$mq-xxsmall} { width: 50%; }
+}
+
+.chili-logo {
+  @media #{$mq-xxsmall} { width: 50%; }
+
+  @media #{$mq-xsmall} { width: 30%; }
 }
 
 .harrow-logo {
