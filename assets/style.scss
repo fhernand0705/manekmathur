@@ -140,8 +140,8 @@ ul, ol, dl, figure,
 }
 
 .brands-img {
-  background: linear-gradient(75deg, #8e35357a, 35%, rgba(0, 0, 0, 0)),
-              url("/assets/images/manek-brands.jpg");
+  background: linear-gradient(75deg, #8e35357a, 35%, rgba(0, 0, 0, .2)),
+              url("/assets/images/manek.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -650,6 +650,11 @@ ul, ol, dl, figure,
   }
 }
 
+.brands-wrapper a {
+  display: inline-block;
+  width: fit-content;
+}
+
 .brands-header {
   position: $rel;
   top: -1.5em;
@@ -697,7 +702,8 @@ ul, ol, dl, figure,
 .nucalm-container, .stamina-container,
 .naboso-container, .lulu-container,
 .greens-container, .lymbr-container,
-.harrow-container, .pso-rite-container {
+.harrow-container, .pso-rite-container,
+.chili-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -717,10 +723,6 @@ ul, ol, dl, figure,
   @media #{$mq-xsmall} {
     text-align: unset;
   }
-
-  // @media #{$mq-medium} {
-  //   padding: 1em 0;
-  // }
 }
 
 .whoop-container {
@@ -729,7 +731,6 @@ ul, ol, dl, figure,
 
 .stamina-container {
   @media #{$mq-xsmall} {
-    // top: 1.5em;
     margin: 0;
   }
 
@@ -752,14 +753,14 @@ ul, ol, dl, figure,
 
 .greens-container {
   @media #{$mq-xsmall} { margin: 0; }
-  // @media #{$mq-xlarge} { margin: 4em 2em; }
 }
 
 .normatec-content, .whoop-content,
 .nucalm-content, .stamina-content,
 .naboso-content, .lulu-content,
 .greens-content, .lymbr-content,
-.harrow-content, .pso-rite-content {
+.harrow-content, .pso-rite-content,
+.chili-content {
   display: flex;
   flex-direction: column;
 
@@ -774,13 +775,10 @@ ul, ol, dl, figure,
 .lulu-logo, .greens-logo,
 .stamina-logo, .naboso-logo,
 .lymbr-logo, .harrow-logo,
-.pso-rite-logo {
+.pso-rite-logo, .chili-logo {
   position: $rel;
 
-  @media #{$mq-xsmall} {
-    width: 35%;
-    //float: left;
-  }
+  @media #{$mq-xsmall} { width: 35%; }
 
   @media #{$mq-medium} {
     width: 30%;
@@ -789,13 +787,13 @@ ul, ol, dl, figure,
 }
 
 .normatec-logo, .whoop-logo,
-.nucalm-logo, .naboso-logo,
-.lymbr-logo, .pso-rite-logo {
-  @media #{$mq-xxsmall} { width: 75%; }
+.naboso-logo, .lymbr-logo,
+.pso-rite-logo {
+  @media #{$mq-xxsmall} { width: 50%; }
 }
 
 .harrow-logo {
-  @media #{$mq-xxsmall} { width: 30%; }
+  @media #{$mq-xxsmall} { width: 22%; }
 
   @media #{$mq-xsmall} {
     width: 13%;
@@ -803,12 +801,9 @@ ul, ol, dl, figure,
   }
 
   @media #{$mq-medium} {
-    width: 11%;
+    width: 9%;
     margin: 0;
   }
-
-  // @media #{$mq-large} { margin: 0 5.5em; }
-  // @media #{$mq-xlarge} { margin: 0 5em 0 6em; }
 }
 
 .lymbr-logo {
@@ -818,7 +813,7 @@ ul, ol, dl, figure,
   }
 
   @media #{$mq-medium} {
-    width: 26%;
+    width: 23%;
     margin: 0;
   }
 
@@ -836,42 +831,25 @@ ul, ol, dl, figure,
 
   @media #{$mq-medium} { margin: 2.5em; }
   @media #{$mq-large} { margin: 1.5em; }
-
-  // @media #{$mq-xlarge} {
-  //   margin: 0 .5em 0 -1.5em;
-  // }
-
-  // @media #{$mq-xxlarge} {
-  //   padding: 3em 0;
-  // }
 }
 
 .nucalm-logo {
+  @media #{$mq-xxsmall} { width: 65%; }
   @media #{$mq-xsmall} {
     width: 30%;
     margin: 0;
     top: 2em;
   }
 
-  // @media #{$mq-medium} {
-  //   margin: 1em 1em;
-  // }
-
   @media #{$mq-large} { width: 35%; }
-  // @media #{$mq-xlarge} { margin: 0 0 0 -1.8em; }
-
   @media #{$mq-xxlarge} {  padding: 3em 0;  }
 }
 
 .pso-rite-logo {
-  @media #{$mq-xxsmall} {  width: 60%;  }
-
   @media #{$mq-xsmall} {
     width: 17%;
     margin: 0;
   }
-
-  // @media #{$mq-medium} { margin: 2em 2.5em; }
 
   @media #{$mq-large} { width: 20%; }
 }
@@ -890,15 +868,11 @@ ul, ol, dl, figure,
   @media #{$mq-large} {
     width: 30%;
     top: 0;
-    // padding: 2.5em 0;
-    // margin: 0;
   }
-
-  // @media #{$mq-xlarge} { margin: 0 0 0 1em; }
 }
 
 .lulu-logo {
-  @media #{$mq-xxsmall} { width: 45%; }
+  @media #{$mq-xxsmall} { width: 35%; }
 
   @media #{$mq-xsmall} {
     width: 15%;
@@ -913,14 +887,11 @@ ul, ol, dl, figure,
   @media #{$mq-large} {
     width: 20%;
     margin: 2.5em;
-    // padding: 1em 0;
   }
-
-  // @media #{$mq-xlarge} { width: 25%; }
 }
 
 .stamina-logo {
-  @media #{$mq-xxsmall} {width: 50%;}
+  @media #{$mq-xxsmall} {width: 35%;}
 
   @media #{$mq-xsmall} {
     width: 15%;
@@ -931,45 +902,20 @@ ul, ol, dl, figure,
     margin: 0;
     top: -1em;
   }
-
-  // @media #{$mq-large} {
-  //   width: 20%;
-  //   margin: 2.5em;
-  // }
-  //
-  // @media #{$mq-xlarge} {
-  //   width: 20%;
-  //   // padding: 2.5em 0;
-  // }
-  //
-  // @media #{$mq-xxlarge} {
-  //   padding: 3em 0;
-  //   top: 2.5em;
-  // }
 }
 
 .greens-logo {
-  @media #{$mq-xxsmall} {width: 55%;}
+  @media #{$mq-xxsmall} {width: 45%;}
 
   @media #{$mq-xsmall} {
     width: 18%;
     margin: 0;
   }
 
-  // @media #{$mq-medium} {
-  //   top: -1em;
-  // }
-
   @media #{$mq-large} {
     width: 20%;
-    // padding: 1.5em 0;
     margin: 1em;
   }
-
-  // @media #{$mq-xlarge} {
-  //   width: %;
-  //   margin: 0 0 0 1em;
-  // }
 }
 
 .naboso-logo {
@@ -978,26 +924,6 @@ ul, ol, dl, figure,
     top: 1em;
     margin: .5em;
   }
-
-  // @media #{$mq-medium} {
-  //   top: -1.5em;
-  // }
-
-  // @media #{$mq-large} {
-  //   width: 34%;
-  //   margin: 1em 0;
-  // }
-  //
-  // @media #{$mq-xlarge} {
-  //   width: 36%;
-  //   padding: 2em 0;
-  //   margin: 0 0 0 -1.5em;
-  // }
-  //
-  // @media #{$mq-xxlarge} {
-  //   margin: -1em 0 0 -2em;
-  //   top: -4em;
-  // }
 }
 
 
@@ -1005,7 +931,8 @@ ul, ol, dl, figure,
 .whoop-header, .nucalm-header,
 .lulu-header, .greens-header,
 .lymbr-header, .naboso-header,
-.harrow-header, .pso-rite-header {
+.harrow-header, .pso-rite-header,
+.chili-header {
   letter-spacing: .15em;
 
   @media #{$mq-xxsmall} {
@@ -1017,7 +944,8 @@ ul, ol, dl, figure,
 .stamina-btn, .naboso-btn,
 .lulu-btn, .normatec-btn,
 .greens-btn, .lymbr-btn,
-.harrow-btn, .pso-rite-btn {
+.harrow-btn, .pso-rite-btn,
+.chili-btn {
   font-family: memories;
   background: whitesmoke;
   cursor: pointer;
@@ -1029,30 +957,21 @@ ul, ol, dl, figure,
   margin: 0 auto;
   transition: all .3s ease-in-out;
 
-  // @media #{$mq-large} {font-size: $btn-font-size * 1.2;}
-
   @media #{$mq-xlarge} {
-    // font-size: $btn-font-size * 1.3;
     border-radius: 2.5em;
     height: 3em;
   }
-
-  // @media #{$mq-xxlarge} {font-size: $btn-font-size * 1.5;}
 }
 
 .whoop-btn:hover, .nucalm-btn:hover,
 .stamina-btn:hover, .naboso-btn:hover,
 .lulu-btn:hover, .normatec-btn:hover,
 .greens-btn:hover, .lymbr-btn:hover,
-.harrow-btn:hover, .pso-rite-btn:hover {
+.harrow-btn:hover, .pso-rite-btn:hover,
+.chili-btn:hover {
   background: $black;
   color: whitesmoke;
   border-color: $black;
-}
-
-.brands-wrapper a {
-  display: inline-block;
-  width: fit-content;
 }
 
 // music section
