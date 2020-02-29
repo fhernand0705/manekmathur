@@ -893,7 +893,6 @@ ul, ol, dl, figure,
   }
 }
 
-
 .stamina-header, .normatec-header,
 .whoop-header, .nucalm-header,
 .lulu-header, .greens-header,
@@ -907,12 +906,7 @@ ul, ol, dl, figure,
   }
 }
 
-.whoop-btn, .nucalm-btn,
-.stamina-btn, .naboso-btn,
-.lulu-btn, .normatec-btn,
-.greens-btn, .lymbr-btn,
-.harrow-btn, .pso-rite-btn,
-.chili-btn {
+.brand-btn {
   font-family: memories;
   background: whitesmoke;
   cursor: pointer;
@@ -930,12 +924,7 @@ ul, ol, dl, figure,
   }
 }
 
-.whoop-btn:hover, .nucalm-btn:hover,
-.stamina-btn:hover, .naboso-btn:hover,
-.lulu-btn:hover, .normatec-btn:hover,
-.greens-btn:hover, .lymbr-btn:hover,
-.harrow-btn:hover, .pso-rite-btn:hover,
-.chili-btn:hover {
+.brand-btn:hover {
   background: $black;
   color: whitesmoke;
   border-color: $black;
