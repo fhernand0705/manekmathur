@@ -19,7 +19,7 @@
      let doubles = document.getElementById('doubles');
 
      // check location and add active class
-    return location.pathname === aboutPage ? about.classList.add("active")
+     return location.pathname === aboutPage ? about.classList.add("active")
            :location.pathname === brandsPage ? brands.classList.add("active")
            :location.pathname === contactPage ? contact.classList.add("active")
            :location.pathname === doublesPage ? doubles.classList.add("active")
@@ -29,20 +29,19 @@
              navbar.style.backgroundImage = "none"
              )
            :null;
-
   })();
 
-// toggles nav menu overlay
+// toggles menu overlay
 let burgerIcon = document.querySelector("#menu-icon");
 
-burgerIcon.addEventListener("click", function() {
+burgerIcon.addEventListener("click", () => {
    let overlay = document.querySelector(".overlay");
    let bars = document.querySelector(".menu-bars");
 
    this.style.zIndex = "1";
    bars.classList.toggle("change");
    overlay.classList.toggle("active");
-  });
+});
 
 // hides/shows navbar on scroll down/up
 var prevScrollPos = window.pageYOffset;
