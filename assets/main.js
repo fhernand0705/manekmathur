@@ -32,13 +32,13 @@
   })();
 
 // toggles menu overlay
-let burgerIcon = document.querySelector("#menu-icon");
+let burgerIcon = document.querySelector(".menu-icon");
 
 burgerIcon.addEventListener("click", () => {
    let overlay = document.querySelector(".overlay");
    let bars = document.querySelector(".menu-bars");
 
-   this.style.zIndex = "1";
+   burgerIcon.style.zIndex = "2";
    bars.classList.toggle("change");
    overlay.classList.toggle("active");
 });
