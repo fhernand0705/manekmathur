@@ -228,8 +228,8 @@ ul, ol, dl, figure,
   margin: -4.5em 0;
 
   @media (min-width: 103.13em) { margin: -6.5em 0; }
-  @media #{$mq-xlarge} { margin: -8em 0; }
-  @media #{$mq-xxlarge} { margin: -9em 0; }
+  @media #{$mq-xlarge} { margin: -7em 0; }
+  @media #{$mq-xxlarge} { margin: -8em 0; }
 }
 
 .navbar-right {
@@ -1156,7 +1156,7 @@ label {color: whitesmoke;}
   display: flex;
   flex-direction: column;
   position: sticky;
-  margin: 2em;
+  margin: 4em;
 }
 
 .social-icons {
