@@ -239,7 +239,7 @@ ul, ol, dl, figure,
 }
 
 .navbar-right {
-  grid-template-columns: 17.5% 17.5% 38% 38% 17.5%;
+  grid-template-columns: 17.5% 38% 38% 17.5% 17.5%;
   margin: 1.5em 0;
 
   @media #{$mq-medium} {
