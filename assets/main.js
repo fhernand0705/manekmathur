@@ -17,7 +17,6 @@
      let music = document.getElementById('music');
      let contact = document.getElementById('contact');
      let doubles = document.getElementById('doubles');
-
      // check location and adds active class
      return location.pathname === aboutPage ? about.classList.add("active")
            :location.pathname === brandsPage ? brands.classList.add("active")
@@ -29,6 +28,7 @@
              navbar.style.backgroundImage = "none"
              )
            :null;
+
   })();
 
 // toggles menu overlay
@@ -47,8 +47,8 @@ burgerIcon.addEventListener("click", () => {
 var prevScrollPos = window.pageYOffset;
 
 window.onscroll = function() {
-  let navbar = document.getElementById("navbar");
-  let homePage = document.getElementById('home').pathname;
+  const navbar = document.getElementById("navbar");
+  const homePage = document.getElementById('home').pathname;
   let currentScrollPos = window.pageYOffset;
 
   if (location.pathname === homePage) return;

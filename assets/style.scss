@@ -192,7 +192,7 @@ ul, ol, dl, figure,
   height: 4.5em;
   transition: all 0.65s ease-in-out;
   justify-content: center;
-  background-image: linear-gradient(-45deg, rgba(39, 40, 33, .65), 25%, rgb(58, 46, 54));
+  background-image: linear-gradient(-45deg, rgba(39, 40, 33, .65), 70%, whitesmoke 25%);
 
   @media #{$mq-medium} { height: 6em; }
   @media (min-width: 103.13em) { height: 8em; }
@@ -208,21 +208,25 @@ ul, ol, dl, figure,
 }
 
 .navbar-logo {
+  display: flex;
+  flex-direction: column;
   position: $rel;
   flex: .5;
   margin: 0 2%;
-  text-align: center;
 }
 
-.navbar-logo a {
-  display: block;
-  height: 93%;
-  width: fit-content;
-  text-decoration: none;
+.web-link p {
+  position: relative;
+  text-align: center;
+  top: 1.25em;
+  width: 40%;
+  color: $black;
+  margin: -1em 0;
+  text-decoration: underline;
 }
 
 .img-logo {
-  position: absolute;
+  position: relative;
   left: .5em;
   width: 45%;
   margin: -4.5em 0;
@@ -486,7 +490,7 @@ ul, ol, dl, figure,
   position: $rel;
   justify-content: center;
   text-align: center;
-  margin: 5.5em 0;
+  margin: 6.5em 0;
   text-shadow: 2px 2px $black;
 
   @media #{$mq-max-medium} {
