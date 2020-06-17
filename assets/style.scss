@@ -194,7 +194,7 @@ ul, ol, dl, figure,
   justify-content: center;
   background-image: linear-gradient(-45deg, rgba(39, 40, 33, .65), 70%, whitesmoke 25%);
 
-  @media #{$mq-medium} { height: 6em; }
+  @media #{$mq-medium} { height: 6.5em; }
   @media (min-width: 103.13em) { height: 8em; }
   @media #{$mq-xlarge} { height: 9em; }
   @media #{$mq-xxlarge} { height: 10em; }
@@ -211,6 +211,7 @@ ul, ol, dl, figure,
   position: $rel;
   flex: .5;
   margin: 0 2%;
+  top: -.6em;
     div {
       display: flex;
       flex-direction: column;
@@ -218,9 +219,10 @@ ul, ol, dl, figure,
 }
 
 .web-link {
-  position: relative;
-  text-align: center;
-  width: 40%;
+  position: $rel;
+  top: .5em;
+  left: 2em;
+  width: fit-content;
   color: $black;
   text-decoration: underline;
   transition: all .2s ease-in;
@@ -230,13 +232,13 @@ ul, ol, dl, figure,
 
 .img-logo {
   position: relative;
-  left: .5em;
-  width: 45%;
-  margin: -4.5em 0;
+  width: 12.5em;
+  max-width: 300px;
+  margin: -5.5em 0;
 
-  @media (min-width: 103.13em) { margin: -6.5em 0; }
-  @media #{$mq-xlarge} { margin: -7em 0; }
-  @media #{$mq-xxlarge} { margin: -8em 0; }
+  //@media (min-width: 103.13em) { margin: -6.5em 0; }
+  //@media #{$mq-xlarge} { margin: -7em 0; }
+  //@media #{$mq-xxlarge} { margin: -8em 0; }
 }
 
 .navbar-right {
@@ -314,10 +316,10 @@ ul, ol, dl, figure,
   border-bottom: 0;
 }
 
-.mobile-logo {display: none;}
+.mobile-logo-wrapper {display: none;}
 .overlay-content a {display: none;}
 
-// mobile navbar responsiveness
+// mobile navbar
 @media #{$mq-max-medium} {
   .navbar-container { display: none; }
   .music-img { background-position: 50%; }
@@ -386,7 +388,7 @@ ul, ol, dl, figure,
   .img-logo {
     top: -1em;
     left: -2em;
-    width: 12.5em;
+    width: 14.5em;
     max-width: 300px;
   }
 
@@ -394,6 +396,7 @@ ul, ol, dl, figure,
     width: fit-content;
     text-align: unset;
     top: -1.5em;
+    left: .5em;
   }
 
   .mobile-logo-link {
