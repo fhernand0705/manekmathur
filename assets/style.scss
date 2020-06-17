@@ -223,6 +223,7 @@ ul, ol, dl, figure,
   width: 40%;
   color: $black;
   text-decoration: underline;
+  transition: all .2s ease-in;
 }
 
 .web-link:hover { color: rgba(39, 40, 33, .65); }
@@ -369,22 +370,36 @@ ul, ol, dl, figure,
 
   .overlay-content a:hover { color: darkgray; }
 
-  .mobile-logo, .manek-logo {
-    display: inline;
+  .mobile-navbar-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .mobile-logo-wrapper {
+    display: flex;
+    flex-direction: column;
     position: $rel;
-    top: -3em;
-    max-width: 250px;
-    width: 85%;
-    float: left;
-    left: 0;
+    width: 100%;
+  }
+
+  .img-logo {
+    top: -1em;
+    left: -2em;
+    width: 12.5em;
+    max-width: 300px;
+  }
+
+  .web-link {
+    width: fit-content;
+    text-align: unset;
+    top: -1.5em;
   }
 
   .mobile-logo-link {
     display: block;
     margin-bottom: 5em;
   }
-
-  .mobile-navbar-container { display: inline; }
 
   #menu-icon {
     position: $rel;
