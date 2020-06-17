@@ -192,9 +192,9 @@ ul, ol, dl, figure,
   height: 4.5em;
   transition: all 0.65s ease-in-out;
   justify-content: center;
-  background-image: linear-gradient(-45deg, rgba(39, 40, 33, .65), 25%, rgb(58, 46, 54));
+  background-image: linear-gradient(-45deg, rgba(39, 40, 33, .65), 70%, whitesmoke 25%);
 
-  @media #{$mq-medium} { height: 6em; }
+  @media #{$mq-medium} { height: 6.5em; }
   @media (min-width: 103.13em) { height: 8em; }
   @media #{$mq-xlarge} { height: 9em; }
   @media #{$mq-xxlarge} { height: 10em; }
@@ -211,25 +211,34 @@ ul, ol, dl, figure,
   position: $rel;
   flex: .5;
   margin: 0 2%;
-  text-align: center;
+  top: -.6em;
+    div {
+      display: flex;
+      flex-direction: column;
+    }
 }
 
-.navbar-logo a {
-  display: block;
-  height: 93%;
+.web-link {
+  position: $rel;
+  top: .5em;
+  left: 2em;
   width: fit-content;
-  text-decoration: none;
+  color: $black;
+  text-decoration: underline;
+  transition: all .2s ease-in;
 }
+
+.web-link:hover { color: rgba(39, 40, 33, .65); }
 
 .img-logo {
-  position: absolute;
-  left: .5em;
-  width: 45%;
-  margin: -4.5em 0;
+  position: relative;
+  width: 12.5em;
+  max-width: 300px;
+  margin: -5.5em 0;
 
-  @media (min-width: 103.13em) { margin: -6.5em 0; }
-  @media #{$mq-xlarge} { margin: -7em 0; }
-  @media #{$mq-xxlarge} { margin: -8em 0; }
+  //@media (min-width: 103.13em) { margin: -6.5em 0; }
+  //@media #{$mq-xlarge} { margin: -7em 0; }
+  //@media #{$mq-xxlarge} { margin: -8em 0; }
 }
 
 .navbar-right {
@@ -307,10 +316,10 @@ ul, ol, dl, figure,
   border-bottom: 0;
 }
 
-.mobile-logo {display: none;}
+.mobile-logo-wrapper {display: none;}
 .overlay-content a {display: none;}
 
-// mobile navbar responsiveness
+// mobile navbar
 @media #{$mq-max-medium} {
   .navbar-container { display: none; }
   .music-img { background-position: 50%; }
@@ -363,22 +372,37 @@ ul, ol, dl, figure,
 
   .overlay-content a:hover { color: darkgray; }
 
-  .mobile-logo, .manek-logo {
-    display: inline;
+  .mobile-navbar-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .mobile-logo-wrapper {
+    display: flex;
+    flex-direction: column;
     position: $rel;
-    top: -3em;
-    max-width: 250px;
-    width: 85%;
-    float: left;
-    left: 0;
+    width: 100%;
+  }
+
+  .img-logo {
+    top: -1em;
+    left: -2em;
+    width: 14.5em;
+    max-width: 300px;
+  }
+
+  .web-link {
+    width: fit-content;
+    text-align: unset;
+    top: -1.5em;
+    left: .5em;
   }
 
   .mobile-logo-link {
     display: block;
     margin-bottom: 5em;
   }
-
-  .mobile-navbar-container { display: inline; }
 
   #menu-icon {
     position: $rel;
@@ -432,38 +456,38 @@ ul, ol, dl, figure,
 }
 
 // home page-song modal section
-.song-modal {
-  display: none;
-  position: relative;
-  width: 100%;
-  justify-content: center;
-  top: 3.5em;
-
-  .modal-title { color: whitesmoke; }
-
-  span {
-    color: black;
-    font-size: 1.5em;
-  }
-  .modal-dialog { margin: 0; }
-  .modal-content {
-    height: 15em;
-    background-color: unset;
-    border: none;
-  }
-  .modal-body {
-    display: grid;
-    justify-content: center;
-  }
-
-  @media #{$mq-max-medium} {
-      grid-template-columns: 17em !important;
-      justify-content: center;
-      top: 9em;
-
-    .modal-content { height: 20em; }
-  }
-}
+// .song-modal {
+//   display: none;
+//   position: relative;
+//   width: 100%;
+//   justify-content: center;
+//   top: 3.5em;
+//
+//   .modal-title { color: whitesmoke; }
+//
+//   span {
+//     color: black;
+//     font-size: 1.5em;
+//   }
+//   .modal-dialog { margin: 0; }
+//   .modal-content {
+//     height: 15em;
+//     background-color: unset;
+//     border: none;
+//   }
+//   .modal-body {
+//     display: grid;
+//     justify-content: center;
+//   }
+//
+//   @media #{$mq-max-medium} {
+//       grid-template-columns: 17em !important;
+//       justify-content: center;
+//       top: 9em;
+//
+//     .modal-content { height: 20em; }
+//   }
+// }
 
 .overlay.show {
   display: block;
@@ -486,7 +510,7 @@ ul, ol, dl, figure,
   position: $rel;
   justify-content: center;
   text-align: center;
-  margin: 5.5em 0;
+  margin: 6.5em 0;
   text-shadow: 2px 2px $black;
 
   @media #{$mq-max-medium} {
@@ -663,7 +687,6 @@ ul, ol, dl, figure,
 
   @media #{$mq-medium} {top: -.5em;}
 }
-
 
 .main-divider {
   position: $rel;
