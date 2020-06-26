@@ -192,7 +192,7 @@ ul, ol, dl, figure,
   height: 4.5em;
   transition: all 0.65s ease-in-out;
   justify-content: center;
-  background-image: linear-gradient(-45deg, rgba(39, 40, 33, .65), 70%, whitesmoke 25%);
+  background-image: linear-gradient(-45deg, rgba(39, 40, 33, .65), 70%, rgba(86, 86, 95, .5) 25%);
 
   @media #{$mq-medium} { height: 6.5em; }
   @media (min-width: 103.13em) { height: 8em; }
@@ -223,12 +223,15 @@ ul, ol, dl, figure,
   top: .5em;
   left: 2em;
   width: fit-content;
-  color: $black;
-  text-decoration: underline;
-  transition: all .2s ease-in;
+  color: whitesmoke;
+  text-decoration: none;
+  transition: all .3s ease-in-out;
 }
 
-.web-link:hover { color: rgba(39, 40, 33, .65); }
+.web-link:hover { 
+  color: $black; 
+  text-shadow: 1px 1px lightslategray;
+}
 
 .img-logo {
   position: relative;
